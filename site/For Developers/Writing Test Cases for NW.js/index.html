@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing Test Cases for NW.js - NW.js Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Writing Test Cases for NW.js";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NW.js Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Developers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building%20NW.js/">Building NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing%20to%20NW.js/">Contributing to NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributors%20of%20Documents/">Contributors of Documents</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Repositories/">Repositories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Writing Test Cases for NW.js</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#writing-test-cases-for-nwjs-doctitle">Writing Test Cases for NW.js {: .doctitle}</a></li>
+                
+                    <li><a class="toctree-l4" href="#test-framework">Test Framework</a></li>
+                
+                    <li><a class="toctree-l4" href="#write-test-cases">Write Test Cases</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Users</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Debugging%20with%20DevTools/">Debugging with DevTools</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Getting%20Started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Package%20and%20Distribute/">Package and Distribute</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Build%20Flavors/">Build Flavors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Content%20Verification/">Content Verification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/">JavaScript Contexts in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">Protect JavaScript Source Code</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Security%20in%20NW.js/">Security in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Test%20with%20ChromeDriver/">Test with ChromeDriver</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Transparent%20Window/">Transparent Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Use%20NaCl%20in%20NW.js/">Use NaCl in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Use%20Native%20Node%20Modules/">Use Native Node Modules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Migration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Migration/From%200.12%20to%200.13/">From 0.12 to 0.13</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/App/">App</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Changes%20to%20DOM/">Changes to DOM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Changes%20to%20Node/">Changes to Node</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Clipboard/">Clipboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Command%20Line%20Options/">Command Line Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Manifest%20Format/">Manifest Format</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Menu/">Menu</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/MenuItem/">MenuItem</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Screen/">Screen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Shell/">Shell</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Shortcut/">Shortcut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Tray/">Tray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Window/">Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/webview%20Tag/">webview Tag</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NW.js Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>For Developers &raquo;</li>
+        
+      
+    
+    <li>Writing Test Cases for NW.js</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="writing-test-cases-for-nwjs-doctitle">Writing Test Cases for NW.js {: .doctitle}</h1>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#writing-test-cases-for-nwjs-doctitle">Writing Test Cases for NW.js {: .doctitle}</a><ul>
+<li><a href="#test-framework">Test Framework</a></li>
+<li><a href="#write-test-cases">Write Test Cases</a><ul>
+<li><a href="#auto-test-case">Auto Test Case</a></li>
+<li><a href="#remoting-test-case">Remoting Test Case</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="test-framework">Test Framework</h2>
+<p>NW.js is using a tiny Python based framework only in three files. You can read the source code in <a href="https://github.com/nwjs/nw.js/tree/nw13/test"><code>test</code> directory</a>.</p>
+<p>Each test case in NW.js is a runnable app, so that you can manually run the case without the framework.</p>
+<p>In NW.js, there are two types of test cases: <code>auto</code> and <code>remoting</code>. See <a href="#write-test-cases">Write Test Cases</a> sections below to see the instructions.</p>
+<p>To run the test cases, use the following command:</p>
+<pre><code class="bash">python test/test.py -t 80 auto
+python test/test.py -t 80 remoting
+</code></pre>
+
+<h2 id="write-test-cases">Write Test Cases</h2>
+<h3 id="auto-test-case">Auto Test Case</h3>
+<p><strong>TODO</strong></p>
+<h3 id="remoting-test-case">Remoting Test Case</h3>
+<p>The remoting test cases are driven by ChromeDriver. Usually these test cases involves user interaction. See <a href="../../For%20Users/Advanced/Test%20with%20ChromeDriver/">Test with ChromeDriver</a> for the usage of ChromeDriver.</p>
+<p>A remoting test case requires a <code>test.py</code> file in the root of the application folder.</p>
+<p>Here is the template of <code>test.py</code> file:</p>
+<pre><code class="python">import time
+import os
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.add_argument(&quot;nwapp=&quot; + os.path.dirname(os.path.abspath(__file__)))
+
+driver = webdriver.Chrome(executable_path=os.environ['CHROMEDRIVER'], chrome_options=chrome_options)
+time.sleep(1)
+try:
+    print driver.current_url
+    # Put your test code here using `assert`
+finally:
+    driver.quit()
+</code></pre>
+
+<p>The real case is an NW.js app. With ChromeDriver, you can simulate mouse clicks and inputs and then get the content of some DOM element. For example, with following code, when you click the button of "Click Me", a new DOM element will be added to the document with content of "success":</p>
+<pre><code class="html">&lt;button id=&quot;clickme&quot; onclick=&quot;success()&quot;&gt;Click Me&lt;/button&gt;
+&lt;script&gt;
+function success() {
+    var el = document.createElement('div');
+    el.id = 'result';
+    el.innerHTML = 'success';
+    document.body.appendChild(el);
+}
+&lt;/script&gt;
+</code></pre>
+
+<p>Then you can test it in <code>test.py</code> script:</p>
+<pre><code class="python">driver.implicitly_wait(10) # 10s timeout when finding an element
+
+clickme = driver.find_element_by_id('clickme')
+clickme.click() # click the button
+
+result = driver.find_element_by_id('result')
+assert(&quot;success&quot; in result.get_attribute('innerHTML')) # assert &quot;success&quot; is in the element
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../For%20Users/Debugging%20with%20DevTools/" class="btn btn-neutral float-right" title="Debugging with DevTools"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Writing%20Documents%20for%20NW.js/" class="btn btn-neutral" title="Writing Documents for NW.js"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Writing%20Documents%20for%20NW.js/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../For%20Users/Debugging%20with%20DevTools/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

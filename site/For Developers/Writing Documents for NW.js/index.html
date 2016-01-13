@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing Documents for NW.js - NW.js Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Writing Documents for NW.js";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NW.js Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Developers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Building%20NW.js/">Building NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributing%20to%20NW.js/">Contributing to NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Contributors%20of%20Documents/">Contributors of Documents</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Repositories/">Repositories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Writing Documents for NW.js</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#writing-documents-for-nwjs-doctitle">Writing Documents for NW.js {: .doctitle}</a></li>
+                
+                    <li><a class="toctree-l4" href="#read-before-writing-new-document">Read Before Writing New Document</a></li>
+                
+                    <li><a class="toctree-l4" href="#view-the-document-offline">View the Document Offline</a></li>
+                
+                    <li><a class="toctree-l4" href="#template-for-api-reference-page">Template for API Reference Page</a></li>
+                
+                    <li><a class="toctree-l4" href="#checklist-for-pull-request">Checklist for Pull Request</a></li>
+                
+                    <li><a class="toctree-l4" href="#markdown-extensions">Markdown Extensions</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Users</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Debugging%20with%20DevTools/">Debugging with DevTools</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Getting%20Started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Package%20and%20Distribute/">Package and Distribute</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Build%20Flavors/">Build Flavors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Content%20Verification/">Content Verification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/">JavaScript Contexts in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">Protect JavaScript Source Code</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Security%20in%20NW.js/">Security in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Test%20with%20ChromeDriver/">Test with ChromeDriver</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Transparent%20Window/">Transparent Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Use%20NaCl%20in%20NW.js/">Use NaCl in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Use%20Native%20Node%20Modules/">Use Native Node Modules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Migration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Migration/From%200.12%20to%200.13/">From 0.12 to 0.13</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/App/">App</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Changes%20to%20DOM/">Changes to DOM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Changes%20to%20Node/">Changes to Node</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Clipboard/">Clipboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Command%20Line%20Options/">Command Line Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Manifest%20Format/">Manifest Format</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Menu/">Menu</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/MenuItem/">MenuItem</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Screen/">Screen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Shell/">Shell</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Shortcut/">Shortcut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Tray/">Tray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Window/">Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/webview%20Tag/">webview Tag</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NW.js Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>For Developers &raquo;</li>
+        
+      
+    
+    <li>Writing Documents for NW.js</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="writing-documents-for-nwjs-doctitle">Writing Documents for NW.js {: .doctitle}</h1>
+<div class="toc">
+<ul>
+<li><a href="#writing-documents-for-nwjs-doctitle">Writing Documents for NW.js {: .doctitle}</a><ul>
+<li><a href="#read-before-writing-new-document">Read Before Writing New Document</a></li>
+<li><a href="#view-the-document-offline">View the Document Offline</a></li>
+<li><a href="#template-for-api-reference-page">Template for API Reference Page</a></li>
+<li><a href="#checklist-for-pull-request">Checklist for Pull Request</a></li>
+<li><a href="#markdown-extensions">Markdown Extensions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="read-before-writing-new-document">Read Before Writing New Document</h2>
+<p>Github provides nice representation of Markdown online with its own syntax GFM (Github Flavored Markdown). And many of the developers are reading documents directly on GitHub. To enable the best documentation of NW.js for any developers, <strong>make sure the document is readable on GitHub before submitting your PR</strong>.</p>
+<p>The documentation site of NW.js is generated by <a href="http://www.mkdocs.org/">MkDocs</a> which supports a slightly different Markdown syntax than GFM. So the page may be broken on GitHub while works under MkDocs, or vice versa.
+A bad example is not having <code>.md</code> suffix in internal links, like <code>[Build NW.js](Build NW.js)</code>. On GitHub, the link is broken because the file <code>Build NW.js</code> without <code>.md</code> does not exist. Always add <code>.md</code> suffix to your internal links.</p>
+<h2 id="view-the-document-offline">View the Document Offline</h2>
+<p>To view the well-formatted documents on your own laptop, you need <a href="https://www.python.org/">Python</a> and install following dependencies:</p>
+<pre><code class="bash">pip install mkdocs pygments pymdown-extensions
+</code></pre>
+
+<p>Run following commands in the root of NW.js repo:</p>
+<pre><code class="bash">mkdocs serve
+</code></pre>
+
+<p>Then open your browser and navigate to http://localhost:8000/ .</p>
+<h2 id="template-for-api-reference-page">Template for API Reference Page</h2>
+<p>Here is a minimal template for writing a page for NW.js API reference:</p>
+<pre><code class="markdown"># Module Name {: .doctitle}
+
+---
+
+[TOC]
+
+Describe the usage and other details of the module here.
+
+## Module.staticMethod(arg1, arg2)
+
+* `arg1` `{String}` description of `arg1`
+* `arg2` `{Object}` description of `arg2`
+  * `isSet` `{Boolean}` description of the field
+* Returns `{Type}` description of the return value
+
+Details about the the method.
+
+## inst.method(arg1, arg2)
+
+## Event: eventName(arg1, arg2)
+</code></pre>
+
+<ul>
+<li><strong>[MUST]</strong> use <code>#</code> for page title and <code>##</code> or <code>###</code> headers for sections. <strong>DO NOT</strong> use <code>=======</code> or <code>-------</code>.</li>
+<li><strong>[MUST]</strong> add <code>{: .doctitle}</code> right to the page title. This is the CSS class name for the document title.</li>
+<li><strong>[MUST]</strong> add a horizontal ruler with <code>---</code> after the page title.</li>
+<li><strong>[MUST]</strong> add a <code>[TOC]</code> after the ruler.</li>
+<li><strong>[MUST]</strong> quote any code with a back tick (<code>`</code>) in the document unless it's in the headers.</li>
+<li><strong>[MUST]</strong> specify the language for the code blocks.</li>
+<li>Instance methods / properties in headers <strong>[MUST]</strong> use lower case instance name. Bad example: <code>Window.resizeTo(x,y)</code>; Good example: <code>win.resizeTo(x,y)</code></li>
+<li>Events <strong>[MUST]</strong> in headers be written as <strong>Event: eventName(args...)</strong></li>
+<li><strong>[MUST]</strong> provide detailed list of arguments and return values for methods, including name, type wrapped with brackets ({TypeName}) and whether it's optional in italic (<em>Optional</em>).</li>
+</ul>
+<h2 id="checklist-for-pull-request">Checklist for Pull Request</h2>
+<ul>
+<li>[ ] Comply with the <a href="#template-for-api-reference-page">Template for API Reference Page</a> above</li>
+<li>[ ] Make sure the document is readable on GitHub</li>
+<li>[ ] Make sure the links are not broken</li>
+<li>[ ] Add your name and email to <a href="../Contributors%20of%20Documents/">Contributors of Documents.md</a></li>
+</ul>
+<h2 id="markdown-extensions">Markdown Extensions</h2>
+<p>Currently the documentation site of NW.js enables following extensions for generating documents. See <code>mkdocs.yml</code> in the root for detailed configuration.</p>
+<ul>
+<li>markdown.extensions.toc</li>
+<li>markdown.extensions.admonition</li>
+<li>markdown.extensions.smarty</li>
+<li>markdown.extensions.nl2br</li>
+<li>markdown.extensions.codehilite</li>
+<li>pymdownx.extra</li>
+<li>pymdownx.inlinehilite</li>
+<li>pymdownx.magiclink</li>
+<li>pymdownx.tilde</li>
+<li>pymdownx.caret</li>
+<li>pymdownx.smartsymbols</li>
+<li>pymdownx.githubemoji</li>
+<li>pymdownx.tasklist</li>
+<li>pymdownx.progressbar</li>
+<li>pymdownx.headeranchor</li>
+<li>pymdownx.arithmatex</li>
+<li>pymdownx.mark</li>
+<li>pymdownx.critic</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Writing%20Test%20Cases%20for%20NW.js/" class="btn btn-neutral float-right" title="Writing Test Cases for NW.js"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Understanding%20Crash%20Dump/" class="btn btn-neutral" title="Understanding Crash Dump"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Understanding%20Crash%20Dump/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Writing%20Test%20Cases%20for%20NW.js/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

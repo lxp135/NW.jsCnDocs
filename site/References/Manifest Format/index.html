@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Manifest Format - NW.js Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Manifest Format";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> NW.js Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Developers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Building%20NW.js/">Building NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Repositories/">Repositories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Users</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Debugging%20with%20DevTools/">Debugging with DevTools</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Getting%20Started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Package%20and%20Distribute/">Package and Distribute</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Build%20Flavors/">Build Flavors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Content%20Verification/">Content Verification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/">JavaScript Contexts in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">Protect JavaScript Source Code</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Security%20in%20NW.js/">Security in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Test%20with%20ChromeDriver/">Test with ChromeDriver</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Transparent%20Window/">Transparent Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Use%20NaCl%20in%20NW.js/">Use NaCl in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Advanced/Use%20Native%20Node%20Modules/">Use Native Node Modules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Migration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../For%20Users/Migration/From%200.12%20to%200.13/">From 0.12 to 0.13</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../App/">App</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Changes%20to%20DOM/">Changes to DOM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Changes%20to%20Node/">Changes to Node</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Clipboard/">Clipboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Command%20Line%20Options/">Command Line Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Manifest Format</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#manifest-format-doctitle">Manifest Format {: .doctitle}</a></li>
+                
+                    <li><a class="toctree-l4" href="#quick-start">Quick Start</a></li>
+                
+                    <li><a class="toctree-l4" href="#required-fields">Required Fields</a></li>
+                
+                    <li><a class="toctree-l4" href="#features-control-fields">Features Control Fields</a></li>
+                
+                    <li><a class="toctree-l4" href="#window-subfields">Window Subfields</a></li>
+                
+                    <li><a class="toctree-l4" href="#webkit-subfields">WebKit Subfields</a></li>
+                
+                    <li><a class="toctree-l4" href="#other-fields">Other Fields</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Menu/">Menu</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../MenuItem/">MenuItem</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Screen/">Screen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Shell/">Shell</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Shortcut/">Shortcut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Tray/">Tray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Window/">Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../webview%20Tag/">webview Tag</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">NW.js Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>References &raquo;</li>
+        
+      
+    
+    <li>Manifest Format</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="manifest-format-doctitle">Manifest Format {: .doctitle}</h1>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#manifest-format-doctitle">Manifest Format {: .doctitle}</a><ul>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#required-fields">Required Fields</a><ul>
+<li><a href="#main">main</a></li>
+<li><a href="#name">name</a></li>
+</ul>
+</li>
+<li><a href="#features-control-fields">Features Control Fields</a><ul>
+<li><a href="#nodejs">nodejs</a></li>
+<li><a href="#node-main">node-main</a></li>
+<li><a href="#single-instance">single-instance</a></li>
+<li><a href="#bg-script">bg-script</a></li>
+<li><a href="#window">window</a></li>
+<li><a href="#webkit">webkit</a></li>
+<li><a href="#user-agent">user-agent</a></li>
+<li><a href="#node-remote">node-remote</a></li>
+<li><a href="#chromium-args">chromium-args</a></li>
+<li><a href="#js-flags">js-flags</a></li>
+<li><a href="#inject-js-start">inject-js-start</a></li>
+<li><a href="#inject-js-end">inject-js-end</a></li>
+<li><a href="#additional_trust_anchors">additional_trust_anchors</a></li>
+<li><a href="#dom_storage_quota">dom_storage_quota</a></li>
+<li><a href="#no-edit-menu-mac">no-edit-menu (Mac)</a></li>
+</ul>
+</li>
+<li><a href="#window-subfields">Window Subfields</a><ul>
+<li><a href="#title">title</a></li>
+<li><a href="#width">width</a></li>
+<li><a href="#height">height</a></li>
+<li><a href="#toolbar">toolbar</a></li>
+<li><a href="#icon">icon</a></li>
+<li><a href="#position">position</a></li>
+<li><a href="#min_width">min_width</a></li>
+<li><a href="#min_height">min_height</a></li>
+<li><a href="#max_width">max_width</a></li>
+<li><a href="#max_height">max_height</a></li>
+<li><a href="#as_desktop-linux">as_desktop (Linux)</a></li>
+<li><a href="#resizable">resizable</a></li>
+<li><a href="#always_on_top">always_on_top</a></li>
+<li><a href="#visible_on_all_workspaces-mac-linux">visible_on_all_workspaces (Mac &amp; Linux)</a></li>
+<li><a href="#fullscreen">fullscreen</a></li>
+<li><a href="#show_in_taskbar">show_in_taskbar</a></li>
+<li><a href="#frame">frame</a></li>
+<li><a href="#show">show</a></li>
+<li><a href="#kiosk">kiosk</a></li>
+<li><a href="#transparent">transparent</a></li>
+</ul>
+</li>
+<li><a href="#webkit-subfields">WebKit Subfields</a><ul>
+<li><a href="#plugin">plugin</a></li>
+<li><a href="#java">java</a></li>
+<li><a href="#page-cache">page-cache</a></li>
+</ul>
+</li>
+<li><a href="#other-fields">Other Fields</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>Every app package should contain a manifest file named <code>package.json</code> in the format of <a href="http://www.json.org/">JSON</a>. This document will help you understand the meaning of each field of the manifest.</p>
+<h2 id="quick-start">Quick Start</h2>
+<p>Following is a minimal manifest:</p>
+<pre><code class="json">{
+  &quot;main&quot;: &quot;index.html&quot;,
+  &quot;name&quot;: &quot;nw-demo&quot;,
+}
+</code></pre>
+
+<p>You only need at least these two fields to start with an NW.js app. Here is the quick explanation of them:</p>
+<ul>
+<li><code>main</code>: tell NW.js to open <code>index.html</code> in the same folder as <code>package.json</code> at start</li>
+<li><code>name</code>: gives the application a unique name called <code>nw-demo</code></li>
+</ul>
+<h2 id="required-fields">Required Fields</h2>
+<p>Each package must provide all the following fields in its package descriptor file.</p>
+<h3 id="main">main</h3>
+<ul>
+<li><code>{String}</code> which page should be opened when NW.js starts.</li>
+</ul>
+<p>You can specify a URL here. You can also specify just a filename (such as <code>index.html</code>) or a path (relative to the directory where your <code>package.json</code> resides).</p>
+<h3 id="name">name</h3>
+<ul>
+<li><code>{String}</code> the name of the package. This must be a unique, lowercase alpha-numeric name without spaces. It may include "." or "_" or "-" characters. It is otherwise opaque. </li>
+</ul>
+<p><code>name</code> should be globally unique since NW.js will store app's data under the directory named <code>name</code>.</p>
+<h2 id="features-control-fields">Features Control Fields</h2>
+<p>Following fields control which features NW.js should provide and how NW.js should open the main window.</p>
+<h3 id="nodejs">nodejs</h3>
+<ul>
+<li><code>{Boolean}</code> set <code>nodejs</code> to false will disable Node support in NW.js.</li>
+</ul>
+<h3 id="node-main">node-main</h3>
+<ul>
+<li><code>{String}</code> Specify the path to a node.js script file. And it will be executed on startup in Node context before the first DOM window load.</li>
+</ul>
+<h3 id="single-instance">single-instance</h3>
+<p>!!! warning "Deprecated"
+    This property is deprecated since 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<ul>
+<li><code>{Boolean}</code> Specify whether to start up single instance of your app. It's set to <code>true</code> by default.</li>
+</ul>
+<p>By default NW.js only allows one instance of your app. If you want to allow multiple instances of your app running at the same time, set this to <code>false</code>.</p>
+<h3 id="bg-script">bg-script</h3>
+<ul>
+<li><code>{String}</code> background script</li>
+</ul>
+<h3 id="window">window</h3>
+<ul>
+<li><code>{Object}</code> controls how the main window looks, see <a href="#window-subfields">Window Subfields</a> below.</li>
+</ul>
+<h3 id="webkit">webkit</h3>
+<ul>
+<li><code>{Object}</code> controls what features of WebKit should be on/off, see <a href="#webkit-subfields">WebKit Subfields</a> below.</li>
+</ul>
+<h3 id="user-agent">user-agent</h3>
+<ul>
+<li><code>{String}</code> Override the <code>User-Agent</code> header in HTTP requests made from the application.</li>
+</ul>
+<p>The following placeholders are available to composite the user agent dynamically:</p>
+<ul>
+<li><code>%name</code>: replaced by the <code>name</code> field in the manifest.</li>
+<li><code>%ver</code>: replaced by the <code>version</code> field in the manifest, if available.</li>
+<li><code>%nwver</code>: replaced by the version of NW.js.</li>
+<li><code>%webkit_ver</code>: replaced by the version of WebKit engine.</li>
+<li><code>%osinfo</code>: replaced by the OS and CPU information you would see in browser's user agent string.</li>
+</ul>
+<h3 id="node-remote">node-remote</h3>
+<p>!!! warning "Behavior Changed"
+    This feature is changed in 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<ul>
+<li><code>{Array}</code> or <code>{String}</code> Enable calling Node in remote pages. The value controls for which sites this feature should be turned on. Each item in the array follows the <a href="https://developer.chrome.com/extensions/match_patterns">match patterns</a> used in Chrome extension.</li>
+</ul>
+<p>A match pattern is essentially a URL that begins with a permitted scheme (<code>http</code>, <code>https</code>, <code>file</code>, or <code>ftp</code>, and that can contain <code>'*'</code> characters. The special pattern <code>&lt;all_urls&gt;</code> matches any URL that starts with a permitted scheme. Each match pattern has 3 parts:</p>
+<ul>
+<li><code>scheme</code> — for example, <code>http</code> or <code>file</code> or <code>*</code></li>
+<li><code>host</code> — for example, <code>www.google.com</code> or <code>*.google.com</code> or <code>*</code>; if the scheme is file, there is no host part</li>
+<li><code>path</code> — for example, <code>/*</code>, <code>/foo*</code>, or <code>/foo/bar</code>. The path must be present in a host permission, but is always treated as <code>/*</code>.</li>
+</ul>
+<p>Here's the basic syntax:</p>
+<pre><code class="none">&lt;url-pattern&gt; := &lt;scheme&gt;://&lt;host&gt;&lt;path&gt;
+&lt;scheme&gt; := '*' | 'http' | 'https' | 'file' | 'ftp'
+&lt;host&gt; := '*' | '*.' &lt;any char except '/' and '*'&gt;+
+&lt;path&gt; := '/' &lt;any chars&gt;
+</code></pre>
+
+<h3 id="chromium-args">chromium-args</h3>
+<ul>
+<li><code>{String}</code> Specify chromium (content shell) command line arguments.</li>
+</ul>
+<p>It will be useful if you want to distribute the app with some custom chromium args. For example, if you want to disable the GPU accelerated video display, just add <code>"chromium-args" : "--disable-accelerated-video"</code>. If you want to add multiple arguments, separate each two arguments by space. This field can take a number of flags in one argument as well, via enclosing them in single quotation marks.</p>
+<p>See <a href="../Command%20Line%20Options/">Command Line Options</a> for more information.</p>
+<h3 id="js-flags">js-flags</h3>
+<ul>
+<li><code>{String}</code> Specify the flags passed to JS engine (v8). e.g. turn on Harmony Proxies and Collections feature:</li>
+</ul>
+<pre><code class="json">{
+  &quot;name&quot;: &quot;nw-demo&quot;,
+  &quot;main&quot;: &quot;index.html&quot;,
+  &quot;js-flags&quot;: &quot;--harmony_proxies --harmony_collections&quot;
+}
+</code></pre>
+
+<h3 id="inject-js-start">inject-js-start</h3>
+<h3 id="inject-js-end">inject-js-end</h3>
+<ul>
+<li><code>{String}</code> a local filename, relative to the application path, used to specify a JavaScript file to inject to the window.</li>
+</ul>
+<p><code>inject-js-start</code>: The injecting JavaScript code is to be executed after any files from css, but before any other DOM is constructed or any other script is run.</p>
+<p><code>inject-js-end</code>: The injecting JavaScript code is to be executed after the document object is loaded, before <code>onload</code> event is fired. This is mainly to be used as an option of <code>Window.open()</code> to inject JS in a new window. </p>
+<h3 id="additional_trust_anchors">additional_trust_anchors</h3>
+<ul>
+<li><code>{String}</code> Containing a list of PEM-encoded certificates (i.e. <code>"-----BEGIN CERTIFICATE-----\n...certificate data...\n-----END CERTIFICATE-----\n"</code>).</li>
+</ul>
+<p>These certificates are used as additional root certificates for validation, to allow connecting to services using a self-signed certificate or certificates issued by custom CAs.</p>
+<h3 id="dom_storage_quota">dom_storage_quota</h3>
+<ul>
+<li><code>{Integer}</code> Number of mega bytes (MB) for the quota of the DOM storage. The suggestion is to put double the value you want.</li>
+</ul>
+<h3 id="no-edit-menu-mac">no-edit-menu (Mac)</h3>
+<p>!!! warning "Deprecated"
+    This property is deprecated since 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<ul>
+<li><code>{Boolean}</code> whether the default <code>Edit</code> menu should be disabled on Mac OS X. The default value is <code>false</code>. Only effective on Mac OS X.</li>
+</ul>
+<h2 id="window-subfields">Window Subfields</h2>
+<h3 id="title">title</h3>
+<ul>
+<li><code>{String}</code> the default title of window created by NW.js, it's very useful if you want to show your own title when the app is starting.</li>
+</ul>
+<h3 id="width">width</h3>
+<h3 id="height">height</h3>
+<ul>
+<li><code>{Integer}</code> the initial width/height of the main window.</li>
+</ul>
+<h3 id="toolbar">toolbar</h3>
+<p>!!! warning "Deprecated"
+    This property is deprecated since 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<ul>
+<li><code>{Boolean}</code> should the navigation toolbar be showed.</li>
+</ul>
+<h3 id="icon">icon</h3>
+<ul>
+<li><code>{String}</code> path to window's icon</li>
+</ul>
+<h3 id="position">position</h3>
+<ul>
+<li><code>{String}</code> be <code>null</code> or <code>center</code> or <code>mouse</code>, controls where window will be put</li>
+</ul>
+<h3 id="min_width">min_width</h3>
+<h3 id="min_height">min_height</h3>
+<ul>
+<li><code>{Integer}</code> minimum width/height of window</li>
+</ul>
+<h3 id="max_width">max_width</h3>
+<h3 id="max_height">max_height</h3>
+<ul>
+<li><code>{Integer}</code> maximum width/height of window</li>
+</ul>
+<h3 id="as_desktop-linux">as_desktop (Linux)</h3>
+<ul>
+<li><code>{Boolean}</code> show as desktop background window under X11 environment</li>
+</ul>
+<h3 id="resizable">resizable</h3>
+<ul>
+<li><code>{Boolean}</code> whether window is resizable</li>
+</ul>
+<p>Beware, if resizable is set to false on OS X and frame is set to true, the user will still be able to make the window fullscreen. Set fullscreen to false to disable the fullscreen control.</p>
+<h3 id="always_on_top">always_on_top</h3>
+<p>!!! warning "Behavior Changed"
+    This feature is changed in 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<ul>
+<li><code>{Boolean}</code> whether the window should always stay on top of other windows.</li>
+</ul>
+<h3 id="visible_on_all_workspaces-mac-linux">visible_on_all_workspaces (Mac &amp; Linux)</h3>
+<p>!!! warning "Behavior Changed"
+    This feature is changed in 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<ul>
+<li><code>{Boolean}</code> whether the window should be visible on all workspaces simultaneously (on platforms that support multiple workspaces, currently Mac OS X and Linux).</li>
+</ul>
+<h3 id="fullscreen">fullscreen</h3>
+<ul>
+<li><code>{Boolean}</code> whether window is fullscreen</li>
+</ul>
+<p>Beware, if frame is also set to false in fullscreen it will prevent the mouse from being captured on the very edges of the screen. You should avoid activate it if fullscreen is also set to true.</p>
+<h3 id="show_in_taskbar">show_in_taskbar</h3>
+<ul>
+<li><code>{Boolean}</code> whether the window is shown in taskbar or dock. The default is <code>true</code>. </li>
+</ul>
+<h3 id="frame">frame</h3>
+<ul>
+<li><code>{Boolean}</code> specify it to <code>false</code> to make the window frameless </li>
+</ul>
+<p>Beware, if frame is set to false in fullscreen it will prevent the mouse from being captured on the very edges of the screen. You should avoid activate it if fullscreen is also set to true.</p>
+<h3 id="show">show</h3>
+<ul>
+<li><code>{Boolean}</code> specify it to <code>false</code> if you want your app to be hidden on startup </li>
+</ul>
+<h3 id="kiosk">kiosk</h3>
+<ul>
+<li><code>{Boolean}</code> whether to use <code>Kiosk</code> mode. In <code>Kiosk</code> mode, the app will be fullscreen and try to prevent users from leaving the app, so you should remember to provide a way in app to leave <code>Kiosk</code> mode. This mode is mainly used for presentation on public displays</li>
+</ul>
+<h3 id="transparent">transparent</h3>
+<ul>
+<li><code>{Boolean}</code> whether to turn on transparent window mode. The default is <code>false</code>.   </li>
+</ul>
+<p>Control the transparency with rgba background value in CSS. Use command line option <code>--disable-transparency</code> to disable this feature completely.</p>
+<p>There is experimental support for "click-through" on the transparent region: add <code>--disable-gpu</code> option to the command line.</p>
+<h2 id="webkit-subfields">WebKit Subfields</h2>
+<h3 id="plugin">plugin</h3>
+<ul>
+<li><code>{Boolean}</code> whether to load external browser plugins like Flash, default to false.</li>
+</ul>
+<h3 id="java">java</h3>
+<ul>
+<li><code>{Boolean}</code> whether to load Java applets, default to false.</li>
+</ul>
+<h3 id="page-cache">page-cache</h3>
+<ul>
+<li><code>{Boolean}</code> whether to enable page cache, default to false.</li>
+</ul>
+<h2 id="other-fields">Other Fields</h2>
+<p>The <a href="http://wiki.commonjs.org/wiki/Packages/1.0">Packages/1.0</a> standard specifies many other fields <code>package.json</code> should provide. Currently we don't make use of them, but you provide them still.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Menu/" class="btn btn-neutral float-right" title="Menu"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Command%20Line%20Options/" class="btn btn-neutral" title="Command Line Options"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Command%20Line%20Options/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Menu/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

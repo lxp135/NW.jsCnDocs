@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>JavaScript Contexts in NW.js - NW.js Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "JavaScript Contexts in NW.js";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> NW.js Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Developers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Building%20NW.js/">Building NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Repositories/">Repositories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Users</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Debugging%20with%20DevTools/">Debugging with DevTools</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Getting%20Started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Package%20and%20Distribute/">Package and Distribute</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Build%20Flavors/">Build Flavors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content%20Verification/">Content Verification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">JavaScript Contexts in NW.js</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#javascript-contexts-in-nwjs-doctitle">JavaScript Contexts in NW.js {: .doctitle}</a></li>
+                
+                    <li><a class="toctree-l4" href="#concept-of-javascript-context">Concept of JavaScript Context</a></li>
+                
+                    <li><a class="toctree-l4" href="#separate-context-mode">Separate Context Mode</a></li>
+                
+                    <li><a class="toctree-l4" href="#mixed-context-mode">Mixed Context Mode</a></li>
+                
+                    <li><a class="toctree-l4" href="#working-with-multiple-contexts">Working with Multiple Contexts</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Protect%20JavaScript%20Source%20Code/">Protect JavaScript Source Code</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Security%20in%20NW.js/">Security in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Test%20with%20ChromeDriver/">Test with ChromeDriver</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Transparent%20Window/">Transparent Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Use%20NaCl%20in%20NW.js/">Use NaCl in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Use%20Native%20Node%20Modules/">Use Native Node Modules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Migration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Migration/From%200.12%20to%200.13/">From 0.12 to 0.13</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/App/">App</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Changes%20to%20DOM/">Changes to DOM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Changes%20to%20Node/">Changes to Node</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Clipboard/">Clipboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Command%20Line%20Options/">Command Line Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Manifest%20Format/">Manifest Format</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Menu/">Menu</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/MenuItem/">MenuItem</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Screen/">Screen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Shell/">Shell</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Shortcut/">Shortcut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Tray/">Tray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Window/">Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/webview%20Tag/">webview Tag</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">NW.js Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Advanced &raquo;</li>
+        
+      
+    
+    <li>JavaScript Contexts in NW.js</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="javascript-contexts-in-nwjs-doctitle">JavaScript Contexts in NW.js {: .doctitle}</h1>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#javascript-contexts-in-nwjs-doctitle">JavaScript Contexts in NW.js {: .doctitle}</a><ul>
+<li><a href="#concept-of-javascript-context">Concept of JavaScript Context</a></li>
+<li><a href="#separate-context-mode">Separate Context Mode</a><ul>
+<li><a href="#browser-context">Browser Context</a><ul>
+<li><a href="#load-script-in-browser-context">Load Script in Browser Context</a></li>
+<li><a href="#global-objects-in-browser-context">Global Objects in Browser Context</a></li>
+<li><a href="#create-new-browser-context">Create New Browser Context</a></li>
+<li><a href="#access-nodejs-and-nwjs-api-in-browser-context">Access Node.js and NW.js API in Browser Context</a></li>
+<li><a href="#relative-path-resovling-of-require-in-browser-context">Relative Path Resovling of require() in Browser Context</a></li>
+</ul>
+</li>
+<li><a href="#node-context">Node Context</a><ul>
+<li><a href="#load-script-in-node-context">Load Script in Node Context</a></li>
+<li><a href="#global-objects-in-node-context">Global Objects in Node Context</a></li>
+<li><a href="#create-new-node-context">Create New Node Context</a></li>
+<li><a href="#access-browser-and-nwjs-api-in-node-context">Access Browser and NW.js API in Node Context</a></li>
+<li><a href="#relative-paths-resolving-of-require-in-node-context">Relative Paths Resolving of require() in Node Context</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mixed-context-mode">Mixed Context Mode</a><ul>
+<li><a href="#load-script-in-mixed-context-mode">Load Script in Mixed Context Mode</a></li>
+<li><a href="#global-objects-in-mixed-context">Global Objects in Mixed Context</a></li>
+<li><a href="#comparing-with-separate-context">Comparing with Separate Context</a></li>
+</ul>
+</li>
+<li><a href="#working-with-multiple-contexts">Working with Multiple Contexts</a><ul>
+<li><a href="#problem-with-instanceof">Problem with instanceOf</a></li>
+<li><a href="#problem-with-objconstructor">Problem with obj.constructor</a></li>
+<li><a href="#problem-of-obj__proto__">Problem of obj.__proto__</a></li>
+<li><a href="#problems-in-3rd-party-library">Problems in 3rd-Party Library</a></li>
+<li><a href="#reliable-way-of-type-checking-across-contexts">Reliable Way of Type Checking Across Contexts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="concept-of-javascript-context">Concept of JavaScript Context</h2>
+<p>Scripts running in different windows live in different JavaScript contexts, i.e. each window has its own global object and its own set of global constructors (such as <code>Array</code> or <code>Object</code>).</p>
+<p>That's common practice among web browsers and it's a good thing because, for example:</p>
+<ul>
+<li>when an object's prototype is replaced or augmented by some library (such as <a href="http://prototypejs.org/">Prototype</a>) or a simpler script, the analogous objects in other windows are unaffected nevertheless;</li>
+<li>when a programmer makes a mistake (such as <a href="http://ejohn.org/blog/simple-class-instantiation/">missing <code>new</code> before a poorly written constructor</a>) and the bug affects (pollutes) the global scope, it still cannot affect larger areas (several windows);</li>
+<li>malicious applications cannot access confidential data structures in other windows.</li>
+</ul>
+<p>When a script accessing to an object / function defined in another context, JS engine will temporarily enter the target context and leave it once finished. </p>
+<h2 id="separate-context-mode">Separate Context Mode</h2>
+<p>Besides the contexts created by browsers, NW.js introduced additional Node context for running Node modules by default. So NW.js has two types of JavaScript contexts: <strong>Browser Context</strong> and <strong>Node Context</strong>.</p>
+<p>!!! note "Web Worker"
+    Actually Web Workers are running in a separate JavaScript context which is neither browser context nor node context. But you can't access Web or Node.js or NW.js APIs in Web Worker's context.</p>
+<h3 id="browser-context">Browser Context</h3>
+<h4 id="load-script-in-browser-context">Load Script in Browser Context</h4>
+<p>Scripts loaded or embedded by traditional web ways, such as using <code>&lt;script&gt;</code> element or jQuery's <a href="http://api.jquery.com/jQuery.getScript/"><code>$.getScript()</code></a> or <a href="http://requirejs.org/">RequireJS</a>, are running in browser context.</p>
+<h4 id="global-objects-in-browser-context">Global Objects in Browser Context</h4>
+<p>In browser context, there are some global objects including <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects">JS builtin objects</a> (such as <code>Date</code> or <code>Error</code> or <code>TypedArray</code>) and <a href="https://developer.mozilla.org/en-US/docs/Web/Reference/API">Web API</a> (such as DOM API).</p>
+<h4 id="create-new-browser-context">Create New Browser Context</h4>
+<p>Different windows and frames have different contexts. So when you create a new frame or window, you will get a new browser context.</p>
+<h4 id="access-nodejs-and-nwjs-api-in-browser-context">Access Node.js and NW.js API in Browser Context</h4>
+<p>Some objects of Node context are copied to Browser context so that scripts running in Browser context can access Node.js objects:</p>
+<ul>
+<li><code>nw</code> -- the object of all <a href="../../../References">NW.js APIs</a></li>
+<li><code>global</code> -- the global object of Node Context; same as <code>nw.global</code></li>
+<li><code>require</code> -- the <code>require()</code> function for loading Node.js modules; similar to <code>nw.require()</code>, but it also supports <code>require('nw.gui')</code> to load NW.js API module.</li>
+<li><code>process</code> -- the <a href="https://nodejs.org/api/globals.html#globals_process">process module</a> of Node.js; same as <code>nw.process</code></li>
+<li><code>Buffer</code> -- the <a href="https://nodejs.org/api/globals.html#globals_class_buffer">Buffer class</a> of Node.js</li>
+</ul>
+<h4 id="relative-path-resovling-of-require-in-browser-context">Relative Path Resovling of <code>require()</code> in Browser Context</h4>
+<p>Relative paths in Browser context are resolved according to path of main HTML file (like all browsers do).</p>
+<h3 id="node-context">Node Context</h3>
+<h4 id="load-script-in-node-context">Load Script in Node Context</h4>
+<p>Scripts loaded with following ways are running in Node context:</p>
+<ul>
+<li>Scripts loaded by <code>require()</code> of Node.js API</li>
+<li>Scripts loaded by <a href="../../../References/Manifest%20Format/#node-main"><code>node-main</code> in Manifest file</a></li>
+</ul>
+<h4 id="global-objects-in-node-context">Global Objects in Node Context</h4>
+<p>Scripts running in the Node context can use <a href="">JS builtin objects</a> like browser context. In addition, you can also use <a href="https://nodejs.org/api/globals.html">global objects defined by Node.js</a>, such as <code>__dirname</code>, <code>process</code>, <code>Buffer</code> etc.</p>
+<p>!!! note
+    Web APIs are not available in Node context. See <a href="#access-browser-and-nwjs-api-in-node-context">Access Browser and NW.js API in Node Context</a> below to find out how to use them.</p>
+<h4 id="create-new-node-context">Create New Node Context</h4>
+<p><strong>All node modules shares a same Node context in separate context mode</strong>. But you have several ways to create new Node contexts:</p>
+<ul>
+<li>Set <code>new-instance</code> option to <code>true</code> when creating window with <a href="../../../References/Window/#windowopenurl-options-callback"><code>Window.open()</code></a></li>
+<li>Start NW.js with <code>--mixed-context</code> CLI option to turn NW.js into <a href="#mixed-context">Mixed Context mode</a></li>
+</ul>
+<h4 id="access-browser-and-nwjs-api-in-node-context">Access Browser and NW.js API in Node Context</h4>
+<p>In Node context, there are no browser side or NW.js APIs, such as <code>alert()</code> or <code>document.*</code> or <code>nw.Clipboard</code> etc. To access browser APIs, you have to pass the corresponding objects, such as <code>window</code> object, to functions in Node context.</p>
+<p>See following example for how to achive this.</p>
+<p>Following script are running in Node context (myscript.js):</p>
+<pre><code class="javascript">// `el` should be passed from browser context
+exports.setText = function(el) {
+    el.innerHTML = 'hello';
+};
+</code></pre>
+
+<p>In the browser side (index.html):</p>
+<pre><code class="html">&lt;div id=&quot;el&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var myscript = require('./myscript');
+// pass the `el` element to the Node function
+myscript.setText(document.getElementbyId('el'));
+// you will see &quot;hello&quot; in the element
+&lt;/script&gt;
+</code></pre>
+
+<p>!!! note "<code>window</code> in Node Context"
+    There is a <code>window</code> object in Node context pointing to the main window as set in <code>main</code> field of Manifest file.</p>
+<h4 id="relative-paths-resolving-of-require-in-node-context">Relative Paths Resolving of <code>require()</code> in Node Context</h4>
+<p>Relative paths in node modules are resolved according to path of that module (like Node.js always do).</p>
+<h2 id="mixed-context-mode">Mixed Context Mode</h2>
+<p>Mixed context is introduced in NW.js 0.13. When running NW.js with <a href="../../../References/Command%20Line%20Options/#mixedcontext"><code>--mixed-context</code> CLI option</a>, a new Node context is created at the time of each browser context creation and running in a same context as browser context, a.k.a. the Mixed context.</p>
+<h3 id="load-script-in-mixed-context-mode">Load Script in Mixed Context Mode</h3>
+<p>To enable Mixed context, add <code>--mixed-context</code> when starting NW.js or add it to <a href="../../../References/Manifest%20Format/#chromium-args"><code>chromium-args</code> in Manifest file</a>.</p>
+<p>Any scripts loaded using web ways or <code>require()</code> in Node.js are running in a same context.</p>
+<h3 id="global-objects-in-mixed-context">Global Objects in Mixed Context</h3>
+<p>In Mixed context, you can use all browser and NW.js API in Node modules, and vice versa.</p>
+<p><code>package.json</code></p>
+<pre><code class="javascript">{
+    &quot;name&quot;: &quot;test-context&quot;,
+    &quot;main&quot;: &quot;index.html&quot;,
+    &quot;chromium-args&quot;: &quot;--mixed-context&quot;
+}
+</code></pre>
+
+<p><code>myscript.js</code></p>
+<pre><code class="javascript">exports.createDate = function() {
+    return new Date();
+};
+
+exports.showAlert = function() {
+    alert(&quot;I'm running in Node module!&quot;);
+};
+</code></pre>
+
+<p>Then following comparison will success in Mixed context:
+<code>index.html</code></p>
+<pre><code class="html">&lt;script&gt;
+var myscript = require('./myscript');
+
+console.log(myscript.createDate() instanceof Date); // true
+myscript.showAlert(); // I'm running in Node module!
+&lt;/script&gt;
+</code></pre>
+
+<h3 id="comparing-with-separate-context">Comparing with Separate Context</h3>
+<p>The advantage of MultiContext mode is that you will not encounter many <a href="#working-with-multiple-contexts">type checking issue</a> as below.</p>
+<p>The cons is that in Mixed context mode, you can't share variable easily as before. To share variables among contexts, you should put variables in a common context that can be accessed from the contexts you want to share with. Or you can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"><code>window.postMessage()</code> API</a> to send and receive messages between contexts.</p>
+<h2 id="working-with-multiple-contexts">Working with Multiple Contexts</h2>
+<p>While differences of contexts are generally benefitial, sometimes they may constitute a problem in your (or some other person's) code, and a need for a workaround arises.</p>
+<p>For example, in different browser contexts, the global objects are not identical and some type checking tricks will fail with multiple contexts.</p>
+<pre><code class="html">&lt;iframe id=&quot;myframe&quot; src=&quot;myframe.html&quot;&gt;&lt;/iframe&gt;
+&lt;script&gt;
+// `window` is the global object of current browser context
+// `myframe.contentWindow` is the global object of the `&lt;iframe&gt;`'s browser context
+var currentContext = window;
+var iframeContext = document.getElementbyId('myframe').contentWindow;
+
+// `myfunc` is defined in current context
+function myfunc() {
+
+}
+
+console.log(currentContext.Date === iframeContext.Date); // false
+console.log(currentContext.Function === iframeContext.Function); // false
+console.log(myfunc instanceof currentContext.Function); // true
+console.log(myfunc instanceof iframeContext.Function); // false
+console.log(myfunc.constructor === currentContext.Function); // true
+console.log(myfunc.constructor === iframeContext.Function); // true
+&lt;/script&gt;
+</code></pre>
+
+<h3 id="problem-with-instanceof">Problem with <code>instanceOf</code></h3>
+<p>The most common cause for such problems is the behaviour of the <code>instanceof</code> operator in JavaScript. As you may <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">see in MDN</a>, the operation <code>someValue instanceof someConstructor</code> tests whether an object has in its prototype chain the <code>prototype</code> property of the given constructor. However, if <code>someValue</code> is passed from a different JavaScript context, then it has its own line of ancestor objects, and the <code>someValue instanceof someConstructor</code> check fails inevitably.</p>
+<p>For example, a simple check <code>someValue instanceof Array</code> cannot determine if a variable's value is an array's if it's passed from another context (see <a href="http://web.mit.edu/jwalden/www/isArray.html">Determining with absolute accuracy whether or not a JavaScript object is an array</a> for details).</p>
+<h3 id="problem-with-objconstructor">Problem with <code>obj.constructor</code></h3>
+<p>The same problem arises when the <code>obj.constructor</code> property is checked directly (for example, when <code>someValue.constructor === Array</code> is used instead of <code>someValue instanceof Array</code>).</p>
+<h3 id="problem-of-obj__proto__">Problem of <code>obj.__proto__</code></h3>
+<p>The legacy <code>obj.__proto__</code> gives you access to the prototype of that object directly. Comparing it's constructor with global object or use <code>instanceof</code> as above will still lead to the wrong result.</p>
+<h3 id="problems-in-3rd-party-library">Problems in 3rd-Party Library</h3>
+<p>3rd-party libraries may use problematic ways of type checking listed above. That will cause misterious errors. Once it happens, it should be a bug of 3rd-party library. You are recommended to report a bug for the library or fix it your own.</p>
+<h3 id="reliable-way-of-type-checking-across-contexts">Reliable Way of Type Checking Across Contexts</h3>
+<p>A way to prevent context-related problems is to <strong>avoid using <code>instanceof</code></strong> when a value may come from another JavaScript context.</p>
+<p>You may use <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray"><code>Array.isArray</code></a> method to check whether a value is an array, and that method works reliably across contexts.</p>
+<p>For testing if <code>someValue</code> is an object of other context dependent globals, like <code>Function</code> or <code>Date</code> etc., you may use following tricks to test the actual types:</p>
+<pre><code class="javascript">// test a function
+Object.prototype.toString.apply(someValue) === &quot;[object Function]&quot;
+// test a Date
+Object.prototype.toString.apply(someValue) === &quot;[object Date]&quot;
+</code></pre>
+
+<p>However, if such a convenient alternate method is not readily available, or when you face a problem in someone other's (not your own) code and patching that would need a hassle, then another workaround is necessary.</p>
+<p>Also you can use <a href="https://github.com/Mithgol/nwglobal"><code>nwglobal</code></a>, which returns the global objects in Node context, to workaround the type checking in some cases.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Protect%20JavaScript%20Source%20Code/" class="btn btn-neutral float-right" title="Protect JavaScript Source Code"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Content%20Verification/" class="btn btn-neutral" title="Content Verification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Content%20Verification/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Protect%20JavaScript%20Source%20Code/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

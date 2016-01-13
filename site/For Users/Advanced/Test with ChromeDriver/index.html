@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Test with ChromeDriver - NW.js Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Test with ChromeDriver";
+  </script>
+  
+  <script src="../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
+  <script src="../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../.." class="icon icon-home"> NW.js Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Developers</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Building%20NW.js/">Building NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Repositories/">Repositories</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>For Users</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Debugging%20with%20DevTools/">Debugging with DevTools</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../FAQ/">FAQ</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Getting%20Started/">Getting Started</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Package%20and%20Distribute/">Package and Distribute</a>
+        
+    </li>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Advanced</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Build%20Flavors/">Build Flavors</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Content%20Verification/">Content Verification</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../JavaScript%20Contexts%20in%20NW.js/">JavaScript Contexts in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Protect%20JavaScript%20Source%20Code/">Protect JavaScript Source Code</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Security%20in%20NW.js/">Security in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Test with ChromeDriver</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#test-with-chromedriver-doctitle">Test with ChromeDriver {: .doctitle}</a></li>
+                
+                    <li><a class="toctree-l4" href="#getting-started">Getting started</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Transparent%20Window/">Transparent Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Use%20NaCl%20in%20NW.js/">Use NaCl in NW.js</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../Use%20Native%20Node%20Modules/">Use Native Node Modules</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+            
+    <ul class="subnav">
+    <li><span>Migration</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../Migration/From%200.12%20to%200.13/">From 0.12 to 0.13</a>
+        
+    </li>
+
+        
+    </ul>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>References</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/App/">App</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Changes%20to%20DOM/">Changes to DOM</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Changes%20to%20Node/">Changes to Node</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Clipboard/">Clipboard</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Command%20Line%20Options/">Command Line Options</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Manifest%20Format/">Manifest Format</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Menu/">Menu</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/MenuItem/">MenuItem</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Screen/">Screen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Shell/">Shell</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Shortcut/">Shortcut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Tray/">Tray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/Window/">Window</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../../References/webview%20Tag/">webview Tag</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../..">NW.js Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Advanced &raquo;</li>
+        
+      
+    
+    <li>Test with ChromeDriver</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="test-with-chromedriver-doctitle">Test with ChromeDriver {: .doctitle}</h1>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#test-with-chromedriver-doctitle">Test with ChromeDriver {: .doctitle}</a><ul>
+<li><a href="#getting-started">Getting started</a><ul>
+<li><a href="#installing">Installing</a></li>
+<li><a href="#running">Running</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<p>From <a href="https://sites.google.com/a/chromium.org/chromedriver/">ChromeDriver project home page</a>:</p>
+<blockquote>
+<p>WebDriver is an open source tool for automated testing of webapps across many browsers. It provides capabilities for navigating to web pages, user input, JavaScript execution, and more.  ChromeDriver is a standalone server which implements WebDriver's wire protocol for Chromium. ChromeDriver is available for Chrome on Android and Chrome on Desktop (Mac, Linux, Windows and ChromeOS).</p>
+</blockquote>
+<p>NW.js provide a customized ChromeDriver for automated testing NW.js based apps. You can use it with tools like <a href="http://docs.seleniumhq.org/">selenium</a>.</p>
+<h2 id="getting-started">Getting started</h2>
+<p>The following workflow uses <a href="http://selenium-python.readthedocs.org/">selenium-python</a> to drive the tests. You can use any language port for Selenium to work with <code>chromedriver</code>.</p>
+<h3 id="installing">Installing</h3>
+<ul>
+<li>Download ChromeDriver from NW.js website</li>
+<li>Extract the package and place <code>chromedriver</code> under the same dir that contains the NW.js binaries: <code>nw</code> for Linux, <code>nw.exe</code> for Windows, or <code>node-webkit.app</code> for Mac.</li>
+<li>Install <code>selenium-python</code> in your project:</li>
+</ul>
+<pre><code class="bash">pip install selenium
+</code></pre>
+
+<h3 id="running">Running</h3>
+<p>Suppose your app shows a form for searching from remote. The page basically something like this:</p>
+<pre><code class="html">&lt;form action=&quot;http://mysearch.com/search&quot; method=&quot;GET&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;q&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>Write a Python script to automatically fill in the search box and submit the form:</p>
+<pre><code class="python">import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+chrome_options = Options()
+chrome_options.add_argument(&quot;nwapp=/path/to/your/app&quot;)
+
+driver = webdriver.Chrome(executable_path='/path/to/nwjs/chromedriver', chrome_options=chrome_options)
+
+time.sleep(5) # Wait 5s to see the web page
+search_box = driver.find_element_by_name('q')
+search_box.send_keys('ChromeDriver')
+search_box.submit()
+time.sleep(5) # Wait 5s to see the search result
+driver.quit()
+</code></pre>
+
+<p>See http://selenium-python.readthedocs.org/ for detailed documents of <code>selenium-python</code>.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Transparent%20Window/" class="btn btn-neutral float-right" title="Transparent Window"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Security%20in%20NW.js/" class="btn btn-neutral" title="Security in NW.js"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Security%20in%20NW.js/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Transparent%20Window/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
