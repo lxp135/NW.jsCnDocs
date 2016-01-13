@@ -1,22 +1,25 @@
-# Migrate from 0.12 to 0.13 {: doctitle}
+# 从0.12升级到0.13
 ---
 
 [TOC]
 
-## Architecture Changes
+## 架构变化
++ NW.js是基于Chrome内核之上的，所有Chrome支持的API与特性NW.js同样支持。现在NW.js生成的默认主机地址从`file://` 变为 `chrome-extension://`，在0.12中使用`app://`的地方改为使用`chrome-extension://`。
 
-+ NW.js application is running as a Chrome App internally. All chrome.* platform APIs and features can be used in NW application now. The default protocol is changed from `file://` to `chrome-extension://`, where the host part of the URL is the generated id. The `app://` protocol in 0.12 is replaced by `chrome-extension://` protocol.
-+ All NW specific APIs, including `require()` is moved into a `nw` object from the `nw.gui` library. However, we provided a builtin wrapper library to provide compatibility for 0.12 apps. You can use `nw.gui` library for some time before we deprecate it in 0.14 or later.
++ 所有NW.js特殊的API，原使用`require()`的情况现在需要从`nw.gui`库中new一个`nw`对象来使用。无论如何, 我们提供了一个内建的库来兼容使用0.12开发的应用。在0.14或更迟的版本我们不建议使用之后，您需要使用`nw.gui`库。
+
 + The Node.js context is put in the DOM context of the background page, which is shared between opening windows as in 0.12 and before. The difference is you have access to all DOM features and chrome.* platform APIs in the Node context in 0.13.
+
 + The entry of the application is either JS or HTML as in 0.12, but as the application is internally a Chrome App, the first window is supposed to be launched by JS from the background page. If you specify a HTML file as the entry with "main" field in package.json, NW will use a default JS to open the first window and load it.
+
 + If NW.js is running under [Mixed Context Mode](../Advanced/JavaScript Contexts in NW.js.md#mixed-context-mode) (boot NW.js with `--mixed-context` argument), `nw.*` is kind of mirror of `window.*`. In this mode, you **CANNOT** share variables among frames or windows by assigning it to Node context. So do **NOT** turn on Mixed Context mode if your application is heavily depending on this variable sharing feature.
 
-## Node.js Changes
+## Node.js 变化
 
 + Node.js is bumped to 5.x in latest build. Check your NPM modules to make sure they support Node.js 5.x **especially for native modules**. There is [a list of native modules](https://github.com/nodejs/node/issues/2798) which should be migrated to latest NaN 2.
 + Add NW version information to process.versions[`nw`]. process.versions[`node-webkit`] will be deprecated later.
 
-## API Changes
+## API 变化
 
 ### Build Flavors
 
@@ -46,7 +49,7 @@
 + Window options `always-on-top` and `visible-on-all-workspaces` is renamed to [`always_on_top`](../../References/Manifest Format.md#always_on_top) and [`visible_on_all_workspaces`](../../References/Manifest Format.md#visible_on_all_workspaces) respectively in `package.json` or as argument of `Window.open()`.
 + Window is not inherited from `EventEmitter` anymore, but the methods `on()`, `once()`, `removeListener()` and `removeAllListeners()` are still supported.
 
-### Known issues
+### 已知问题
 
 + Appending zip to the executable is currently not supported. Please use plain files or a separate zip file.
 + The following window options passed to nw.Window.open() is not effective on Linux: `min_width`, `min_height`, `max_width`, `max_height`, `resizable` for now; try to set them in the callback.
