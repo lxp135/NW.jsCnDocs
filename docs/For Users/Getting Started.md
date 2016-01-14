@@ -1,26 +1,26 @@
-# Getting Started with NW.js
+# 快速开始
 ---
 
 [TOC]
 
-## What can NW.js do?
+## NW.js 能做什么?
+NW.js 基于[Chromium](http://www.chromium.org)内核与[Node.js](http://nodejs.org/)。
+NW.js让您在编写应用时可以使用Node.js及其modules与web开发技术。而且，您可以非常容易的将一个WEB应用打包成一个原生应用。
 
-NW.js is based on [Chromium](http://www.chromium.org) and [Node.js](http://nodejs.org/). It lets you call Node.js code and modules directly from browser and also use Web technologies in your app. Further, you can easily package a web application to a native application.
+## 获得 NW.js
 
-## Get NW.js
-
-You can get the latest binaries from official website http://nwjs.io. Or you can also build NW.js binaries yourself by following the instructions in [Building NW.js](../For Developers/Building NW.js.md).
+您可以从官方网站[http://nwjs.io](http://nwjs.io/)取得最新版本，或者您也可以参考[Building NW.js](../For Developers/Building NW.js.md)自己编译NW.js。
 
 !!! tip
-    You are recommended to choose SDK build flavor to develop your app, which enables you to use DevTools to debug your app. See [Build Flavors](Advanced/Build Flavors.md) for the differences between build flavors.
+    建议您选择SDK版本，在SDK版本中您可以使用DevTools工具来Debug您的应用。查看不同编译版本的区别[Build Flavors](Advanced/Build Flavors.md)。
 
-## Write NW.js App
+## 编写 NW.js 应用
 
-### Example 1 - Hello World
+### 例 1 - Hello World
 
-This the basic example shows how to write an NW.js app.
+从一个简单的例子来让我们看看如何编写一个NW.js应用。
 
-**Step 1.** Create `package.json`:
+**第一步** 创建 `package.json`配置文件:
 
 ```json
 {
@@ -29,9 +29,9 @@ This the basic example shows how to write an NW.js app.
 }
 ```
 
-`package.json` is the manifest file in your app. It is written in [JSON format](http://www.json.org/). The `main` field figures out the first page opened by the NW.js, i.e. `"index.html"` in this example. And the `name` field is the unique name used among NW.js apps. See [Manifest Format](../References/Manifest Format.md) for more details.
+`package.json` 是应用的默认配置文件，书写格式参考[JSON format](http://www.json.org/)。其中 `main` 属性设置例1中的NW.js应用打开的首页是`"index.html"`，`name` 属性设置了NW.js应用的唯一名称，更多配置属性可以查看[Manifest Format](../References/Manifest Format.md)。
 
-**Step 2.** Create `index.html`:
+**第二步** 创建首页 `index.html`:
 
 ```html
 <!DOCTYPE html>
@@ -45,26 +45,26 @@ This the basic example shows how to write an NW.js app.
 </html>
 ```
 
-This is the normal HTML file. You can use any web technologies supported by latest browsers.
+这是一个简单的HTML页面文件，您可以使用任何最新浏览器支持的WEB开发技术。
 
-!!! note "Chromium Specific Features"
-    NW.js is based on Chromium, which also enables you to use Chrome specific features. Such as [File System API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API), experimental CSS styles with `-webkit-` prefix. **Be careful with these non-standard features since they may be deprecated shortly.**
+!!! note "Chromium核心特性"
+    由于NW.js基于Chromium核心,她允许您使用Chrome浏览器所支持独特功能，比如[File System API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_API), 与带`-webkit-`前缀的实验性CSS样式. **但是请小心使用这些非标准特性，非标准特性有可能会在新的版本中不被支持。**
 
-**Step 3.** Run your app
+**第三步** 运行您的应用
 
 ```bash
 cd /path/to/your/app
 /path/to/nw .
 ```
 
-`/path/to/nw` is the binary file of NW.js. On Windows, it's `nw.exe`; On Linux, it's `nw`; On Mac, it's `nwjs.app/Contents/MacOS/nwjs`.
+`/path/to/nw` 是NW.js生成的二进制文件。在windows系统上,文件为`nw.exe`；在Linux系统,文件为`nw`;在Mac系统,文件为`nwjs.app/Contents/MacOS/nwjs`.
 
-!!! tip "Drag &amp; Drop on Windows"
-    On Windows, you can drag the `package.json` to `nw.exe` to run your app.
+!!! tip "拖拽 &amp; Drop on Windows"
+    在使用windows系统时，您可以拖拽`package.json`文件到`nw.exe`文件之上来运行应用。
 
-### Example 2 - Using NW.js APIs
+### 例 2 - 使用 NW.js APIs
 
-All NW.js APIs are loaded in `nw` object globally and can be used directly in JavaScript files. See [API References](../index.md#references) for full list of supported APIs.
+全部NW.js APIs都可以在任何JavaScript文件从`nw`全局对象调用。从[API References](../index.md#references)列表查看所有支持的APIs。
 
 This example shows how to create a native context menu in your NW.js app. You can create `index.html` with following content:
 ```html

@@ -1,7 +1,7 @@
-# NW.js 0.13.0 参考文档
+# NW.js 0.13.0 中文参考文档
 ---
 
-> [NW.js](http://nwjs.io) 让您可以使用WEB(html5、css3、javascript)技术，包括[Node.js](https://nodejs.org/)极其所有[modules](https://www.npmjs.org/)来开发桌面应用的一种新方式。她的前身是 "node-webkit" 项目。
+> [NW.js](http://nwjs.io) 让您可以使用WEB(html5、css3、javascript)技术，包括[Node.js](https://nodejs.org/)及其所有[modules](https://www.npmjs.org/)来开发桌面应用的一种新方式。她的前身是 "node-webkit" 项目。
 
 该文档包含三个主要组成部分:
 
@@ -9,7 +9,7 @@
 * **开发者手册** - 当您想扩展NW.js时候可以参考该部分文档
 * **参考资料** - NW.js API 文档
 
-该项目的所有源码和文档都在[GIT仓库](https://github.com/nwjs/nw.js/tree/nw13/docs)中，欢迎您来Pull Requests.
+该项目的所有源码和文档都在[GIT仓库](https://github.com/nwjs/nw.js/tree/nw13/docs)中，欢迎您来Pull Requests。
 
 ## 文档目录
 
