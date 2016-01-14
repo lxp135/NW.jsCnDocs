@@ -1,2 +1,10 @@
-site_name: NW.js Documentation
+site_name: NW.js 中文文档
 theme: readthedocs
+repo_url: http://liuxp.me
+repo_name: 刘小平
+use_directory_urls: true
+markdown_extensions:
+    - markdown.extensions.toc
+    - markdown.extensions.admonition
+    - markdown.extensions.smarty
+    - markdown.extensions.nl2br
