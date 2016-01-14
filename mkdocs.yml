@@ -8,3 +8,5 @@ markdown_extensions:
     - markdown.extensions.admonition
     - markdown.extensions.smarty
     - markdown.extensions.nl2br
+    - markdown.extensions.codehilite:
+        guess_lang: false
