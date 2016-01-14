@@ -66,7 +66,8 @@ cd /path/to/your/app
 
 全部NW.js APIs都可以在任何JavaScript文件从`nw`全局对象调用。从[API References](../index.md#references)列表查看所有支持的APIs。
 
-This example shows how to create a native context menu in your NW.js app. You can create `index.html` with following content:
+这个例子展示了如何在NW.js应用中创建一个右键菜单，您可以在例1中创建的`index.html`文件中加入如下代码：
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -78,10 +79,10 @@ This example shows how to create a native context menu in your NW.js app. You ca
 <p>'Right click' to show context menu.</p>
 
 <script>
-// Create an empty context menu
+// 创建一个空菜单
 var menu = new nw.Menu();
 
-// Add some items with label
+// 添加一些文本选项
 menu.append(new nw.MenuItem({
   label: 'Item A',
   click: function(){
@@ -92,7 +93,7 @@ menu.append(new nw.MenuItem({ label: 'Item B' }));
 menu.append(new nw.MenuItem({ type: 'separator' }));
 menu.append(new nw.MenuItem({ label: 'Item C' }));
 
-// Hooks the "contextmenu" event
+// 绑定"contextmenu"事件
 document.body.addEventListener('contextmenu', function(ev) {
   // Prevent showing default context menu
   ev.preventDefault();
@@ -107,20 +108,20 @@ document.body.addEventListener('contextmenu', function(ev) {
 </html>
 ```
 
-... then run your app:
+然后运行应用:
 ```bash
 cd /path/to/your/app
 /path/to/nw .
 ```
 
 !!! tip "require('nw.gui')"
-    The legacy way of loading NW.js APIs using `require('nw.gui')` is also supported. It returns the same `nw` object.
+	依然支持使用`require('nw.gui')`来加载NW.js APIs，同样返回`nw`对象。
 
-### Example 3 - Using Node.js API
+### 例 3 - 使用 Node.js API
 
 You can call node.js and modules directly from the DOM. So it enables endless possibilities for writing apps with nw.js.
 
-This example shows how to query the OS platform with `os` module of Node.js. Simpley create the `index.html` file with following content and run it with NW.js.
+这个例子展示了如何使用Node.js中的`os`模块来调用系统接口，您可以在`index.html`文件中加入如下代码：
 
 ```html
 <!DOCTYPE html>
@@ -130,7 +131,7 @@ This example shows how to query the OS platform with `os` module of Node.js. Sim
 </head>
 <body>
 <script>
-// get the system platform using node.js
+// 使用node.js取得系统接口
 var os = require('os');
 document.write('You are running on ', os.platform());
 </script>
@@ -138,22 +139,22 @@ document.write('You are running on ', os.platform());
 </html>
 ```
 
-You could also use the modules installed by [`npm`](https://www.npmjs.com/) with NW.js.
+您可以在NW.js中使用所有由[`npm`](https://www.npmjs.com/)安装的Node.js模块。
 
 !!! note "Native Node Modules"
     Native Node modules, built when running `npm install`, are not compatible with NW.js ABI. To use them, you have to rebuild it from source code with [`nw-gyp`](https://github.com/nwjs/nw-gyp). See [Use Native Node Modules](Advanced/Use Native Node Modules.md) for details.
 
-## What's next
+## 下一步？
 
-See [Debugging with DevTools](Debugging with DevTools.md) for debugging NW.js apps.
+查看[使用DevTools进行Debug](Debugging with DevTools.md)了解如何调试NW.js应用。
 
-See [Package and Distribute](Package and Distribute.md) for packaging and reditribute your app in production.
+查看[打包与分发](Package and Distribute.md) for packaging and reditribute your app in production.
 
-See [FAQ](FAQ.md) for issues you may encounter.
+查看[FAQ](FAQ.md) for issues you may encounter.
 
-See [the migration notes](Migration/From 0.12 to 0.13.md), if you are migrating your app from NW.js 0.12 or older versions.
+查看[从0.12升级到0.13](Migration/From 0.12 to 0.13.md)，了解如何从0.12或者更老版本升级到0.13。
 
-## Getting Help
+## 取得帮助
 
 There are lots of useful information on [NW.js wiki](https://github.com/nwjs/nw.js/wiki). The wiki is also open for everyone, and you are encouraged to publish your knowledge on wiki.
 

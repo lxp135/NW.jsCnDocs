@@ -17,7 +17,7 @@
 * 用户手册
     - [快速开始](For Users/Getting Started.md)
     - [使用DevTools进行Debug](For Users/Debugging with DevTools.md)
-    - [将项目打包与分发](For Users/Package and Distribute.md)
+    - [打包与分发](For Users/Package and Distribute.md)
     - [FAQ 常见问题](For Users/FAQ.md)
     - [从0.12升级到0.13](For Users/Migration/From 0.12 to 0.13.md)
     - 进阶
