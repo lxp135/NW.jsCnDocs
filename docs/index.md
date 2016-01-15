@@ -28,7 +28,7 @@
         + [使用ChromeDriver进行测试](For Users/Advanced/Test with ChromeDriver.md)
         + [在NW.js中使用NaCl](For Users/Advanced/Use NaCl in NW.js.md)
         + [使用 Native Node Modules](For Users/Advanced/Use Native Node Modules.md)
-        + [上下文检查特性](For Users/Advanced/Content Verification.md)
+        + [内容验证](For Users/Advanced/Content Verification.md)
 * 开发者手册
     - [编译NW.js](For Developers/Building NW.js.md)
     - [向NW.js贡献代码](For Developers/Contributing to NW.js.md)

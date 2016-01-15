@@ -3,6 +3,17 @@ theme: readthedocs
 repo_url: http://liuxp.me
 repo_name: 刘小平
 use_directory_urls: false
+copyright: NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。
+pages:
+- 首页: index.md
+- 用户手册:
+    - 使用DevTools进行Debug: For Users/Debugging with DevTools.md
+    - FAQ: For Users/FAQ.md
+    - 快速开始: For Users/Getting Started.md
+    - 打包与分发: For Users/Package and Distribute.md
+    - 进阶:
+        - Build 特性: For Users/Advanced/Build Flavors.md
+        - 内容验证: For Users/Advanced/Content Verification.md
 markdown_extensions:
     - markdown.extensions.toc
     - markdown.extensions.admonition
