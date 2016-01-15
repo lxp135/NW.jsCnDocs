@@ -161,3 +161,7 @@ document.write('You are running on ', os.platform());
 您也可以在[mail list on Google group](https://groups.google.com/forum/#!forum/nwjs-general)这个邮件列表中提出您的问题，或者在[Gitter](https://gitter.im/nwjs/nw.js)中参与讨论。
 
 请在[GitHub](https://github.com/nwjs/nw.js/issues)上报告BUG和提交需求，使NW.js变得更强大。
+
+## 关于中文文档翻译
+
+NW.js中文文档翻译由[刘小平](http://liuxp.me)提供，项目托管在[GitHub](https://github.com/lxp135/NW.jsCnDocs)，欢迎您参与翻译。
