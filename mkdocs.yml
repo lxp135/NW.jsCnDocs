@@ -2,49 +2,7 @@ site_name: NW.js 中文文档
 theme: readthedocs
 use_directory_urls: false
 copyright: NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。
-pages:
-- home: index.md
-- 用户手册:
-    - 使用DevTools调试: For Users/Debugging with DevTools.md
-    - FAQ: For Users/FAQ.md
-    - 快速开始: For Users/Getting Started.md
-    - 打包与分发: For Users/Package and Distribute.md
-    - 进阶:
-        - Build 特性: For Users/Advanced/Build Flavors.md
-        - 内容验证: For Users/Advanced/Content Verification.md
-        - 在NW.js中使用JavaScript: For Users/Advanced/JavaScript Contexts in NW.js.md
-        - 编译JavaScript代码: For Users/Advanced/Protect JavaScript Source Code.md
-        - NW.js的安全性: For Users/Advanced/Security in NW.js.md
-        - 使用ChromeDriver进行测试: For Users/Advanced/Test with ChromeDriver.md
-        - 透明窗口: For Users/Advanced/Transparent Window.md
-        - 在NW.js中使用NaCl: For Users/Advanced/Use NaCl in NW.js.md
-        - 使用 Native Node Modules: For Users/Advanced/Use Native Node Modules.md
-    - 合并版本:
-        - 从0.12升级到0.13: For Users/Migration/From 0.12. to 0.13.md
-- 参考资料:
-    - App: References/App.md
-    - Changes to DOM: References/Changes to DOM.md
-    - Changes to Node: References/Changes to Node.md
-    - Clipboard: References/Clipboard.md
-    - Command Line Options: References/Command Line Options.md
-    - Manifest Format: References/Manifest Format.md
-    - Menu: References/Menu.md
-    - MenuItem: References/MenuItem.md
-    - Screen: References/Screen.md
-    - Shell: References/Shell.md
-    - Shortcut: References/Shortcut.md
-    - Tray: References/Tray.md
-    - webview Tag: References/webview Tag.md
-    - Window: References/Window.md
-- 开发者手册:
-    - Building NW.js:For Developers/Building NW.js.md
-    - Contributing to NW.js:For Developers/Contributing to NW.js.md
-    - Contributors of Documents:For Developers/Contributors of Documents.md
-    - Enable Proprietary Codecs:For Developers/Enable Proprietary Codecs.md
-    - Repositories:For Developers/Repositories.md
-    - Understanding Crash Dump:For Developers/Understanding Crash Dump.md
-    - Writing Documents for NW.js:For Developers/Writing Documents for NW.js.md
-    - Writing Test Cases for NW.js:For Developers/Writing Test Cases for NW.js.md
+
 markdown_extensions:
     - markdown.extensions.toc
     - markdown.extensions.admonition
