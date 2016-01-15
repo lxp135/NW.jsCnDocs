@@ -95,9 +95,9 @@ menu.append(new nw.MenuItem({ label: 'Item C' }));
 
 // 绑定"contextmenu"事件
 document.body.addEventListener('contextmenu', function(ev) {
-  // Prevent showing default context menu
+  // 阻止弹出默认菜单
   ev.preventDefault();
-  // Popup the native context menu at place you click
+  // 在你点击的位置弹出自定义菜单
   menu.popup(ev.x, ev.y);
 
   return false;
@@ -142,7 +142,7 @@ document.write('You are running on ', os.platform());
 您可以在NW.js中使用所有由[`npm`](https://www.npmjs.com/)安装的Node.js模块。
 
 !!! note "Native Node Modules"
-    Native Node modules, built when running `npm install`, are not compatible with NW.js ABI. To use them, you have to rebuild it from source code with [`nw-gyp`](https://github.com/nwjs/nw-gyp). See [Use Native Node Modules](Advanced/Use Native Node Modules.md) for details.
+    本地使用`npm install`安装的原生Node模块，并不能在NW.js中直接使用。想使用某个Node模块的话，你必须使用[`nw-gyp`](https://github.com/nwjs/nw-gyp)从该模块源代码重新编译。有关详细信息，请参阅[Use Native Node Modules](Advanced/Use Native Node Modules.md)。
 
 ## 下一步？
 
