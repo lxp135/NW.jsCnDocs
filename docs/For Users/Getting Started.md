@@ -119,7 +119,7 @@ cd /path/to/your/app
 
 ### 例 3 - 使用 Node.js API
 
-You can call node.js and modules directly from the DOM. So it enables endless possibilities for writing apps with nw.js.
+您可以使用NW.js在应用的任何地方调用node.js及其modules。
 
 这个例子展示了如何使用Node.js中的`os`模块来调用系统接口，您可以在`index.html`文件中加入如下代码：
 
@@ -146,18 +146,18 @@ document.write('You are running on ', os.platform());
 
 ## 下一步？
 
-查看[使用DevTools进行Debug](Debugging with DevTools.md)了解如何调试NW.js应用。
+查看[使用DevTools进行Debug](Debugging with DevTools.md)，了解如何调试NW.js应用。
 
-查看[打包与分发](Package and Distribute.md) for packaging and reditribute your app in production.
+查看[打包与分发](Package and Distribute.md)，了解如何将您的NW.js应用打包成成品并发布。
 
-查看[FAQ](FAQ.md) for issues you may encounter.
+查看[FAQ](FAQ.md)，了解常见问题。
 
 查看[从0.12升级到0.13](Migration/From 0.12 to 0.13.md)，了解如何从0.12或者更老版本升级到0.13。
 
 ## 取得帮助
 
-There are lots of useful information on [NW.js wiki](https://github.com/nwjs/nw.js/wiki). The wiki is also open for everyone, and you are encouraged to publish your knowledge on wiki.
+更多有用的信息请查看[NW.js wiki](https://github.com/nwjs/nw.js/wiki)。该wiki对所有人开放，欢迎您参与编辑分享您所知道关于NW.js的知识。
 
-You can also ask questions on [mail list on Google group](https://groups.google.com/forum/#!forum/nwjs-general) or chat on [Gitter](https://gitter.im/nwjs/nw.js).
+您也可以在[mail list on Google group](https://groups.google.com/forum/#!forum/nwjs-general)这个邮件列表中提出您的问题，或者在[Gitter](https://gitter.im/nwjs/nw.js)中参与讨论。
 
-Please report bugs or submit requirements on [GitHub](https://github.com/nwjs/nw.js/issues) to make NW.js more powerful.
+请在[GitHub](https://github.com/nwjs/nw.js/issues)上报告BUG和提交需求，使NW.js变得更强大。
