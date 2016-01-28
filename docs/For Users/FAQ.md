@@ -1,13 +1,13 @@
-# FAQ {: .doctitle}
+# FAQ 常见问题
 ---
 
 [TOC]
 
-## 1. `var crypto = require('crypto')` gets a wrong object
-Chromium has its own global `crypto` object which can't be overwritten. So you can't use the same variable name `crypto`. Changing your variable name to something else, like `nodeCrypto`, will work.
+## 1. `var crypto = require('crypto')` 获得了一个错误的对象
+`crypto`是Chromium所使用的全局对象，它不能被覆盖。所以您不能使用`crypto`这个变量名。改写您自定义的变量名，比如改为`nodeCrypto`即可。
 
-## 2. Images are broken in AnugarJS and receive `Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME` in DevTools
-AngularJS added `unsafe:` prefix for unknown scheme to prevent XSS attack. URLs in NW.js and Chrome apps are started with `chrome-extension:` scheme, which is unknown to AnuglarJS. The solution is to config the whitelist of known schemes with AngularJS by adding following lines:
+## 2. 在AnugarJS中图片不可用并在DevTools中可以看到`Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME`错误信息。
+为了抵御XSS攻击AngularJS添加了 `unsafe:`未知前缀机制。NW.js和Chrome应用程序的URL都以`chrome-extension:`前缀开头，AnuglarJS还不能正确识别。解决的办法是使用如下代码修改AngularJS的白名单配置添加`chrome-extension:`：
 
 ```javascript
 myApp.config(['$compileProvider',
