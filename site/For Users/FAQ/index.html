@@ -138,11 +138,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#faq-doctitle">FAQ {: .doctitle}</a></li>
+                <li class="toctree-l3"><a href="#faq">FAQ 常见问题</a></li>
                 
-                    <li><a class="toctree-l4" href="#1-var-crypto-requirecrypto-gets-a-wrong-object">1. var crypto = require('crypto') gets a wrong object</a></li>
+                    <li><a class="toctree-l4" href="#1-var-crypto-requirecrypto">1. var crypto = require('crypto') 获得了一个错误的对象</a></li>
                 
-                    <li><a class="toctree-l4" href="#2-images-are-broken-in-anugarjs-and-receive-failed-to-load-resource-xxx-neterr_unknown_url_scheme-in-devtools">2. Images are broken in AnugarJS and receive Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME in DevTools</a></li>
+                    <li><a class="toctree-l4" href="#2-anugarjsdevtoolsfailed-to-load-resource-xxx-neterr_unknown_url_scheme">2. 在AnugarJS中图片不可用并在DevTools中可以看到Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME错误信息。</a></li>
                 
             
             </ul>
@@ -395,21 +395,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="faq-doctitle">FAQ {: .doctitle}</h1>
+                <h1 id="faq">FAQ 常见问题</h1>
 <hr />
 <div class="toc">
 <ul>
-<li><a href="#faq-doctitle">FAQ {: .doctitle}</a><ul>
-<li><a href="#1-var-crypto-requirecrypto-gets-a-wrong-object">1. var crypto = require(&lsquo;crypto&rsquo;) gets a wrong object</a></li>
-<li><a href="#2-images-are-broken-in-anugarjs-and-receive-failed-to-load-resource-xxx-neterr_unknown_url_scheme-in-devtools">2. Images are broken in AnugarJS and receive Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME in DevTools</a></li>
+<li><a href="#faq">FAQ 常见问题</a><ul>
+<li><a href="#1-var-crypto-requirecrypto">1. var crypto = require(&lsquo;crypto&rsquo;) 获得了一个错误的对象</a></li>
+<li><a href="#2-anugarjsdevtoolsfailed-to-load-resource-xxx-neterr_unknown_url_scheme">2. 在AnugarJS中图片不可用并在DevTools中可以看到Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME错误信息。</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="1-var-crypto-requirecrypto-gets-a-wrong-object">1. <code>var crypto = require('crypto')</code> gets a wrong object</h2>
-<p>Chromium has its own global <code>crypto</code> object which can&rsquo;t be overwritten. So you can&rsquo;t use the same variable name <code>crypto</code>. Changing your variable name to something else, like <code>nodeCrypto</code>, will work.</p>
-<h2 id="2-images-are-broken-in-anugarjs-and-receive-failed-to-load-resource-xxx-neterr_unknown_url_scheme-in-devtools">2. Images are broken in AnugarJS and receive <code>Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME</code> in DevTools</h2>
-<p>AngularJS added <code>unsafe:</code> prefix for unknown scheme to prevent XSS attack. URLs in NW.js and Chrome apps are started with <code>chrome-extension:</code> scheme, which is unknown to AnuglarJS. The solution is to config the whitelist of known schemes with AngularJS by adding following lines:</p>
+<h2 id="1-var-crypto-requirecrypto">1. <code>var crypto = require('crypto')</code> 获得了一个错误的对象</h2>
+<p><code>crypto</code>是Chromium所使用的全局对象，它不能被覆盖。所以您不能使用<code>crypto</code>这个变量名。改写您自定义的变量名，比如改为<code>nodeCrypto</code>即可。</p>
+<h2 id="2-anugarjsdevtoolsfailed-to-load-resource-xxx-neterr_unknown_url_scheme">2. 在AnugarJS中图片不可用并在DevTools中可以看到<code>Failed to load resource XXX net::ERR_UNKNOWN_URL_SCHEME</code>错误信息。</h2>
+<p>为了抵御XSS攻击AngularJS添加了 <code>unsafe:</code>未知前缀机制。NW.js和Chrome应用程序的URL都以<code>chrome-extension:</code>前缀开头，AnuglarJS还不能正确识别。解决的办法是使用如下代码修改AngularJS的白名单配置添加<code>chrome-extension:</code>：</p>
 <pre class="codehilite"><code class="language-javascript">myApp.config(['$compileProvider',
   function($compileProvider) {
     $compileProvider.imgSrcSanitizationWhitelist(/^\s*((https?|ftp|file|blob|chrome-extension):|data:image\/)/);
@@ -435,7 +435,7 @@
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。</p>
+      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
     
   </div>
 

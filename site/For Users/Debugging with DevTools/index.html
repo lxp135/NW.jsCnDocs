@@ -131,11 +131,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#debugging-with-devtools-doctitle">Debugging with DevTools {: .doctitle}</a></li>
+                <li class="toctree-l3"><a href="#devtools">使用DevTools调试</a></li>
                 
-                    <li><a class="toctree-l4" href="#open-developer-tools">Open Developer Tools</a></li>
+                    <li><a class="toctree-l4" href="#devtools_1">如何打开DevTools调试工具</a></li>
                 
-                    <li><a class="toctree-l4" href="#remote-debugging">Remote Debugging</a></li>
+                    <li><a class="toctree-l4" href="#_1">远程调试</a></li>
                 
             
             </ul>
@@ -395,17 +395,17 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="debugging-with-devtools-doctitle">Debugging with DevTools {: .doctitle}</h1>
+                <h1 id="devtools">使用DevTools调试</h1>
 <hr />
 <div class="admonition note">
-<p class="admonition-title">SDK Flavor Only</p>
-<p>DevTools is only available in <a href="../Advanced/Build%20Flavors/index.html">SDK flavor</a>. It&rsquo;s recommended to use SDK flavor to develop and test your app. And use other flavors for production.</p>
+<p class="admonition-title">SDK版本特性</p>
+<p>DevTools仅在<a href="../Advanced/Build%20Flavors/index.html">SDK flavor</a>版本中工作，建议您使用SDK版本进行开发与调试NW.js应用。使用其他版本发布应用。</p>
 </div>
-<h2 id="open-developer-tools">Open Developer Tools</h2>
-<p>DevTools can be opened with keyboard shortcut <kbd>F12</kbd> for Windows and Linux or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd>.</p>
-<p>Alternatively, you may open DevTools programmatically using NW.js API <a href="../../References/Window/index.html##winshowdevtoolsiframe-headless-callback">win.showDevTools()`</a> for a window.</p>
-<h2 id="remote-debugging">Remote Debugging</h2>
-<p>You can use the <code>--remote-debugging-port=port</code> command line option to specify which port the DevTools should listen to. For example, by running <code>nw --remote-debugging-port=9222</code>, you can open http://localhost:9222/ in your browser to visit the debugger remotely.</p>
+<h2 id="devtools_1">如何打开DevTools调试工具</h2>
+<p>您可以在Windows、Linux和<kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd>上使用快捷键<kbd>F12</kbd>调出DevTools。</p>
+<p>你还可以使用DevTools来调试你所使用的NW.js 窗口API <a href="../../References/Window/index.html##winshowdevtoolsiframe-headless-callback">win.showDevTools()`</a>。</p>
+<h2 id="_1">远程调试</h2>
+<p>您可以在命令行输入<code>--remote-debugging-port=port</code>并指定端口来启动DevTools监听。举个例子，输入并运行<code>nw --remote-debugging-port=9222</code>，可以在你自己的浏览器中输入网址http://localhost:9222/来进行远程调试。</p>
               
             </div>
           </div>
@@ -426,7 +426,7 @@
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。</p>
+      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
     
   </div>
 

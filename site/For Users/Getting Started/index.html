@@ -496,9 +496,9 @@ menu.append(new nw.MenuItem({ label: 'Item C' }));
 
 // 绑定&quot;contextmenu&quot;事件
 document.body.addEventListener('contextmenu', function(ev) {
-  // Prevent showing default context menu
+  // 阻止弹出默认菜单
   ev.preventDefault();
-  // Popup the native context menu at place you click
+  // 在你点击的位置弹出自定义菜单
   menu.popup(ev.x, ev.y);
 
   return false;
@@ -539,7 +539,7 @@ document.write('You are running on ', os.platform());
 <p>您可以在NW.js中使用所有由<a href="https://www.npmjs.com/"><code>npm</code></a>安装的Node.js模块。</p>
 <div class="admonition note">
 <p class="admonition-title">Native Node Modules</p>
-<p>Native Node modules, built when running <code>npm install</code>, are not compatible with NW.js ABI. To use them, you have to rebuild it from source code with <a href="https://github.com/nwjs/nw-gyp"><code>nw-gyp</code></a>. See <a href="../Advanced/Use%20Native%20Node%20Modules/index.html">Use Native Node Modules</a> for details.</p>
+<p>本地使用<code>npm install</code>安装的原生Node模块，并不能在NW.js中直接使用。想使用某个Node模块的话，你必须使用<a href="https://github.com/nwjs/nw-gyp"><code>nw-gyp</code></a>从该模块源代码重新编译。有关详细信息，请参阅<a href="../Advanced/Use%20Native%20Node%20Modules/index.html">使用 Native Node Modules</a>。</p>
 </div>
 <h2 id="_2">下一步？</h2>
 <p>查看<a href="../Debugging%20with%20DevTools/index.html">使用DevTools进行Debug</a>，了解如何调试NW.js应用。</p>
@@ -570,7 +570,7 @@ document.write('You are running on ', os.platform());
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。</p>
+      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
     
   </div>
 

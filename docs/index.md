@@ -16,14 +16,14 @@
 * [主页](index.md)
 * 用户手册
     - [快速开始](For Users/Getting Started.md)
-    - [使用DevTools进行Debug](For Users/Debugging with DevTools.md)
+    - [使用DevTools调试](For Users/Debugging with DevTools.md)
     - [打包与分发](For Users/Package and Distribute.md)
     - [FAQ 常见问题](For Users/FAQ.md)
     - [从0.12升级到0.13](For Users/Migration/From 0.12 to 0.13.md)
     - 进阶
         + [Build 特性](For Users/Advanced/Build Flavors.md)
-        + [在NW.js使用JavaScript上下文](For Users/Advanced/JavaScript Contexts in NW.js.md)
-        + [项目中的JavaScript代码](For Users/Advanced/Protect JavaScript Source Code.md)
+        + [在NW.js使用JavaScript](For Users/Advanced/JavaScript Contexts in NW.js.md)
+        + [编译JavaScript代码](For Users/Advanced/Protect JavaScript Source Code.md)
         + [NW.js的安全性](For Users/Advanced/Security in NW.js.md)
         + [使用ChromeDriver进行测试](For Users/Advanced/Test with ChromeDriver.md)
         + [在NW.js中使用NaCl](For Users/Advanced/Use NaCl in NW.js.md)

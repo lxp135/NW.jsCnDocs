@@ -142,7 +142,7 @@ document.write('You are running on ', os.platform());
 您可以在NW.js中使用所有由[`npm`](https://www.npmjs.com/)安装的Node.js模块。
 
 !!! note "Native Node Modules"
-    本地使用`npm install`安装的原生Node模块，并不能在NW.js中直接使用。想使用某个Node模块的话，你必须使用[`nw-gyp`](https://github.com/nwjs/nw-gyp)从该模块源代码重新编译。有关详细信息，请参阅[Use Native Node Modules](Advanced/Use Native Node Modules.md)。
+    本地使用`npm install`安装的原生Node模块，并不能在NW.js中直接使用。想使用某个Node模块的话，你必须使用[`nw-gyp`](https://github.com/nwjs/nw-gyp)从该模块源代码重新编译。有关详细信息，请参阅[使用 Native Node Modules](Advanced/Use Native Node Modules.md)。
 
 ## 下一步？
 
