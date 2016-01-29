@@ -1,21 +1,21 @@
-# Package and Distribute {: .doctitle}
+# 打包与分发
 ---
 
 [TOC]
 
-This document guides you how to package and distribute NW.js based app.
+这篇指南文档将教会你如何打包与分发NW.js应用。
 
-## Quick Start
+## 快速开始
 
-You can use [`nw-builder`](https://github.com/nwjs/nw-builder) to quickly generate a package for you.
+你可以使用[`nw-builder`](https://github.com/nwjs/nw-builder)来快速的形成一个程序包。
 
-1. [Prepare your app](#prepare-your-app) as below.
-2. Install `nw-builder` with `npm install -g nw-builder`
-3. Package your app with `nwbuild -p linux64 /path/to/your/app`
+1. 在打包之前[准备好你的应用](#_3)。
+2. 输入 `npm install -g nw-builder` 安装  `nw-builder`。
+3. 输入 `nwbuild -p linux64 /path/to/your/app` 打包你的应用。
 
-Your app can be found in `./build` folder.
+打包完成的应用将在`./build`文件夹中找到。
 
-## Prepare Your App
+## 准备好你的应用
 
 Before packaging, you should prepare all necessary files on hands. Check out following checklist to make sure you didn't miss anything:
 
