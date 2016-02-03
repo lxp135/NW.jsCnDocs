@@ -1,7 +1,50 @@
 site_name: NW.js 中文文档
 theme: readthedocs
-use_directory_urls: false
+use_directory_urls: true
+site_url: http://liuxp.me/nwjs
+site_author: 刘小平
+repo_url: https://github.com/lxp135/NW.jsCnDocs
 copyright: NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script>
+
+pages:
+- ['index.md', '首页']
+- ['For Users/Debugging with DevTools.md', '用户手册', '使用DevTools调试']
+- ['For Users/FAQ.md', '用户手册', 'FAQ']
+- ['For Users/Getting Started.md', '用户手册', '快速开始']
+- ['For Users/Package and Distribute.md', '用户手册', '打包与分发']
+- ['For Users/Advanced/Build Flavors.md', '用户手册', '进阶：Build 特性']
+- ['For Users/Advanced/Content Verification.md', '用户手册', '进阶：内容验证']
+- ['For Users/Advanced/JavaScript Contexts in NW.js.md', '用户手册', '进阶：在NW.js中使用JavaScript']
+- ['For Users/Advanced/Protect JavaScript Source Code.md', '用户手册', '进阶：编译JavaScript代码']
+- ['For Users/Advanced/Security in NW.js.md', '用户手册', '进阶：NW.js的安全性']
+- ['For Users/Advanced/Test with ChromeDriver.md', '用户手册', '进阶：使用ChromeDriver进行测试']
+- ['For Users/Advanced/Transparent Window.md', '用户手册', '进阶：透明窗口']
+- ['For Users/Advanced/Use NaCl in NW.js.md', '用户手册', '进阶：在NW.js中使用NaCl']
+- ['For Users/Advanced/Use Native Node Modules.md', '用户手册', '进阶：使用 Native Node Modules']
+- ['For Users/Migration/From 0.12 to 0.13.md', '用户手册', '合并版本：从0.12升级到0.13']
+- ['For Developers/Building NW.js.md', '开发者手册', 'Building NW.js']
+- ['For Developers/Contributing to NW.js.md', '开发者手册', 'Contributing to NW.js']
+- ['For Developers/Contributors of Documents.md', '开发者手册', 'Contributors of Documents']
+- ['For Developers/Enable Proprietary Codecs.md', '开发者手册', 'Enable Proprietary Codecs']
+- ['For Developers/Repositories.md', '开发者手册', 'Repositories']
+- ['For Developers/Understanding Crash Dump.md', '开发者手册', 'Understanding Crash Dump']
+- ['For Developers/Writing Documents for NW.js.md', '开发者手册', 'Writing Documents for NW.js']
+- ['For Developers/Writing Test Cases for NW.js.md', '开发者手册', 'Writing Test Cases for NW.js']
+- ['References/App.md', '参考资料', 'App']
+- ['References/Changes to DOM.md', '参考资料', 'Changes to DOM']
+- ['References/Changes to Node.md', '参考资料', 'Changes to Node']
+- ['References/Clipboard.md', '参考资料', 'Clipboard']
+- ['References/Command Line Options.md', '参考资料', 'Command Line Options']
+- ['References/Manifest Format.md', '参考资料', 'Manifest Format']
+- ['References/Menu.md', '参考资料', 'Menu']
+- ['References/MenuItem.md', '参考资料', 'MenuItem']
+- ['References/Screen.md', '参考资料', 'Screen']
+- ['References/Shell.md', '参考资料', 'Shell']
+- ['References/Shortcut.md', '参考资料', 'Shortcut']
+- ['References/Tray.md', '参考资料', 'Tray']
+- ['References/webview Tag.md', '参考资料', 'webview Tag']
+- ['References/Window.md', '参考资料', 'Window']
+
 
 markdown_extensions:
     - markdown.extensions.toc

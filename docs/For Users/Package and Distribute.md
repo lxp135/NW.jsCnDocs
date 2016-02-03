@@ -17,36 +17,36 @@
 
 ## 准备好你的应用
 
-Before packaging, you should prepare all necessary files on hands. Check out following checklist to make sure you didn't miss anything:
+在打包之前，你应该准备所有必要的文件。根据下面的清单进行检查，确保没有任何缺失：
 
-* [ ] Source code and resources
-* [ ] Install NPM modules with `npm install`
-* [ ] [Rebuild native Node modules](Advanced/Use Native Node Modules.md)
-* [ ] [Build NaCl binaries](Advanced/Use NaCl in NW.js.md)
-* [ ] [Compile source code](Advanced/Protect JavaScript Source Code.md) and remove the original files
-* [ ] Icon used in [manifest file](../References/Manifest Format.md#icon)
+* [ ] 源代码与资源文件
+* [ ] 使用`npm install`安装NPM模块
+* [ ] [重新编译原生Node.js模块](Advanced/Use Native Node Modules.md)
+* [ ] [编译 NaCl binaries](Advanced/Use NaCl in NW.js.md)
+* [ ] [压缩JS源代码](Advanced/Protect JavaScript Source Code.md)并删除原始文件
+* [ ] 在[manifest file](../References/Manifest Format.md#icon)中配置图标
 
-!!! warning
+!!! 警告
     Do not assume your `node_modules` that target one platform work _as is_ in all platforms. For instance `node-email-templates` has specific Windows & Mac OS X`npm install` commands. Besides, it requires python to install properly, which is not installed by default on Windows.
     As a rule of thumb **`npm install` your `package.json` on each platform you target** to ensure everything works as expected.
 
-!!! note "Filename and Path"
+!!! note "文件名与路径"
     On most Linux and some Mac OS X, the file system is **case sensitive**. That means `test.js` and `Test.js` are different files. Make sure the paths and filenames used in your app have the right case. Otherwise your app may look bad or crash on those file systems.
 
-!!! note "Long Path on Windows"
+!!! note "在windows中使用长路径"
     The length of path used in your app may exceed the maximum length (260 characters) on Windows. That will cause various build failures. This usually happens during installing dependencies with `npm install` using older version of NPM (<3.0). Please build your app in the root directory, like `C:\build\`, to avoid this issue as much as possible.
 
-## Prepare NW.js
+## 准备 NW.js
 
 You have to redistribute NW.js with your app to get your app running. NW.js provided multiple [build flavors](Advanced/Build Flavors.md) for different requirements and package size. Choose the proper build flavor for your product or [build it from source code](../For Developers/Building NW.js.md).
 
 All files in the downloaded package should be redistributed with your product, except `nwjc` or `nwjc.exe` in SDK flavor.
 
-## Package Your App
+## 打包你的应用
 
 There two options to pack your app: plain files or zip file.
 
-### Package Option 1. Plain Files (Recommended)
+### 打包方式1：普通文件 (推荐方式)
 
 On Windows and Linux, you can put the files of your app in the same folder of NW.js binaries and then ship them to your users. Make sure `nw` (or `nw.exe`) is in the same folder as `package.json`. Or you can put the files of your app in a folder named `package.nw` in the same folder as `nw` (or `nw.exe`).
 
@@ -54,7 +54,7 @@ On Mac, put the files of your app into a folder named `app.nw` in `nwjs.app/Cont
 
 It's the recommended way to pack your app.
 
-### Package Option 2. Zip File
+### 打包方式2：ZIP压缩文件
 
 You can package all the files into a zip file and rename it as `package.nw`. And put it along with NW.js binaries for Windows and Linux. For Mac, put `package.nw` in `nwjs.app/Contents/Resources/`.
 
@@ -71,7 +71,7 @@ or following command on Linux:
 cat nw app.nw > app && chmod +x app 
 ```
 
-## Platform Specific Steps
+## 不同平台区别
 
 ### Windows
 
@@ -96,6 +96,6 @@ On Mac OS X, you need to modify following files to have your own icon and boundl
 
 And you should sign you Mac app. Or the user won't launch the app if Gatekeeper is turned on. See [Signed Apps or Installer Packages](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html) for details.
 
-## References
+## 参考资料
 
-See [wiki of NW.js](https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps) for more tools of packaging your app.
+在[wiki of NW.js](https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps)中可以找到更多工具来打包你的应用。

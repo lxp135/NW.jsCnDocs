@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Package and Distribute - NW.js 中文文档</title>
+  <title>打包与分发 - NW.js 中文文档</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Package and Distribute";
+    var mkdocs_page_name = "打包与分发";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -38,7 +38,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../index.html" class="icon icon-home"> NW.js 中文文档</a>
+        <a href="../.." class="icon icon-home"> NW.js 中文文档</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -51,120 +51,56 @@
           
             <li>
     <li class="toctree-l1 ">
-        <a class="" href="../../index.html">Home</a>
+        <a class="" href="../..">首页</a>
         
     </li>
 <li>
           
             <li>
     <ul class="subnav">
-    <li><span>For Developers</span></li>
+    <li><span>用户手册</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Building%20NW.js/index.html">Building NW.js</a>
+        <a class="" href="../Debugging%20with%20DevTools/">使用DevTools调试</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Contributing%20to%20NW.js/index.html">Contributing to NW.js</a>
+        <a class="" href="../FAQ/">FAQ</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Contributors%20of%20Documents/index.html">Contributors of Documents</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Enable%20Proprietary%20Codecs/index.html">Enable Proprietary Codecs</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Repositories/index.html">Repositories</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Understanding%20Crash%20Dump/index.html">Understanding Crash Dump</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Writing%20Documents%20for%20NW.js/index.html">Writing Documents for NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/index.html">Writing Test Cases for NW.js</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>For Users</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Debugging%20with%20DevTools/index.html">Debugging with DevTools</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../FAQ/index.html">FAQ</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Getting%20Started/index.html">Getting Started</a>
+        <a class="" href="../Getting%20Started/">快速开始</a>
         
     </li>
 
         
             
     <li class="toctree-l1 current">
-        <a class="current" href="index.html">Package and Distribute</a>
+        <a class="current" href="./">打包与分发</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#package-and-distribute-doctitle">Package and Distribute {: .doctitle}</a></li>
+                <li class="toctree-l3"><a href="#_1">打包与分发</a></li>
                 
-                    <li><a class="toctree-l4" href="#quick-start">Quick Start</a></li>
+                    <li><a class="toctree-l4" href="#_2">快速开始</a></li>
                 
-                    <li><a class="toctree-l4" href="#prepare-your-app">Prepare Your App</a></li>
+                    <li><a class="toctree-l4" href="#_3">准备好你的应用</a></li>
                 
-                    <li><a class="toctree-l4" href="#prepare-nwjs">Prepare NW.js</a></li>
+                    <li><a class="toctree-l4" href="#nwjs">准备 NW.js</a></li>
                 
-                    <li><a class="toctree-l4" href="#package-your-app">Package Your App</a></li>
+                    <li><a class="toctree-l4" href="#_4">打包你的应用</a></li>
                 
-                    <li><a class="toctree-l4" href="#platform-specific-steps">Platform Specific Steps</a></li>
+                    <li><a class="toctree-l4" href="#_5">不同平台区别</a></li>
                 
-                    <li><a class="toctree-l4" href="#references">References</a></li>
+                    <li><a class="toctree-l4" href="#_6">参考资料</a></li>
                 
             
             </ul>
@@ -173,89 +109,73 @@
 
         
             
-    <ul class="subnav">
-    <li><span>Advanced</span></li>
-
-        
-            
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Build%20Flavors/index.html">Build Flavors</a>
+        <a class="" href="../Advanced/Build%20Flavors/">进阶：Build 特性</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Content%20Verification/index.html">Content Verification</a>
+        <a class="" href="../Advanced/Content%20Verification/">进阶：内容验证</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/JavaScript%20Contexts%20in%20NW.js/index.html">JavaScript Contexts in NW.js</a>
+        <a class="" href="../Advanced/JavaScript%20Contexts%20in%20NW.js/">进阶：在NW.js中使用JavaScript</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Protect%20JavaScript%20Source%20Code/index.html">Protect JavaScript Source Code</a>
+        <a class="" href="../Advanced/Protect%20JavaScript%20Source%20Code/">进阶：编译JavaScript代码</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Security%20in%20NW.js/index.html">Security in NW.js</a>
+        <a class="" href="../Advanced/Security%20in%20NW.js/">进阶：NW.js的安全性</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Test%20with%20ChromeDriver/index.html">Test with ChromeDriver</a>
+        <a class="" href="../Advanced/Test%20with%20ChromeDriver/">进阶：使用ChromeDriver进行测试</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Transparent%20Window/index.html">Transparent Window</a>
+        <a class="" href="../Advanced/Transparent%20Window/">进阶：透明窗口</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Use%20NaCl%20in%20NW.js/index.html">Use NaCl in NW.js</a>
+        <a class="" href="../Advanced/Use%20NaCl%20in%20NW.js/">进阶：在NW.js中使用NaCl</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Use%20Native%20Node%20Modules/index.html">Use Native Node Modules</a>
+        <a class="" href="../Advanced/Use%20Native%20Node%20Modules/">进阶：使用 Native Node Modules</a>
         
     </li>
-
-        
-    </ul>
-
-        
-            
-    <ul class="subnav">
-    <li><span>Migration</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../Migration/From%200.12%20to%200.13/index.html">From 0.12 to 0.13</a>
+        <a class="" href="../Migration/From%200.12%20to%200.13/">合并版本：从0.12升级到0.13</a>
         
     </li>
-
-        
-    </ul>
 
         
     </ul>
@@ -263,103 +183,167 @@
           
             <li>
     <ul class="subnav">
-    <li><span>References</span></li>
+    <li><span>开发者手册</span></li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/App/index.html">App</a>
+        <a class="" href="../../For%20Developers/Building%20NW.js/">Building NW.js</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Changes%20to%20DOM/index.html">Changes to DOM</a>
+        <a class="" href="../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Changes%20to%20Node/index.html">Changes to Node</a>
+        <a class="" href="../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Clipboard/index.html">Clipboard</a>
+        <a class="" href="../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Command%20Line%20Options/index.html">Command Line Options</a>
+        <a class="" href="../../For%20Developers/Repositories/">Repositories</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Manifest%20Format/index.html">Manifest Format</a>
+        <a class="" href="../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Menu/index.html">Menu</a>
+        <a class="" href="../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/MenuItem/index.html">MenuItem</a>
+        <a class="" href="../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>参考资料</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/App/">App</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Screen/index.html">Screen</a>
+        <a class="" href="../../References/Changes%20to%20DOM/">Changes to DOM</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Shell/index.html">Shell</a>
+        <a class="" href="../../References/Changes%20to%20Node/">Changes to Node</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Shortcut/index.html">Shortcut</a>
+        <a class="" href="../../References/Clipboard/">Clipboard</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Tray/index.html">Tray</a>
+        <a class="" href="../../References/Command%20Line%20Options/">Command Line Options</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/Window/index.html">Window</a>
+        <a class="" href="../../References/Manifest%20Format/">Manifest Format</a>
         
     </li>
 
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../References/webview%20Tag/index.html">webview Tag</a>
+        <a class="" href="../../References/Menu/">Menu</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/MenuItem/">MenuItem</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Screen/">Screen</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Shell/">Shell</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Shortcut/">Shortcut</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Tray/">Tray</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/webview%20Tag/">webview Tag</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../../References/Window/">Window</a>
         
     </li>
 
@@ -377,7 +361,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">NW.js 中文文档</a>
+        <a href="../..">NW.js 中文文档</a>
       </nav>
 
       
@@ -385,16 +369,20 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
         
-          <li>For Users &raquo;</li>
+          <li>用户手册 &raquo;</li>
         
       
     
-    <li>Package and Distribute</li>
+    <li>打包与分发</li>
     <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/lxp135/NW.jsCnDocs" class="icon icon-github"> Edit on GitHub</a>
+        
       
     </li>
   </ul>
@@ -403,72 +391,72 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="package-and-distribute-doctitle">Package and Distribute {: .doctitle}</h1>
+                <h1 id="_1">打包与分发</h1>
 <hr />
 <div class="toc">
 <ul>
-<li><a href="#package-and-distribute-doctitle">Package and Distribute {: .doctitle}</a><ul>
-<li><a href="#quick-start">Quick Start</a></li>
-<li><a href="#prepare-your-app">Prepare Your App</a></li>
-<li><a href="#prepare-nwjs">Prepare NW.js</a></li>
-<li><a href="#package-your-app">Package Your App</a><ul>
-<li><a href="#package-option-1-plain-files-recommended">Package Option 1. Plain Files (Recommended)</a></li>
-<li><a href="#package-option-2-zip-file">Package Option 2. Zip File</a></li>
+<li><a href="#_1">打包与分发</a><ul>
+<li><a href="#_2">快速开始</a></li>
+<li><a href="#_3">准备好你的应用</a></li>
+<li><a href="#nwjs">准备 NW.js</a></li>
+<li><a href="#_4">打包你的应用</a><ul>
+<li><a href="#1">打包方式1：普通文件 (推荐方式)</a></li>
+<li><a href="#2zip">打包方式2：ZIP压缩文件</a></li>
 </ul>
 </li>
-<li><a href="#platform-specific-steps">Platform Specific Steps</a><ul>
+<li><a href="#_5">不同平台区别</a><ul>
 <li><a href="#windows">Windows</a></li>
 <li><a href="#linux">Linux</a></li>
 <li><a href="#mac-os-x">Mac OS X</a></li>
 </ul>
 </li>
-<li><a href="#references">References</a></li>
+<li><a href="#_6">参考资料</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>This document guides you how to package and distribute NW.js based app.</p>
-<h2 id="quick-start">Quick Start</h2>
-<p>You can use <a href="https://github.com/nwjs/nw-builder"><code>nw-builder</code></a> to quickly generate a package for you.</p>
+<p>这篇指南文档将教会你如何打包与分发NW.js应用。</p>
+<h2 id="_2">快速开始</h2>
+<p>你可以使用<a href="https://github.com/nwjs/nw-builder"><code>nw-builder</code></a>来快速的形成一个程序包。</p>
 <ol>
-<li><a href="#prepare-your-app">Prepare your app</a> as below.</li>
-<li>Install <code>nw-builder</code> with <code>npm install -g nw-builder</code></li>
-<li>Package your app with <code>nwbuild -p linux64 /path/to/your/app</code></li>
+<li>在打包之前<a href="#_3">准备好你的应用</a>。</li>
+<li>输入 <code>npm install -g nw-builder</code> 安装  <code>nw-builder</code>。</li>
+<li>输入 <code>nwbuild -p linux64 /path/to/your/app</code> 打包你的应用。</li>
 </ol>
-<p>Your app can be found in <code>./build</code> folder.</p>
-<h2 id="prepare-your-app">Prepare Your App</h2>
-<p>Before packaging, you should prepare all necessary files on hands. Check out following checklist to make sure you didn&rsquo;t miss anything:</p>
+<p>打包完成的应用将在<code>./build</code>文件夹中找到。</p>
+<h2 id="_3">准备好你的应用</h2>
+<p>在打包之前，你应该准备所有必要的文件。根据下面的清单进行检查，确保没有任何缺失：</p>
 <ul>
-<li>[ ] Source code and resources</li>
-<li>[ ] Install NPM modules with <code>npm install</code></li>
-<li>[ ] <a href="../Advanced/Use%20Native%20Node%20Modules/index.html">Rebuild native Node modules</a></li>
-<li>[ ] <a href="../Advanced/Use%20NaCl%20in%20NW.js/index.html">Build NaCl binaries</a></li>
-<li>[ ] <a href="../Advanced/Protect%20JavaScript%20Source%20Code/index.html">Compile source code</a> and remove the original files</li>
-<li>[ ] Icon used in <a href="../../References/Manifest%20Format/index.html#icon">manifest file</a></li>
+<li>[ ] 源代码与资源文件</li>
+<li>[ ] 使用<code>npm install</code>安装NPM模块</li>
+<li>[ ] <a href="../Advanced/Use%20Native%20Node%20Modules/">重新编译原生Node.js模块</a></li>
+<li>[ ] <a href="../Advanced/Use%20NaCl%20in%20NW.js/">编译 NaCl binaries</a></li>
+<li>[ ] <a href="../Advanced/Protect%20JavaScript%20Source%20Code/">压缩JS源代码</a>并删除原始文件</li>
+<li>[ ] 在<a href="../../References/Manifest%20Format/#icon">manifest file</a>中配置图标</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
+<div class="admonition 警告">
+<p class="admonition-title">警告</p>
 <p>Do not assume your <code>node_modules</code> that target one platform work <em>as is</em> in all platforms. For instance <code>node-email-templates</code> has specific Windows &amp; Mac OS X<code>npm install</code> commands. Besides, it requires python to install properly, which is not installed by default on Windows.<br />
 As a rule of thumb <strong><code>npm install</code> your <code>package.json</code> on each platform you target</strong> to ensure everything works as expected.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Filename and Path</p>
+<p class="admonition-title">文件名与路径</p>
 <p>On most Linux and some Mac OS X, the file system is <strong>case sensitive</strong>. That means <code>test.js</code> and <code>Test.js</code> are different files. Make sure the paths and filenames used in your app have the right case. Otherwise your app may look bad or crash on those file systems.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Long Path on Windows</p>
+<p class="admonition-title">在windows中使用长路径</p>
 <p>The length of path used in your app may exceed the maximum length (260 characters) on Windows. That will cause various build failures. This usually happens during installing dependencies with <code>npm install</code> using older version of NPM (&lt;3.0). Please build your app in the root directory, like <code>C:\build\</code>, to avoid this issue as much as possible.</p>
 </div>
-<h2 id="prepare-nwjs">Prepare NW.js</h2>
-<p>You have to redistribute NW.js with your app to get your app running. NW.js provided multiple <a href="../Advanced/Build%20Flavors/index.html">build flavors</a> for different requirements and package size. Choose the proper build flavor for your product or <a href="../../For%20Developers/Building%20NW.js/index.html">build it from source code</a>.</p>
+<h2 id="nwjs">准备 NW.js</h2>
+<p>You have to redistribute NW.js with your app to get your app running. NW.js provided multiple <a href="../Advanced/Build%20Flavors/">build flavors</a> for different requirements and package size. Choose the proper build flavor for your product or <a href="../../For%20Developers/Building%20NW.js/">build it from source code</a>.</p>
 <p>All files in the downloaded package should be redistributed with your product, except <code>nwjc</code> or <code>nwjc.exe</code> in SDK flavor.</p>
-<h2 id="package-your-app">Package Your App</h2>
+<h2 id="_4">打包你的应用</h2>
 <p>There two options to pack your app: plain files or zip file.</p>
-<h3 id="package-option-1-plain-files-recommended">Package Option 1. Plain Files (Recommended)</h3>
+<h3 id="1">打包方式1：普通文件 (推荐方式)</h3>
 <p>On Windows and Linux, you can put the files of your app in the same folder of NW.js binaries and then ship them to your users. Make sure <code>nw</code> (or <code>nw.exe</code>) is in the same folder as <code>package.json</code>. Or you can put the files of your app in a folder named <code>package.nw</code> in the same folder as <code>nw</code> (or <code>nw.exe</code>).</p>
 <p>On Mac, put the files of your app into a folder named <code>app.nw</code> in <code>nwjs.app/Contents/Resources/</code> and done.</p>
 <p>It&rsquo;s the recommended way to pack your app.</p>
-<h3 id="package-option-2-zip-file">Package Option 2. Zip File</h3>
+<h3 id="2zip">打包方式2：ZIP压缩文件</h3>
 <p>You can package all the files into a zip file and rename it as <code>package.nw</code>. And put it along with NW.js binaries for Windows and Linux. For Mac, put <code>package.nw</code> in <code>nwjs.app/Contents/Resources/</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Start Slow with Big Package or Too Many Files</p>
@@ -483,7 +471,7 @@ You can run following command on Windows to achieve this:</p>
 <pre class="codehilite"><code class="language-bash">cat nw app.nw &gt; app &amp;&amp; chmod +x app </code></pre>
 
 
-<h2 id="platform-specific-steps">Platform Specific Steps</h2>
+<h2 id="_5">不同平台区别</h2>
 <h3 id="windows">Windows</h3>
 <p>Icon for <code>nw.exe</code> can be replaced with tools like <a href="http://www.angusj.com/resourcehacker/">Resource Hacker</a>, <a href="https://github.com/mllrsohn/node-webkit-builder">node-webkit-builder</a> and <a href="https://github.com/felicienfrancois/node-winresourcer">node-winresourcer</a>.</p>
 <p>You can create a installer to deploy all necessary files onto end user&rsquo;s system. You can use <a href="https://msdn.microsoft.com/en-us/library/cc185688(VS.85).aspx">Windows Installer</a>, <a href="http://nsis.sourceforge.net/Main_Page">NSIS</a> or <a href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a>.</p>
@@ -498,8 +486,8 @@ You can run following command on Windows to achieve this:</p>
 <li><code>Contents/Info.plist</code>: the apple package description file. You can view <a href="http://cocoadevcentral.com/articles/000071.php">Implementing Cocoa&rsquo;s Standard About Panel</a> on how this file will influence your app and what fields you should modify.</li>
 </ul>
 <p>And you should sign you Mac app. Or the user won&rsquo;t launch the app if Gatekeeper is turned on. See <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html">Signed Apps or Installer Packages</a> for details.</p>
-<h2 id="references">References</h2>
-<p>See <a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps">wiki of NW.js</a> for more tools of packaging your app.</p>
+<h2 id="_6">参考资料</h2>
+<p>在<a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps">wiki of NW.js</a>中可以找到更多工具来打包你的应用。</p>
               
             </div>
           </div>
@@ -507,10 +495,10 @@ You can run following command on Windows to achieve this:</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Advanced/Build%20Flavors/index.html" class="btn btn-neutral float-right" title="Build Flavors"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Advanced/Build%20Flavors/" class="btn btn-neutral float-right" title="进阶：Build 特性"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Getting%20Started/index.html" class="btn btn-neutral" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Getting%20Started/" class="btn btn-neutral" title="快速开始"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -537,11 +525,13 @@ You can run following command on Windows to achieve this:</p>
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
-        <span><a href="../Getting%20Started/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+        <span><a href="../Getting%20Started/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Advanced/Build%20Flavors/index.html" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Advanced/Build%20Flavors/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
