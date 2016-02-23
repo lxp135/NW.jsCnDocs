@@ -26,15 +26,15 @@
 * [ ] [压缩JS源代码](Advanced/Protect JavaScript Source Code.md)并删除原始文件
 * [ ] 在[manifest file](../References/Manifest Format.md#icon)中配置图标
 
-!!! 警告
-    Do not assume your `node_modules` that target one platform work _as is_ in all platforms. For instance `node-email-templates` has specific Windows & Mac OS X`npm install` commands. Besides, it requires python to install properly, which is not installed by default on Windows.
-    As a rule of thumb **`npm install` your `package.json` on each platform you target** to ensure everything works as expected.
+!!! Warning "警告"
+    不要假设你的`node_modules`会正确工作在所有平台上，例如`node-email-templates`在Windows和Mac OS X上需要指定的`npm install`命令来安装。而且需要Python环境才能运行，但是Python环境在Windows上默认是不存在的。
+    一个经验规则是**在每个平台上将`npm install`命令配置到对应的`package.json`中**，以确保一切正常。
 
 !!! note "文件名与路径"
-    On most Linux and some Mac OS X, the file system is **case sensitive**. That means `test.js` and `Test.js` are different files. Make sure the paths and filenames used in your app have the right case. Otherwise your app may look bad or crash on those file systems.
+	大多数Linux与Mac OS X的文件系统对于文件名是**大小写敏感**的，这意味着`test.js` 和 `Test.js` 是截然不同的两个文件。确保代码中的路径与文件名是正确的，否则你的应用在不同的文件系统上面可能会看起来有问题或者直接崩溃。
 
 !!! note "在windows中使用长路径"
-    The length of path used in your app may exceed the maximum length (260 characters) on Windows. That will cause various build failures. This usually happens during installing dependencies with `npm install` using older version of NPM (<3.0). Please build your app in the root directory, like `C:\build\`, to avoid this issue as much as possible.
+        在Windows上使用超过260个字符的路径名称，将可能导致构建失败。通常发生在依赖`npm install`安装且NPM版本小于3.0的情况下。在建立你的应用根目录时使用类似`C:\build\`这样的路径将尽可能避免这个问题。
 
 ## 准备 NW.js
 
@@ -98,4 +98,4 @@ And you should sign you Mac app. Or the user won't launch the app if Gatekeeper 
 
 ## 参考资料
 
-在[wiki of NW.js](https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps)中可以找到更多工具来打包你的应用。
+在[wiki of NW.js](https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps)中可以找到更多工具帮助你打包应用。
