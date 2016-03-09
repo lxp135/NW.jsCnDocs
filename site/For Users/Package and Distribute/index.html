@@ -457,7 +457,7 @@
 <p>在Mac系统中，新建名称为<code>app.nw</code>的文件夹，把你的应用所有相关文件放入其中，然后将<code>app.nw</code>文件夹放在<code>nwjs.app/Contents/Resources/</code>目录下即可。</p>
 <p>推荐您使用该打包方式。</p>
 <h3 id="2zip">打包方式2：ZIP压缩文件</h3>
-<p>你可以将应用的所有相关文件打成一个名为<code>package.nw</code>的压缩包。在Windows与Linux系统中，将<code>package.nw</code>与NW.js可执行文件合并即可。而在Mac系统中，则将<code>package.nw</code>放到<code>nwjs.app/Contents/Resources/</code>目录下。</p>
+<p>你可以将应用的所有相关文件打成一个名为<code>package.nw</code>的压缩包。在Windows与Linux系统中，将<code>package.nw</code>与NW.js可执行文件放到相同目录即可。而在Mac系统中，则将<code>package.nw</code>放到<code>nwjs.app/Contents/Resources/</code>目录下。</p>
 <div class="admonition warning">
 <p class="admonition-title">打包过大或者文件过多将导致启动缓慢</p>
 <p>在启动时，NW.js会将压缩包解压缩到一个临时文件夹并读取。所以如果你打包的压缩包过大或者文件过多会导致启动缓慢。</p>
@@ -473,19 +473,20 @@
 
 <h2 id="_5">不同平台区别</h2>
 <h3 id="windows">Windows</h3>
-<p>Icon for <code>nw.exe</code> can be replaced with tools like <a href="http://www.angusj.com/resourcehacker/">Resource Hacker</a>, <a href="https://github.com/mllrsohn/node-webkit-builder">node-webkit-builder</a> and <a href="https://github.com/felicienfrancois/node-winresourcer">node-winresourcer</a>.</p>
-<p>You can create a installer to deploy all necessary files onto end user&rsquo;s system. You can use <a href="https://msdn.microsoft.com/en-us/library/cc185688(VS.85).aspx">Windows Installer</a>, <a href="http://nsis.sourceforge.net/Main_Page">NSIS</a> or <a href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a>.</p>
+<p>替换<code>nw.exe</code>的icon图标查看这里<a href="http://www.angusj.com/resourcehacker/">Resource Hacker</a>、<a href="https://github.com/mllrsohn/node-webkit-builder">node-webkit-builder</a> 和 <a href="https://github.com/felicienfrancois/node-winresourcer">node-winresourcer</a>。</p>
+<p>你可以创建一个安装程序来部署所有必要文件到用户的系统。你可以使用<a href="https://msdn.microsoft.com/en-us/library/cc185688(VS.85).aspx">Windows Installer</a>、<a href="http://nsis.sourceforge.net/Main_Page">NSIS</a> 或 <a href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a>。</p>
 <h3 id="linux">Linux</h3>
-<p>On Linux, you need to create proper <a href="https://wiki.archlinux.org/index.php/Desktop_Entries"><code>.desktop</code> file</a>.</p>
-<p>To create a self-extractable installer script, you can use scripts like <a href="https://en.wikipedia.org/wiki/Shar"><code>shar</code></a> or <a href="http://stephanepeter.com/makeself/"><code>makeself</code></a>.</p>
-<p>To distribute your app through the package management sysmtem, like <code>apt</code>, <code>yum</code>, <code>pacman</code> etc, please follow their official documents to create the packages.</p>
+<p>在Linux系统中，你需要创建合适的<a href="https://wiki.archlinux.org/index.php/Desktop_Entries"><code>.desktop</code> 文件</a>。</p>
+<p>要创建一个自动安装脚本，你可以使用<a href="https://en.wikipedia.org/wiki/Shar"><code>shar</code></a> 或 <a href="http://stephanepeter.com/makeself/"><code>makeself</code></a>。</p>
+<p>要通过包管理系统分发您的应用程序，比如<code>apt</code>、<code>yum</code>、<code>pacman</code>等，请按照他们的官方说明文档来创建包。</p>
 <h3 id="mac-os-x">Mac OS X</h3>
-<p>On Mac OS X, you need to modify following files to have your own icon and boundle id:</p>
+<p>在Mac OS X中,你需要修改下列文件，添加你自己的icon和boundle id： </p>
 <ul>
-<li><code>Contents/Resources/nw.icns</code>: icon of your app. <code>nw.icns</code> is in <a href="https://en.wikipedia.org/wiki/Apple_Icon_Image_format">Apple Icon Image Format</a>. You can convert your icon in PNG/JPEG format into ICNS by using tools like <a href="http://www.img2icnsapp.com/">Image2Icon</a>.</li>
-<li><code>Contents/Info.plist</code>: the apple package description file. You can view <a href="http://cocoadevcentral.com/articles/000071.php">Implementing Cocoa&rsquo;s Standard About Panel</a> on how this file will influence your app and what fields you should modify.</li>
+<li><code>Contents/Resources/nw.icns</code>：MAC应用程序图标。 <br />
+<code>nw.icns</code> 遵循 <a href="https://en.wikipedia.org/wiki/Apple_Icon_Image_format">Apple Icon Image Format</a>标准。你可以使用类似<a href="http://www.img2icnsapp.com/">Image2Icon</a>一样的工具，将你的PNG/JPEG格式的图标转换成icns格式。</li>
+<li><code>Contents/Info.plist</code>：MAC应用程序描述文件。 这个<a href="http://cocoadevcentral.com/articles/000071.php">Implementing Cocoa&rsquo;s Standard About Panel</a>文件将告诉你需要修改哪些字段。</li>
 </ul>
-<p>And you should sign you Mac app. Or the user won&rsquo;t launch the app if Gatekeeper is turned on. See <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html">Signed Apps or Installer Packages</a> for details.</p>
+<p>你应该注册的你mac应用程序，否则当Gatekeeper选项被开启时用户将不能使用你的应用程序。查看<a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html">Signed Apps or Installer Packages</a>了解详情。</p>
 <h2 id="_6">参考资料</h2>
 <p>在<a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps">wiki of NW.js</a>中可以找到更多工具帮助你打包应用。</p>
               

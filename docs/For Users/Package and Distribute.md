@@ -56,7 +56,7 @@
 
 ### 打包方式2：ZIP压缩文件
 
-你可以将应用的所有相关文件打成一个名为`package.nw`的压缩包。在Windows与Linux系统中，将`package.nw`与NW.js可执行文件合并即可。而在Mac系统中，则将`package.nw`放到`nwjs.app/Contents/Resources/`目录下。
+你可以将应用的所有相关文件打成一个名为`package.nw`的压缩包。在Windows与Linux系统中，将`package.nw`与NW.js可执行文件放到相同目录即可。而在Mac系统中，则将`package.nw`放到`nwjs.app/Contents/Resources/`目录下。
 
 !!! warning "打包过大或者文件过多将导致启动缓慢"
 	在启动时，NW.js会将压缩包解压缩到一个临时文件夹并读取。所以如果你打包的压缩包过大或者文件过多会导致启动缓慢。
@@ -77,26 +77,27 @@ cat nw app.nw > app && chmod +x app
 
 ### Windows
 
-Icon for `nw.exe` can be replaced with tools like [Resource Hacker](http://www.angusj.com/resourcehacker/), [node-webkit-builder](https://github.com/mllrsohn/node-webkit-builder) and [node-winresourcer](https://github.com/felicienfrancois/node-winresourcer).
+替换`nw.exe`的icon图标查看这里[Resource Hacker](http://www.angusj.com/resourcehacker/)、[node-webkit-builder](https://github.com/mllrsohn/node-webkit-builder) 和 [node-winresourcer](https://github.com/felicienfrancois/node-winresourcer)。
 
-You can create a installer to deploy all necessary files onto end user's system. You can use [Windows Installer](https://msdn.microsoft.com/en-us/library/cc185688(VS.85).aspx), [NSIS](http://nsis.sourceforge.net/Main_Page) or [Inno Setup](http://www.jrsoftware.org/isinfo.php).
+你可以创建一个安装程序来部署所有必要文件到用户的系统。你可以使用[Windows Installer](https://msdn.microsoft.com/en-us/library/cc185688(VS.85).aspx)、[NSIS](http://nsis.sourceforge.net/Main_Page) 或 [Inno Setup](http://www.jrsoftware.org/isinfo.php)。
 
 ### Linux
 
-On Linux, you need to create proper [`.desktop` file](https://wiki.archlinux.org/index.php/Desktop_Entries).
+在Linux系统中，你需要创建合适的[`.desktop` 文件](https://wiki.archlinux.org/index.php/Desktop_Entries)。
 
-To create a self-extractable installer script, you can use scripts like [`shar`](https://en.wikipedia.org/wiki/Shar) or [`makeself`](http://stephanepeter.com/makeself/).
+要创建一个自动安装脚本，你可以使用[`shar`](https://en.wikipedia.org/wiki/Shar) 或 [`makeself`](http://stephanepeter.com/makeself/)。
 
-To distribute your app through the package management sysmtem, like `apt`, `yum`, `pacman` etc, please follow their official documents to create the packages.
+要通过包管理系统分发您的应用程序，比如`apt`、`yum`、`pacman`等，请按照他们的官方说明文档来创建包。
 
 ### Mac OS X
 
-On Mac OS X, you need to modify following files to have your own icon and boundle id:
+在Mac OS X中,你需要修改下列文件，添加你自己的icon和boundle id： 
 
-* `Contents/Resources/nw.icns`: icon of your app. `nw.icns` is in [Apple Icon Image Format](https://en.wikipedia.org/wiki/Apple_Icon_Image_format). You can convert your icon in PNG/JPEG format into ICNS by using tools like [Image2Icon](http://www.img2icnsapp.com/).
-* `Contents/Info.plist`: the apple package description file. You can view [Implementing Cocoa's Standard About Panel](http://cocoadevcentral.com/articles/000071.php) on how this file will influence your app and what fields you should modify.
+* `Contents/Resources/nw.icns`：MAC应用程序图标。 
+`nw.icns` 遵循 [Apple Icon Image Format](https://en.wikipedia.org/wiki/Apple_Icon_Image_format)标准。你可以使用类似[Image2Icon](http://www.img2icnsapp.com/)一样的工具，将你的PNG/JPEG格式的图标转换成icns格式。
+* `Contents/Info.plist`：MAC应用程序描述文件。 这个[Implementing Cocoa's Standard About Panel](http://cocoadevcentral.com/articles/000071.php)文件将告诉你需要修改哪些字段。
 
-And you should sign you Mac app. Or the user won't launch the app if Gatekeeper is turned on. See [Signed Apps or Installer Packages](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html) for details.
+你应该注册的你mac应用程序，否则当Gatekeeper选项被开启时用户将不能使用你的应用程序。查看[Signed Apps or Installer Packages](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html)了解详情。
 
 ## 参考资料
 
