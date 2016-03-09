@@ -38,35 +38,37 @@
 
 ## 准备 NW.js
 
-You have to redistribute NW.js with your app to get your app running. NW.js provided multiple [build flavors](Advanced/Build Flavors.md) for different requirements and package size. Choose the proper build flavor for your product or [build it from source code](../For Developers/Building NW.js.md).
+为了让你的应用更好的运行，你必须重新编译发布NW.js。针对不同的需求和打包尺寸，NW.js提供了多个 [编译版本](Advanced/Build Flavors.md)。选择适合你的产品编版本格或者 [从源码构建与编译](../For Developers/Building NW.js.md)。
 
-All files in the downloaded package should be redistributed with your product, except `nwjc` or `nwjc.exe` in SDK flavor.
+除了SDK版本中的`nwjc` or `nwjc.exe`，下载的压缩包中其他的所有文件可以根据需要有选择的加入到你的产品中。
 
 ## 打包你的应用
 
-There two options to pack your app: plain files or zip file.
+有两种方式可以打包你的应用：普通文件或者ZIP压缩文件。
 
 ### 打包方式1：普通文件 (推荐方式)
 
-On Windows and Linux, you can put the files of your app in the same folder of NW.js binaries and then ship them to your users. Make sure `nw` (or `nw.exe`) is in the same folder as `package.json`. Or you can put the files of your app in a folder named `package.nw` in the same folder as `nw` (or `nw.exe`).
+在Windows和Linux系统上,你可以将你的应用所有相关文件与NW.js执行文件放在相同文件夹下一起发送给你的用户。确保`nw` (或 `nw.exe`) 与 `package.json`在相同的文件夹（或目录）下。 或者你可以把你的应用的所有相关文件放在一个单独的文件夹下，并将该文件夹命名为`package.nw`，该文件夹需要放在与`nw` (或 `nw.exe`)相同的文件夹（或目录）中。
 
-On Mac, put the files of your app into a folder named `app.nw` in `nwjs.app/Contents/Resources/` and done.
+在Mac系统中，新建名称为`app.nw`的文件夹，把你的应用所有相关文件放入其中，然后将`app.nw`文件夹放在`nwjs.app/Contents/Resources/`目录下即可。
 
-It's the recommended way to pack your app.
+推荐您使用该打包方式。
 
 ### 打包方式2：ZIP压缩文件
 
-You can package all the files into a zip file and rename it as `package.nw`. And put it along with NW.js binaries for Windows and Linux. For Mac, put `package.nw` in `nwjs.app/Contents/Resources/`.
+你可以将应用的所有相关文件打成一个名为`package.nw`的压缩包。在Windows与Linux系统中，将`package.nw`与NW.js可执行文件合并即可。而在Mac系统中，则将`package.nw`放到`nwjs.app/Contents/Resources/`目录下。
 
-!!! warning "Start Slow with Big Package or Too Many Files"
-    At starting time, NW.js will unzip the package into temp folder and load it from there. So it will start slower if your package is big or contains too many files.
+!!! warning "打包过大或者文件过多将导致启动缓慢"
+	在启动时，NW.js会将压缩包解压缩到一个临时文件夹并读取。所以如果你打包的压缩包过大或者文件过多会导致启动缓慢。
 
-On Windows and Linux, you can even hide the zip file by appending the zip file to the end of `nw` or `nw.exe`.
-You can run following command on Windows to achieve this:
+在Windows和Linux系统中，你甚至可以隐藏你的压缩包，将压缩包与`nw`或`nw.exe`合并为一个文件。
+
+在Windows系统中执行以下命令：
 ```batch
 copy /b nw.exe+package.nw app.exe
 ```
-or following command on Linux:
+
+在Linux系统中执行以下命令达到相同效果：
 ```bash
 cat nw app.nw > app && chmod +x app 
 ```

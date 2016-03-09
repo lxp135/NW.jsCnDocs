@@ -32,7 +32,7 @@ node-pre-gyp build --runtime=node-webkit --target=0.13.0 --target_arch=x64
 
 See https://github.com/mapbox/node-pre-gyp for more details.
 
-## Known Issues
+## 已知问题
 
 So far, you have to rebuild **each native module** with tools above including thoses are indirectly depended modules. Since `binding.gyp` is required for building native modules, you can easily locate all native modules by finding `binding.gyp` file.
 

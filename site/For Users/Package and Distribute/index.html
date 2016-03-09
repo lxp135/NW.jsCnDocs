@@ -434,40 +434,40 @@
 <li>[ ] <a href="../Advanced/Protect%20JavaScript%20Source%20Code/">压缩JS源代码</a>并删除原始文件</li>
 <li>[ ] 在<a href="../../References/Manifest%20Format/#icon">manifest file</a>中配置图标</li>
 </ul>
-<div class="admonition 警告">
+<div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Do not assume your <code>node_modules</code> that target one platform work <em>as is</em> in all platforms. For instance <code>node-email-templates</code> has specific Windows &amp; Mac OS X<code>npm install</code> commands. Besides, it requires python to install properly, which is not installed by default on Windows.<br />
-As a rule of thumb <strong><code>npm install</code> your <code>package.json</code> on each platform you target</strong> to ensure everything works as expected.</p>
+<p>不要假设你的<code>node_modules</code>会正确工作在所有平台上，例如<code>node-email-templates</code>在Windows和Mac OS X上需要指定的<code>npm install</code>命令来安装。而且需要Python环境才能运行，但是Python环境在Windows上默认是不存在的。<br />
+一个经验规则是<strong>在每个平台上将<code>npm install</code>命令配置到对应的<code>package.json</code>中</strong>，以确保一切正常。</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">文件名与路径</p>
-<p>On most Linux and some Mac OS X, the file system is <strong>case sensitive</strong>. That means <code>test.js</code> and <code>Test.js</code> are different files. Make sure the paths and filenames used in your app have the right case. Otherwise your app may look bad or crash on those file systems.</p>
+<p>大多数Linux与Mac OS X的文件系统对于文件名是<strong>大小写敏感</strong>的，这意味着<code>test.js</code> 和 <code>Test.js</code> 是截然不同的两个文件。确保代码中的路径与文件名是正确的，否则你的应用在不同的文件系统上面可能会看起来有问题或者直接崩溃。</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">在windows中使用长路径</p>
-<p>The length of path used in your app may exceed the maximum length (260 characters) on Windows. That will cause various build failures. This usually happens during installing dependencies with <code>npm install</code> using older version of NPM (&lt;3.0). Please build your app in the root directory, like <code>C:\build\</code>, to avoid this issue as much as possible.</p>
+<p class="admonition-title">在windows中使用长路径<p>在Windows上使用超过260个字符的路径名称，将可能导致构建失败。通常发生在依赖<code>npm install</code>安装且NPM版本小于3.0的情况下。在建立你的应用根目录时使用类似<code>C:\build\</code>这样的路径将尽可能避免这个问题。</p>
+</p>
 </div>
 <h2 id="nwjs">准备 NW.js</h2>
-<p>You have to redistribute NW.js with your app to get your app running. NW.js provided multiple <a href="../Advanced/Build%20Flavors/">build flavors</a> for different requirements and package size. Choose the proper build flavor for your product or <a href="../../For%20Developers/Building%20NW.js/">build it from source code</a>.</p>
-<p>All files in the downloaded package should be redistributed with your product, except <code>nwjc</code> or <code>nwjc.exe</code> in SDK flavor.</p>
+<p>为了让你的应用更好的运行，你必须重新编译发布NW.js。针对不同的需求和打包尺寸，NW.js提供了多个 <a href="../Advanced/Build%20Flavors/">编译版本</a>。选择适合你的产品编版本格或者 <a href="../../For%20Developers/Building%20NW.js/">从源码构建与编译</a>。</p>
+<p>除了SDK版本中的<code>nwjc</code> or <code>nwjc.exe</code>，下载的压缩包中其他的所有文件可以根据需要有选择的加入到你的产品中。</p>
 <h2 id="_4">打包你的应用</h2>
-<p>There two options to pack your app: plain files or zip file.</p>
+<p>有两种方式可以打包你的应用：普通文件或者ZIP压缩文件。</p>
 <h3 id="1">打包方式1：普通文件 (推荐方式)</h3>
-<p>On Windows and Linux, you can put the files of your app in the same folder of NW.js binaries and then ship them to your users. Make sure <code>nw</code> (or <code>nw.exe</code>) is in the same folder as <code>package.json</code>. Or you can put the files of your app in a folder named <code>package.nw</code> in the same folder as <code>nw</code> (or <code>nw.exe</code>).</p>
-<p>On Mac, put the files of your app into a folder named <code>app.nw</code> in <code>nwjs.app/Contents/Resources/</code> and done.</p>
-<p>It&rsquo;s the recommended way to pack your app.</p>
+<p>在Windows和Linux系统上,你可以将你的应用所有相关文件与NW.js执行文件放在相同文件夹下一起发送给你的用户。确保<code>nw</code> (或 <code>nw.exe</code>) 与 <code>package.json</code>在相同的文件夹（或目录）下。 或者你可以把你的应用的所有相关文件放在一个单独的文件夹下，并将该文件夹命名为<code>package.nw</code>，该文件夹需要放在与<code>nw</code> (或 <code>nw.exe</code>)相同的文件夹（或目录）中。</p>
+<p>在Mac系统中，新建名称为<code>app.nw</code>的文件夹，把你的应用所有相关文件放入其中，然后将<code>app.nw</code>文件夹放在<code>nwjs.app/Contents/Resources/</code>目录下即可。</p>
+<p>推荐您使用该打包方式。</p>
 <h3 id="2zip">打包方式2：ZIP压缩文件</h3>
-<p>You can package all the files into a zip file and rename it as <code>package.nw</code>. And put it along with NW.js binaries for Windows and Linux. For Mac, put <code>package.nw</code> in <code>nwjs.app/Contents/Resources/</code>.</p>
+<p>你可以将应用的所有相关文件打成一个名为<code>package.nw</code>的压缩包。在Windows与Linux系统中，将<code>package.nw</code>与NW.js可执行文件合并即可。而在Mac系统中，则将<code>package.nw</code>放到<code>nwjs.app/Contents/Resources/</code>目录下。</p>
 <div class="admonition warning">
-<p class="admonition-title">Start Slow with Big Package or Too Many Files</p>
-<p>At starting time, NW.js will unzip the package into temp folder and load it from there. So it will start slower if your package is big or contains too many files.</p>
+<p class="admonition-title">打包过大或者文件过多将导致启动缓慢</p>
+<p>在启动时，NW.js会将压缩包解压缩到一个临时文件夹并读取。所以如果你打包的压缩包过大或者文件过多会导致启动缓慢。</p>
 </div>
-<p>On Windows and Linux, you can even hide the zip file by appending the zip file to the end of <code>nw</code> or <code>nw.exe</code>.<br />
-You can run following command on Windows to achieve this:</p>
+<p>在Windows和Linux系统中，你甚至可以隐藏你的压缩包，将压缩包与<code>nw</code>或<code>nw.exe</code>合并为一个文件。</p>
+<p>在Windows系统中执行以下命令：</p>
 <pre class="codehilite"><code class="language-batch">copy /b nw.exe+package.nw app.exe</code></pre>
 
 
-<p>or following command on Linux:</p>
+<p>在Linux系统中执行以下命令达到相同效果：</p>
 <pre class="codehilite"><code class="language-bash">cat nw app.nw &gt; app &amp;&amp; chmod +x app </code></pre>
 
 
@@ -487,7 +487,7 @@ You can run following command on Windows to achieve this:</p>
 </ul>
 <p>And you should sign you Mac app. Or the user won&rsquo;t launch the app if Gatekeeper is turned on. See <a href="https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/DistributingApplicationsOutside/DistributingApplicationsOutside.html">Signed Apps or Installer Packages</a> for details.</p>
 <h2 id="_6">参考资料</h2>
-<p>在<a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps">wiki of NW.js</a>中可以找到更多工具来打包你的应用。</p>
+<p>在<a href="https://github.com/nwjs/nw.js/wiki/How-to-package-and-distribute-your-apps">wiki of NW.js</a>中可以找到更多工具帮助你打包应用。</p>
               
             </div>
           </div>
