@@ -1,33 +1,33 @@
-# Protect JavaScript Source Code {: doctitle}
+# 保护JavaScript源代码
 ---
 
 [TOC]
 
-The JavaScript source code of your application can be protected by compiling to native code and loaded by NW.js. You only have to distribute the compiled code with your app for production.
+你的应用中的所有JavaScript源代码可以通过编译为机器代码的方式加密，NW.js可以正确读取编译后的JavaScript源代码。你在发布应用的时候可以仅加载编译后的机器代码而不需要源代码。
 
-### Compilation
+### 编译
 
-JS source code is compiled to native code with the tool `nwjc` , which is provided in the binary download.
+使用`nwjc`工具来编译你的JS源代码为机器代码，which is provided in the binary download.
 
-To use it:
+开始使用:
 ```bash
 nwjc source.js binary.bin
 ```
 
-The `*.bin` file is needed to be distributed with your application. You can name it whatever you want.
+编译后`*.bin`文件必须包含在你发布的应用中，有必要的话你可以重新命名该文件。
 
-### Load the Compiled JavaScript
+### 加载编译后的JavaScript代码
 
 ```javascript
 nw.Window.get().evalNWBin(frame, 'binary.bin');
 ```
 The arguments of the [win.evalNWBin()](../../References/Window.md#winevalnwbin) method are similar with the `Window.eval()` method, where the first parameter is the target iframe (`null` for main frame), and the 2nd parameter is the binary code file.
 
-!!! note
-    The compiled code is executed in [Browser Context](JavaScript Contexts in NW.js.md#browser-context). You can use any Web APIs (such as DOM) and [access NW.js API and Node API](JavaScript Contexts in NW.js.md#access-nodejs-and-nwjs-api-in-browser-context) like other scripts running in browser context.
+!!! note "注意"
+	编译后的机器代码在[Browser Context](JavaScript Contexts in NW.js.md#browser-context)中执行。你可以像使用其他脚本一样使用任何Web APIs（例如DOM）和[access NW.js API and Node API](JavaScript Contexts in NW.js.md#access-nodejs-and-nwjs-api-in-browser-context)运行在[Browser Context](JavaScript Contexts in NW.js.md#browser-context)中。
 
-### Known Issues
+### 已知问题
 
-The compiled code runs **slower than normal JS**: ~30% performance according to v8bench. Other non-compiled JS source code will not be affected.
+在v8引擎中，编译后的机器代码执行效率会**降低大概30%左右**，其他没编译的JS代码不受影响。
 
-The compiled code is **not cross-platform nor compatible between versions** of NW.js. So you'll need to run `nwjc` for each of the platforms when you package your application.
+编译后的机器代码是**不能跨平台的**，版本之间并不兼容。所以，你需要在每个平台执行`nwjc`来编译对应不同平台的机器代码。

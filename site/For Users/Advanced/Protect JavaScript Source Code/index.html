@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>进阶：编译JavaScript代码 - NW.js 中文文档</title>
+  <title>进阶：保护JavaScript源代码 - NW.js 中文文档</title>
   
 
   <link rel="shortcut icon" href="../../../img/favicon.ico">
@@ -20,7 +20,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "进阶：编译JavaScript代码";
+    var mkdocs_page_name = "进阶：保护JavaScript源代码";
   </script>
   
   <script src="../../../js/jquery-2.1.1.min.js"></script>
@@ -112,17 +112,17 @@
         
             
     <li class="toctree-l1 current">
-        <a class="current" href="./">进阶：编译JavaScript代码</a>
+        <a class="current" href="./">进阶：保护JavaScript源代码</a>
         
             <ul>
             
-                <li class="toctree-l3"><a href="#protect-javascript-source-code-doctitle">Protect JavaScript Source Code {: doctitle}</a></li>
+                <li class="toctree-l3"><a href="#javascript">保护JavaScript源代码</a></li>
                 
-                    <li><a class="toctree-l4" href="#compilation">Compilation</a></li>
+                    <li><a class="toctree-l4" href="#_1">编译</a></li>
                 
-                    <li><a class="toctree-l4" href="#load-the-compiled-javascript">Load the Compiled JavaScript</a></li>
+                    <li><a class="toctree-l4" href="#javascript_1">加载编译后的JavaScript代码</a></li>
                 
-                    <li><a class="toctree-l4" href="#known-issues">Known Issues</a></li>
+                    <li><a class="toctree-l4" href="#_2">已知问题</a></li>
                 
             
             </ul>
@@ -371,7 +371,7 @@
         
       
     
-    <li>进阶：编译JavaScript代码</li>
+    <li>进阶：保护JavaScript源代码</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -385,38 +385,38 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="protect-javascript-source-code-doctitle">Protect JavaScript Source Code {: doctitle}</h1>
+                <h1 id="javascript">保护JavaScript源代码</h1>
 <hr />
 <div class="toc">
 <ul>
-<li><a href="#protect-javascript-source-code-doctitle">Protect JavaScript Source Code {: doctitle}</a><ul>
-<li><a href="#compilation">Compilation</a></li>
-<li><a href="#load-the-compiled-javascript">Load the Compiled JavaScript</a></li>
-<li><a href="#known-issues">Known Issues</a></li>
+<li><a href="#javascript">保护JavaScript源代码</a><ul>
+<li><a href="#_1">编译</a></li>
+<li><a href="#javascript_1">加载编译后的JavaScript代码</a></li>
+<li><a href="#_2">已知问题</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<p>The JavaScript source code of your application can be protected by compiling to native code and loaded by NW.js. You only have to distribute the compiled code with your app for production.</p>
-<h3 id="compilation">Compilation</h3>
-<p>JS source code is compiled to native code with the tool <code>nwjc</code> , which is provided in the binary download.</p>
-<p>To use it:</p>
+<p>你的应用中的所有JavaScript源代码可以通过编译为机器代码的方式加密，NW.js可以正确读取编译后的JavaScript源代码。你在发布应用的时候可以仅加载编译后的机器代码而不需要源代码。</p>
+<h3 id="_1">编译</h3>
+<p>使用<code>nwjc</code>工具来编译你的JS源代码为机器代码，which is provided in the binary download.</p>
+<p>开始使用:</p>
 <pre class="codehilite"><code class="language-bash">nwjc source.js binary.bin</code></pre>
 
 
-<p>The <code>*.bin</code> file is needed to be distributed with your application. You can name it whatever you want.</p>
-<h3 id="load-the-compiled-javascript">Load the Compiled JavaScript</h3>
+<p>编译后<code>*.bin</code>文件必须包含在你发布的应用中，有必要的话你可以重新命名该文件。</p>
+<h3 id="javascript_1">加载编译后的JavaScript代码</h3>
 <pre class="codehilite"><code class="language-javascript">nw.Window.get().evalNWBin(frame, 'binary.bin');</code></pre>
 
 
 <p>The arguments of the <a href="../../../References/Window/#winevalnwbin">win.evalNWBin()</a> method are similar with the <code>Window.eval()</code> method, where the first parameter is the target iframe (<code>null</code> for main frame), and the 2nd parameter is the binary code file.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="admonition-title">注意</p>
 <p>The compiled code is executed in <a href="../JavaScript%20Contexts%20in%20NW.js/#browser-context">Browser Context</a>. You can use any Web APIs (such as DOM) and <a href="../JavaScript%20Contexts%20in%20NW.js/#access-nodejs-and-nwjs-api-in-browser-context">access NW.js API and Node API</a> like other scripts running in browser context.</p>
 </div>
-<h3 id="known-issues">Known Issues</h3>
-<p>The compiled code runs <strong>slower than normal JS</strong>: ~30% performance according to v8bench. Other non-compiled JS source code will not be affected.</p>
-<p>The compiled code is <strong>not cross-platform nor compatible between versions</strong> of NW.js. So you&rsquo;ll need to run <code>nwjc</code> for each of the platforms when you package your application.</p>
+<h3 id="_2">已知问题</h3>
+<p>在v8引擎中，编译后的机器代码执行效率会<strong>降低大概30%左右</strong>，其他没编译的JS代码不受影响。</p>
+<p>编译后的机器代码是<strong>不能跨平台的</strong>，版本之间并不兼容。所以，你需要在每个平台执行<code>nwjc</code>来编译对应不同平台的机器代码。</p>
               
             </div>
           </div>

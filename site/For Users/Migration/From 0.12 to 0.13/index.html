@@ -112,7 +112,7 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="../../Advanced/Protect%20JavaScript%20Source%20Code/">进阶：编译JavaScript代码</a>
+        <a class="" href="../../Advanced/Protect%20JavaScript%20Source%20Code/">进阶：保护JavaScript源代码</a>
         
     </li>
 
@@ -438,8 +438,8 @@
 </ul>
 <h3 id="manifest-format">Manifest Format</h3>
 <ul>
-<li><a href="../../../References/Manifest%20Format/#single-instance"><code>single-instance</code></a> is <strong>deprecated</strong> and it&rsquo;s always <code>true</code>. You <strong>CANNOT</strong> have multiple instances for your app.</li>
-<li><a href="../../../References/Manifest%20Format/#toolbar"><code>toolbar</code></a> is <strong>deprecated</strong> and it&rsquo;s always <code>false</code>. The traditional toolbar will <strong>NOT</strong> be supported including the reload buttons, location bar and DevTools buttons. As a workaround, you can open / close DevTools with <kbd>F12</kbd> (Windows &amp; Linux) or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> (Mac). And use <a href="../../../References/Window/#winreload"><code>win.reload()</code></a> and <a href="../../../References/Window/#winreloaddev"><code>win.reloadDev()</code></a> to simulate the reload buttons.</li>
+<li><a href="../../../References/Manifest%20Format/#single-instance"><code>single-instance</code></a> 选项已<strong>弃用</strong>，现在这个选项总是 <code>true</code>。你将<strong>不能</strong>再使用多个instances。</li>
+<li><a href="../../../References/Manifest%20Format/#toolbar"><code>toolbar</code></a>选项已<strong>弃用</strong>，现在这个选项总是<code>false</code>。The traditional toolbar will <strong>NOT</strong> be supported including the reload buttons, location bar and DevTools buttons. As a workaround, you can open / close DevTools with <kbd>F12</kbd> (Windows &amp; Linux) or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> (Mac). And use <a href="../../../References/Window/#winreload"><code>win.reload()</code></a> and <a href="../../../References/Window/#winreloaddev"><code>win.reloadDev()</code></a> to simulate the reload buttons.</li>
 <li><a href="../../../References/Manifest%20Format/#no-edit-menu-mac"><code>no-edit-menu</code></a> is <strong>deprecated</strong>.</li>
 <li><a href="../../../References/Manifest%20Format/#snapshot"><code>snapshot</code></a> is <strong>deprecated</strong>. Use <a href="../../../References/Window/#winevalnwbin"><code>win.evalNWBin()</code></a> instead.</li>
 <li>The format of <a href="../../../References/Manifest%20Format/#node-remote"><code>node-remote</code></a> is changed to array of <a href="https://developer.chrome.com/extensions/match_patterns">match patterns</a> used by Chrome extension.</li>

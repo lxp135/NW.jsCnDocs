@@ -23,7 +23,7 @@
     - 进阶
         + [Build 特性](For Users/Advanced/Build Flavors.md)
         + [在NW.js使用JavaScript](For Users/Advanced/JavaScript Contexts in NW.js.md)
-        + [编译JavaScript代码](For Users/Advanced/Protect JavaScript Source Code.md)
+        + [保护JavaScript源代码](For Users/Advanced/Protect JavaScript Source Code.md)
         + [NW.js的安全性](For Users/Advanced/Security in NW.js.md)
         + [使用ChromeDriver进行测试](For Users/Advanced/Test with ChromeDriver.md)
         + [在NW.js中使用NaCl](For Users/Advanced/Use NaCl in NW.js.md)

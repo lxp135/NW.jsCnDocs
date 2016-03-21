@@ -15,7 +15,7 @@ pages:
 - ['For Users/Advanced/Build Flavors.md', '用户手册', '进阶：Build 特性']
 - ['For Users/Advanced/Content Verification.md', '用户手册', '进阶：内容验证']
 - ['For Users/Advanced/JavaScript Contexts in NW.js.md', '用户手册', '进阶：在NW.js中使用JavaScript']
-- ['For Users/Advanced/Protect JavaScript Source Code.md', '用户手册', '进阶：编译JavaScript代码']
+- ['For Users/Advanced/Protect JavaScript Source Code.md', '用户手册', '进阶：保护JavaScript源代码']
 - ['For Users/Advanced/Security in NW.js.md', '用户手册', '进阶：NW.js的安全性']
 - ['For Users/Advanced/Test with ChromeDriver.md', '用户手册', '进阶：使用ChromeDriver进行测试']
 - ['For Users/Advanced/Transparent Window.md', '用户手册', '进阶：透明窗口']
