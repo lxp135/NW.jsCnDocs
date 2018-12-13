@@ -1,4 +1,4 @@
-# NW.js 0.35 中文参考文档
+# NW.js 0.35.2 中文参考文档
 ---
 
 > [NW.js](http://nwjs.io) 让您可以使用WEB(html5、css3、javascript)技术，包括[Node.js](https://nodejs.org/)及其所有[modules](https://www.npmjs.org/)来开发桌面应用的一种新方式。她的前身是 "node-webkit" 项目。
@@ -9,7 +9,7 @@
 * **开发者手册** - 当您想扩展NW.js时候可以参考该部分文档
 * **参考资料** - NW.js API 文档
 
-该项目的所有源码和文档都在[GIT仓库](https://github.com/nwjs/nw.js/tree/nw13/docs)中，欢迎Pull Requests。
+该项目的所有源码和文档都在[GIT仓库](https://github.com/nwjs/nw.js/tree/nw35/docs)中，欢迎Pull Requests。
 
 ## 文档目录
 
@@ -20,40 +20,40 @@
     - [打包与发布](For Users/Package and Distribute.md)
     - [FAQ](For Users/FAQ.md)
     - [0.12升级0.13](For Users/Migration/From 0.12 to 0.13.md)
-    - Advanced
-        + [Build Flavors](For Users/Advanced/Build Flavors.md)
-        + [JavaScript Contexts in NW.js](For Users/Advanced/JavaScript Contexts in NW.js.md)
-        + [Protect JavaScript Source Code](For Users/Advanced/Protect JavaScript Source Code.md)
-        + [Security in NW.js](For Users/Advanced/Security in NW.js.md)
-        + [Support for Mac App Store](For Users/Advanced/Support for Mac App Store.md)
-        + [Test with ChromeDriver](For Users/Advanced/Test with ChromeDriver.md)
-        + [Use Flash Plugin](For Users/Advanced/Use Flash Plugin.md)
-        + [Use NaCl in NW.js](For Users/Advanced/Use NaCl in NW.js.md)
-        + [Use Native Node Modules](For Users/Advanced/Use Native Node Modules.md)
-        + [Content Verification](For Users/Advanced/Content Verification.md)
-        + [Customize Menubar](For Users/Advanced/Customize Menubar.md)
-* For Developers
-    - [Building NW.js](For Developers/Building NW.js.md)
-    - [Contributing to NW.js](For Developers/Contributing to NW.js.md)
-    - [Enable Proprietary Codecs](For Developers/Enable Proprietary Codecs.md)
-    - [Repositories](For Developers/Repositories.md)
-    - [Understanding Crash Dump](For Developers/Understanding Crash Dump.md)
-    - [Writing Documents for NW.js](For Developers/Writing Documents for NW.js.md)
-    - [Writing Test Cases for NW.js](For Developers/Writing Test Cases for NW.js.md)
-    - [Contributors of Documents](For Developers/Contributors of Documents.md)
-* References
+    - 进阶
+        + [编译](For Users/Advanced/Build Flavors.md)
+        + [在NW.js中使用JavaScript上下文](For Users/Advanced/JavaScript Contexts in NW.js.md)
+        + [保护JavaScript源代码](For Users/Advanced/Protect JavaScript Source Code.md)
+        + [NW.js的安全性](For Users/Advanced/Security in NW.js.md)
+        + [提交到Mac应用商店](For Users/Advanced/Support for Mac App Store.md)
+        + [使用ChromeDriver测试](For Users/Advanced/Test with ChromeDriver.md)
+        + [在NW.js中使用Flash插件](For Users/Advanced/Use Flash Plugin.md)
+        + [在NW.js中使用NaCl](For Users/Advanced/Use NaCl in NW.js.md)
+        + [在NW.js中使用原生Node.js模块](For Users/Advanced/Use Native Node Modules.md)
+        + [内容验证](For Users/Advanced/Content Verification.md)
+        + [自定义菜单](For Users/Advanced/Customize Menubar.md)
+* 开发者手册
+    - [构建 NW.js](For Developers/Building NW.js.md)
+    - [为NW.js贡献代码](For Developers/Contributing to NW.js.md)
+    - [打开专有编解码器](For Developers/Enable Proprietary Codecs.md)
+    - [资源列表](For Developers/Repositories.md)
+    - [了解崩溃机制](For Developers/Understanding Crash Dump.md)
+    - [为NW.js编写文档](For Developers/Writing Documents for NW.js.md)
+    - [为NW.js编写测试用例](For Developers/Writing Test Cases for NW.js.md)
+    - [贡献者列表](For Developers/Contributors of Documents.md)
+* 参考资料
     - [App](References/App.md)
     - [Changes to DOM](References/Changes to DOM.md)
     - [Changes to Node](References/Changes to Node.md)
-    - [Clipboard](References/Clipboard.md)
-    - [Command Line Options](References/Command Line Options.md)
-    - [Chrome Extension APIs](References/Chrome Extension APIs.md)
-    - [Manifest Format](References/Manifest Format.md)
-    - [Menu](References/Menu.md)
-    - [MenuItem](References/MenuItem.md)
-    - [Screen](References/Screen.md)
+    - [剪切板](References/Clipboard.md)
+    - [命令行参数](References/Command Line Options.md)
+    - [Chrome扩展API](References/Chrome Extension APIs.md)
+    - [配置文件](References/Manifest Format.md)
+    - [菜单](References/Menu.md)
+    - [菜单项](References/MenuItem.md)
+    - [屏幕](References/Screen.md)
     - [Shell](References/Shell.md)
-    - [Shortcut](References/Shortcut.md)
-    - [Tray](References/Tray.md)
-    - [webview Tag](References/webview Tag.md)
+    - [快捷键](References/Shortcut.md)
+    - [系统托盘](References/Tray.md)
+    - [webview标签](References/webview Tag.md)
     - [Window](References/Window.md)
