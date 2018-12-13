@@ -16,12 +16,12 @@
 * [首页](index.md)
 * 用户手册
     - [快速开始](For Users/Getting Started.md)
-    - [使用DevTools调试](For Users/Debugging with DevTools.md)
+    - [使用开发者工具调试](For Users/Debugging with DevTools.md)
     - [打包与发布](For Users/Package and Distribute.md)
     - [FAQ](For Users/FAQ.md)
     - [0.12升级0.13](For Users/Migration/From 0.12 to 0.13.md)
     - 进阶
-        + [编译](For Users/Advanced/Build Flavors.md)
+        + [编译版本](For Users/Advanced/Build Flavors.md)
         + [在NW.js中使用JavaScript上下文](For Users/Advanced/JavaScript Contexts in NW.js.md)
         + [保护JavaScript源代码](For Users/Advanced/Protect JavaScript Source Code.md)
         + [NW.js的安全性](For Users/Advanced/Security in NW.js.md)

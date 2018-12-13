@@ -1,42 +1,42 @@
-# Debugging with DevTools {: .doctitle}
+# 使用DevTools调试
 ---
 
-!!! note "SDK Flavor Only"
-    DevTools is only available in [SDK flavor](Advanced/Build Flavors.md). It's recommended to use SDK flavor to develop and test your app. And use other flavors for production.
+!!! note "仅SDK版本支持调试"
+    开发者工具仅在[SDK flavor](Advanced/Build Flavors.md)版本中工作，建议您使用SDK版本进行开发与调试NW.js应用。使用其他版本发布应用。
 
-## Open Developer Tools
+## 启用开发者工具
 
-DevTools can be opened with keyboard shortcut <kbd>F12</kbd> on Windows and Linux or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> on Mac.
+您可以在Windows、Linux上使用快捷键<kbd>F12</kbd>呼出开发者工具，或者在Mac上使用<kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd>呼出。
 
-Alternatively, you may open DevTools programmatically using NW.js API [win.showDevTools()](../References/Window.md#winshowdevtoolsiframe-callback) for a window.
+此外, 你可以编写JS代码调用NW.js的API打开开发者工具窗口 [win.showDevTools()](../References/Window.md#winshowdevtoolsiframe-callback)。
 
-## Node.js Modules Debugging
+## Node.js 模块调试
 
 NW.js is running in [Separate Context Mode](Advanced/JavaScript Contexts in NW.js.md#separate-context-mode) by default. To debug Node.js modules, you can right click the app and choose "Inspect Background Page". When stepping into Node.js modules in the debugger, the DevTools for background page is automatically focused and stopped at certain statement.
 
 If your app is running under [Mixed Context Mode](Advanced/JavaScript Contexts in NW.js.md#mixed-context-mode), Node.js modules can be directly debugged within the same DevTools window of the window. See [JavaScript Contexts in NW.js](Advanced/JavaScript Contexts in NW.js.md) for the differences.
 
-## Remote Debugging
+## 远程调试
 
-You can use the `--remote-debugging-port=port` command line option to specify which port the DevTools should listen to. For example, by running `nw --remote-debugging-port=9222`, you can open http://localhost:9222/ in your browser to visit the debugger remotely.
+您可以在命令行输入 `--remote-debugging-port=port` 指令并指定端口来启动开发者工具监听。举个例子，输入并运行 `nw --remote-debugging-port=9222`，可以在你自己的浏览器中输入网址http://localhost:9222/来进行远程调试。
 
-## Using devtools extensions
+## 使用开发者工具扩展
 
 Devtools extensions are fully supported, including the one for ReactJS, Vue.js, etc. To use it, add the permission "chrome-extension://*" to manifest.json of the devtools extension, and load it with `--load-extension=path/to/extension` when nw is started. The files for devtools extensions can be copied from extension folder of Chrome browser after you install them from Chrome Web Store.
 
-### React Example
+### React 例子
 
 * https://s3-us-west-2.amazonaws.com/nwjs/sample/react-app.zip
 * https://s3-us-west-2.amazonaws.com/nwjs/sample/react-devtools.zip
 
-Unpack them, download the SDK build and run it with: `nw.exe --load-extension=path/to/devtools path/to/app/folder`
+解压缩, 下载SDK版本并带以下参数运行：`nw.exe --load-extension=path/to/devtools path/to/app/folder`
 
-The app is a simple react app with 'package.json' added. The devtools files are from the Chrome browser's extension folder of official react devtools extension installed from Chrome Web store. Only the manifest file is modified to add the permission: "chrome-extension://*".
+这个是一个包含'package.json'配置文件的简单react应用。The devtools files are from the Chrome browser's extension folder of official react devtools extension installed from Chrome Web store. Only the manifest file is modified to add the permission: "chrome-extension://*".
 
-### Vue Example
+### Vue 例子
 
 1. `npm install --save-dev nw-vue-devtools`
-1. Add this to your `package.json`:
+1. 在配置文件 `package.json` 中添加以下代码:
     ```js
     "chromium-args": "--load-extension='./node_modules/nw-vue-devtools/extension'",
     ```

@@ -4,19 +4,19 @@ use_directory_urls: true
 site_url: https://nwjs.liuxp.me
 site_author: 刘小平
 repo_url: https://github.com/lxp135/NW.jsCnDocs
-copyright: NW.js中文参考文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script>
+copyright: NW.js中文参考文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script type="text/javascript" src="https://js.users.51.la/18564708.js"></script>
 
 pages:
 - '首页': 'index.md'
 - '用户手册':
   - '快速开始': 'For Users/Getting Started.md'
-  - '使用DevTools调试': 'For Users/Debugging with DevTools.md'
+  - '使用开发者工具调试': 'For Users/Debugging with DevTools.md'
   - '打包与发布': 'For Users/Package and Distribute.md'
   - 'FAQ': 'For Users/FAQ.md'
-  - '合并版本':
+  - '迁移':
     - '0.12升级0.13': 'For Users/Migration/From 0.12 to 0.13.md'
   - '进阶':
-    - '编译': 'For Users/Advanced/Build Flavors.md'
+    - '编译版本': 'For Users/Advanced/Build Flavors.md'
     - '内容验证': 'For Users/Advanced/Content Verification.md'
     - '自定义菜单': 'For Users/Advanced/Customize Menubar.md'
     - '在NW.js中使用JavaScript上下文': 'For Users/Advanced/JavaScript Contexts in NW.js.md'
