@@ -1,10 +1,10 @@
-site_name: NW.js 最新版中文文档
+site_name: NW.js 0.35.2 中文参考文档
 theme: readthedocs
 use_directory_urls: true
 site_url: https://nwjs.liuxp.me
 site_author: 刘小平
 repo_url: https://github.com/lxp135/NW.jsCnDocs
-copyright: NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script>
+copyright: NW.js中文参考文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script>
 
 pages:
 - '首页': 'index.md'
