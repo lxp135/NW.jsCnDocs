@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>快速开始 - NW.js 中文文档</title>
-  
-
+  <meta name="author" content="刘小平">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>快速开始 - NW.js 最新版中文文档</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "快速开始";
+    var mkdocs_page_name = "\u5feb\u901f\u5f00\u59cb";
+    var mkdocs_page_input_path = "For Users\\Getting Started.md";
+    var mkdocs_page_url = "/For Users/Getting Started/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,316 +36,239 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> NW.js 中文文档</a>
+        <a href="../.." class="icon icon-home"> NW.js 最新版中文文档</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">首页</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">首页</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">用户手册</span>
     <ul class="subnav">
-    <li><span>用户手册</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Debugging%20with%20DevTools/">使用DevTools调试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../FAQ/">FAQ</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">快速开始</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#_1">快速开始</a></li>
-                
-                    <li><a class="toctree-l4" href="#nwjs">NW.js 能做什么?</a></li>
-                
-                    <li><a class="toctree-l4" href="#nwjs_1">获得 NW.js</a></li>
-                
-                    <li><a class="toctree-l4" href="#nwjs_2">编写 NW.js 应用</a></li>
-                
-                    <li><a class="toctree-l4" href="#_2">下一步？</a></li>
-                
-                    <li><a class="toctree-l4" href="#_3">取得帮助</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Package%20and%20Distribute/">打包与分发</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Build%20Flavors/">进阶：Build 特性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Content%20Verification/">进阶：内容验证</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/JavaScript%20Contexts%20in%20NW.js/">进阶：在NW.js中使用JavaScript</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Protect%20JavaScript%20Source%20Code/">进阶：保护JavaScript源代码</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Security%20in%20NW.js/">进阶：NW.js的安全性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Test%20with%20ChromeDriver/">进阶：使用ChromeDriver进行测试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Transparent%20Window/">进阶：透明窗口</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Use%20NaCl%20in%20NW.js/">进阶：在NW.js中使用NaCl</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Advanced/Use%20Native%20Node%20Modules/">进阶：使用 Native Node Modules</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Migration/From%200.12%20to%200.13/">合并版本：从0.12升级到0.13</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class=" current">
+                    
+    <a class="current" href="./">快速开始</a>
     <ul class="subnav">
-    <li><span>开发者手册</span></li>
-
-        
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Building%20NW.js/">Building NW.js</a>
+    <li class="toctree-l3"><a href="#getting-started-with-nwjs">Getting Started with NW.js</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l4" href="#what-can-nwjs-do">What can NW.js do?</a></li>
+        
+            <li><a class="toctree-l4" href="#get-nwjs">Get NW.js</a></li>
+        
+            <li><a class="toctree-l4" href="#write-nwjs-app">Write NW.js App</a></li>
+        
+            <li><a class="toctree-l4" href="#whats-next">What's next</a></li>
+        
+            <li><a class="toctree-l4" href="#getting-help">Getting Help</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Repositories/">Repositories</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
-        
-    </li>
-
-        
     </ul>
-<li>
-          
-            <li>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Debugging with DevTools/">使用DevTools调试</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Package and Distribute/">打包与发布</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../FAQ/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">合并版本</span>
     <ul class="subnav">
-    <li><span>参考资料</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/App/">App</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Changes%20to%20DOM/">Changes to DOM</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Changes%20to%20Node/">Changes to Node</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Clipboard/">Clipboard</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Command%20Line%20Options/">Command Line Options</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Manifest%20Format/">Manifest Format</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Menu/">Menu</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/MenuItem/">MenuItem</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Screen/">Screen</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Shell/">Shell</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Shortcut/">Shortcut</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Tray/">Tray</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/webview%20Tag/">webview Tag</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Window/">Window</a>
-        
-    </li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Migration/From 0.12 to 0.13/">0.12升级0.13</a>
+                </li>
     </ul>
-<li>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">进阶</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Build Flavors/">编译特性</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Content Verification/">内容验证</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Customize Menubar/">Customize Menubar</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/JavaScript Contexts in NW.js/">JavaScript Contexts in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Protect JavaScript Source Code/">Protect JavaScript Source Code</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Security in NW.js/">Security in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Support for Mac App Store/">Support for Mac App Store</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Test with ChromeDriver/">Test with ChromeDriver</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Transparent Window/">Transparent Window</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Use Flash Plugin/">Use Flash Plugin</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Use NaCl in NW.js/">Use NaCl in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Use Native Node Modules/">Use Native Node Modules</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Advanced/Autoupdates/">Autoupdates</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">参考资料</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../References/App/">App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Changes to DOM/">Changes to DOM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Changes to Node/">Changes to Node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Clipboard/">Clipboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Command Line Options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Chrome Extension APIs/">Chrome Extension APIs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Manifest Format/">Manifest Format</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Menu/">Menu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/MenuItem/">MenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Screen/">Screen</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Shell/">Shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Shortcut/">Shortcut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Tray/">Tray</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/webview Tag/">webview Tag</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Window/">Window</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发者手册</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Building NW.js/">Building NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Contributing to NW.js/">Contributing to NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Enable Proprietary Codecs/">Enable Proprietary Codecs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Repositories/">Repositories</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Understanding Crash Dump/">Understanding Crash Dump</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Writing Documents for NW.js/">Writing Documents for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Writing Test Cases for NW.js/">Writing Test Cases for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Contributors of Documents/">Contributors of Documents</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -359,7 +280,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">NW.js 中文文档</a>
+        <a href="../..">NW.js 最新版中文文档</a>
       </nav>
 
       
@@ -378,9 +299,8 @@
     <li>快速开始</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/lxp135/NW.jsCnDocs" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/lxp135/NW.jsCnDocs/edit/master/docs/For Users/Getting Started.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -389,46 +309,53 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="_1">快速开始</h1>
+                <h1 id="getting-started-with-nwjs">Getting Started with NW.js</h1>
 <hr />
 <div class="toc">
 <ul>
-<li><a href="#_1">快速开始</a><ul>
-<li><a href="#nwjs">NW.js 能做什么?</a></li>
-<li><a href="#nwjs_1">获得 NW.js</a></li>
-<li><a href="#nwjs_2">编写 NW.js 应用</a><ul>
-<li><a href="#1-hello-world">例 1 - Hello World</a></li>
-<li><a href="#2-nwjs-apis">例 2 - 使用 NW.js APIs</a></li>
-<li><a href="#3-nodejs-api">例 3 - 使用 Node.js API</a></li>
+<li><a href="#getting-started-with-nwjs">Getting Started with NW.js</a><ul>
+<li><a href="#what-can-nwjs-do">What can NW.js do?</a></li>
+<li><a href="#get-nwjs">Get NW.js</a></li>
+<li><a href="#write-nwjs-app">Write NW.js App</a><ul>
+<li><a href="#example-1-hello-world">Example 1 - Hello World</a></li>
+<li><a href="#example-2-using-nwjs-apis">Example 2 - Using NW.js APIs</a></li>
+<li><a href="#example-3-using-nodejs-api">Example 3 - Using Node.js API</a></li>
 </ul>
 </li>
-<li><a href="#_2">下一步？</a></li>
-<li><a href="#_3">取得帮助</a></li>
+<li><a href="#whats-next">What&rsquo;s next</a></li>
+<li><a href="#getting-help">Getting Help</a></li>
 </ul>
 </li>
 </ul>
 </div>
-<h2 id="nwjs">NW.js 能做什么?</h2>
-<p>NW.js 基于<a href="http://www.chromium.org">Chromium</a>内核与<a href="http://nodejs.org/">Node.js</a>。<br />
-NW.js让您在编写应用时可以使用Node.js及其modules与web开发技术。而且，您可以非常容易的将一个WEB应用打包成一个原生应用。</p>
-<h2 id="nwjs_1">获得 NW.js</h2>
-<p>您可以从官方网站<a href="http://nwjs.io/">http://nwjs.io</a>取得最新版本，或者您也可以参考<a href="../../For%20Developers/Building%20NW.js/">Building NW.js</a>自己编译NW.js。</p>
+<h2 id="what-can-nwjs-do">What can NW.js do?</h2>
+<p>NW.js is based on <a href="http://www.chromium.org">Chromium</a> and <a href="http://nodejs.org/">Node.js</a>. It lets you call Node.js code and modules directly from browser and also use Web technologies in your app. Further, you can easily package a web application to a native application.</p>
+<h2 id="get-nwjs">Get NW.js</h2>
+<p>You can get the latest binaries from official website http://nwjs.io. Or you can also build NW.js binaries yourself by following the instructions in <a href="../../For Developers/Building NW.js/">Building NW.js</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>建议您选择SDK版本，在SDK版本中您可以使用DevTools工具来Debug您的应用。查看不同编译版本的区别<a href="../Advanced/Build%20Flavors/">Build Flavors</a>。</p>
+<p>You are recommended to choose SDK build flavor to develop your app, which enables you to use DevTools to debug your app. See <a href="../Advanced/Build Flavors/">Build Flavors</a> for the differences between build flavors.</p>
 </div>
-<h2 id="nwjs_2">编写 NW.js 应用</h2>
-<h3 id="1-hello-world">例 1 - Hello World</h3>
-<p>从一个简单的例子来让我们看看如何编写一个NW.js应用。</p>
-<p><strong>第一步</strong> 创建 <code>package.json</code>配置文件:</p>
+<h2 id="write-nwjs-app">Write NW.js App</h2>
+<h3 id="example-1-hello-world">Example 1 - Hello World</h3>
+<p>This the basic example shows how to write an NW.js app.</p>
+<p><strong>Step 1.</strong> Create <code>package.json</code>:</p>
 <pre class="codehilite"><code class="language-json">{
   &quot;name&quot;: &quot;helloworld&quot;,
   &quot;main&quot;: &quot;index.html&quot;
 }</code></pre>
 
 
-<p><code>package.json</code> 是应用的默认配置文件，书写格式参考<a href="http://www.json.org/">JSON format</a>。其中 <code>main</code> 属性设置例1中的NW.js应用打开的首页是<code>"index.html"</code>，<code>name</code> 属性设置了NW.js应用的唯一名称，更多配置属性可以查看<a href="../../References/Manifest%20Format/">Manifest Format</a>。</p>
-<p><strong>第二步</strong> 创建首页 <code>index.html</code>:</p>
+<p><code>package.json</code> is the manifest file in your app. It is written in <a href="http://www.json.org/">JSON format</a>. The <code>main</code> field figures out the first page opened by the NW.js if referenced to an HTML file, <code>"index.html"</code> in this example. And the <code>name</code> field is the unique name used among NW.js apps. See <a href="../../References/Manifest Format/">Manifest Format</a> for more details.</p>
+<div class="admonition tip">
+<p class="admonition-title">Use JS File as Main</p>
+<p>You can set JS file as in <code>"main"</code> field as well, like <code>"main.js"</code>. Then the JS file will be loaded in the background page on start and no window is opened by default. Usually you can do some initialization and open the window manually later. For example,<br />
+<code>javascript
+// initialize your app
+// and ...
+nw.Window.open('index.html', {}, function(win) {});</code></p>
+</div>
+<p><strong>Step 2.</strong> Create <code>index.html</code>:</p>
 <pre class="codehilite"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -440,24 +367,20 @@ NW.js让您在编写应用时可以使用Node.js及其modules与web开发技术�
 &lt;/html&gt;</code></pre>
 
 
-<p>这是一个简单的HTML页面文件，您可以使用任何最新浏览器支持的WEB开发技术。</p>
-<div class="admonition note">
-<p class="admonition-title">Chromium核心特性</p>
-<p>由于NW.js基于Chromium核心,她允许您使用Chrome浏览器所支持独特功能，比如<a href="https://developer.mozilla.org/en-US/docs/Web/API/File_System_API">File System API</a>, 与带<code>-webkit-</code>前缀的实验性CSS样式. <strong>但是请小心使用这些非标准特性，非标准特性有可能会在新的版本中不被支持。</strong></p>
-</div>
-<p><strong>第三步</strong> 运行您的应用</p>
+<p>This is the normal HTML file. You can use any web technologies supported by latest browsers.</p>
+<p><strong>Step 3.</strong> Run your app</p>
 <pre class="codehilite"><code class="language-bash">cd /path/to/your/app
 /path/to/nw .</code></pre>
 
 
-<p><code>/path/to/nw</code> 是NW.js生成的二进制文件。在windows系统上,文件为<code>nw.exe</code>；在Linux系统,文件为<code>nw</code>;在Mac系统,文件为<code>nwjs.app/Contents/MacOS/nwjs</code>.</p>
+<p><code>/path/to/nw</code> is the binary file of NW.js. On Windows, it&rsquo;s <code>nw.exe</code>; On Linux, it&rsquo;s <code>nw</code>; On Mac, it&rsquo;s <code>nwjs.app/Contents/MacOS/nwjs</code>.</p>
 <div class="admonition tip">
-<p class="admonition-title">拖拽 &amp; Drop on Windows</p>
-<p>在使用windows系统时，您可以拖拽<code>package.json</code>文件到<code>nw.exe</code>文件之上来运行应用。</p>
+<p class="admonition-title">Drag &amp; Drop on Windows</p>
+<p>On Windows, you can drag the <code>folder containing package.json</code> to <code>nw.exe</code> to run your app.</p>
 </div>
-<h3 id="2-nwjs-apis">例 2 - 使用 NW.js APIs</h3>
-<p>全部NW.js APIs都可以在任何JavaScript文件从<code>nw</code>全局对象调用。从<a href="../..#references">API References</a>列表查看所有支持的APIs。</p>
-<p>这个例子展示了如何在NW.js应用中创建一个右键菜单，您可以在例1中创建的<code>index.html</code>文件中加入如下代码：</p>
+<h3 id="example-2-using-nwjs-apis">Example 2 - Using NW.js APIs</h3>
+<p>All NW.js APIs are loaded in <code>nw</code> object globally and can be used directly in JavaScript files. See <a href="../..#references">API References</a> for full list of supported APIs.</p>
+<p>This example shows how to create a native context menu in your NW.js app. You can create <code>index.html</code> with following content:</p>
 <pre class="codehilite"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -468,10 +391,10 @@ NW.js让您在编写应用时可以使用Node.js及其modules与web开发技术�
 &lt;p&gt;'Right click' to show context menu.&lt;/p&gt;
 
 &lt;script&gt;
-// 创建一个空菜单
+// Create an empty context menu
 var menu = new nw.Menu();
 
-// 添加一些文本选项
+// Add some items with label
 menu.append(new nw.MenuItem({
   label: 'Item A',
   click: function(){
@@ -482,11 +405,11 @@ menu.append(new nw.MenuItem({ label: 'Item B' }));
 menu.append(new nw.MenuItem({ type: 'separator' }));
 menu.append(new nw.MenuItem({ label: 'Item C' }));
 
-// 绑定&quot;contextmenu&quot;事件
+// Hooks the &quot;contextmenu&quot; event
 document.body.addEventListener('contextmenu', function(ev) {
-  // 阻止弹出默认菜单
+  // Prevent showing default context menu
   ev.preventDefault();
-  // 在你点击的位置弹出自定义菜单
+  // Popup the native context menu at place you click
   menu.popup(ev.x, ev.y);
 
   return false;
@@ -497,18 +420,18 @@ document.body.addEventListener('contextmenu', function(ev) {
 &lt;/html&gt;</code></pre>
 
 
-<p>然后运行应用:</p>
+<p>&hellip; then run your app:</p>
 <pre class="codehilite"><code class="language-bash">cd /path/to/your/app
 /path/to/nw .</code></pre>
 
 
 <div class="admonition tip">
 <p class="admonition-title">require(&lsquo;nw.gui&rsquo;)</p>
-<p>依然支持使用<code>require('nw.gui')</code>来加载NW.js APIs，同样返回<code>nw</code>对象。</p>
+<p>The legacy way of loading NW.js APIs using <code>require('nw.gui')</code> is also supported. It returns the same <code>nw</code> object.</p>
 </div>
-<h3 id="3-nodejs-api">例 3 - 使用 Node.js API</h3>
-<p>您可以使用NW.js在应用的任何地方调用node.js及其modules。</p>
-<p>这个例子展示了如何使用Node.js中的<code>os</code>模块来调用系统接口，您可以在<code>index.html</code>文件中加入如下代码：</p>
+<h3 id="example-3-using-nodejs-api">Example 3 - Using Node.js API</h3>
+<p>You can call node.js and modules directly from the DOM. So it enables endless possibilities for writing apps with nw.js.</p>
+<p>This example shows how to query the OS platform with <code>os</code> module of Node.js. Simply create the <code>index.html</code> file with following content and run it with NW.js.</p>
 <pre class="codehilite"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -516,7 +439,7 @@ document.body.addEventListener('contextmenu', function(ev) {
 &lt;/head&gt;
 &lt;body&gt;
 &lt;script&gt;
-// 使用node.js取得系统接口
+// get the system platform using node.js
 var os = require('os');
 document.write('You are running on ', os.platform());
 &lt;/script&gt;
@@ -524,20 +447,20 @@ document.write('You are running on ', os.platform());
 &lt;/html&gt;</code></pre>
 
 
-<p>您可以在NW.js中使用所有由<a href="https://www.npmjs.com/"><code>npm</code></a>安装的Node.js模块。</p>
+<p>You could also use the modules installed by <a href="https://www.npmjs.com/"><code>npm</code></a> with NW.js.</p>
 <div class="admonition note">
 <p class="admonition-title">Native Node Modules</p>
-<p>本地使用<code>npm install</code>安装的原生Node模块，并不能在NW.js中直接使用。想使用某个Node模块的话，你必须使用<a href="https://github.com/nwjs/nw-gyp"><code>nw-gyp</code></a>从该模块源代码重新编译。有关详细信息，请参阅<a href="../Advanced/Use%20Native%20Node%20Modules/">使用 Native Node Modules</a>。</p>
+<p>Native Node modules, built when running <code>npm install</code>, are not compatible with NW.js ABI. To use them, you have to rebuild it from source code with <a href="https://github.com/nwjs/nw-gyp"><code>nw-gyp</code></a>. See <a href="../Advanced/Use Native Node Modules/">Use Native Node Modules</a> for details.</p>
 </div>
-<h2 id="_2">下一步？</h2>
-<p>查看<a href="../Debugging%20with%20DevTools/">使用DevTools进行Debug</a>，了解如何调试NW.js应用。</p>
-<p>查看<a href="../Package%20and%20Distribute/">打包与分发</a>，了解如何将您的NW.js应用打包成成品并发布。</p>
-<p>查看<a href="../FAQ/">FAQ</a>，了解常见问题。</p>
-<p>查看<a href="../Migration/From%200.12%20to%200.13/">从0.12升级到0.13</a>，了解如何从0.12或者更老版本升级到0.13。</p>
-<h2 id="_3">取得帮助</h2>
-<p>更多有用的信息请查看<a href="https://github.com/nwjs/nw.js/wiki">NW.js wiki</a>。该wiki对所有人开放，欢迎您参与编辑分享您所知道关于NW.js的知识。</p>
-<p>您也可以在<a href="https://groups.google.com/forum/#!forum/nwjs-general">mail list on Google group</a>这个邮件列表中提出您的问题，或者在<a href="https://gitter.im/nwjs/nw.js">Gitter</a>中参与讨论。</p>
-<p>请在<a href="https://github.com/nwjs/nw.js/issues">GitHub</a>上报告BUG和提交需求，使NW.js变得更强大。</p>
+<h2 id="whats-next">What&rsquo;s next</h2>
+<p>See <a href="../Debugging with DevTools/">Debugging with DevTools</a> for debugging NW.js apps.</p>
+<p>See <a href="../Package and Distribute/">Package and Distribute</a> for packaging and redistribute your app in production.</p>
+<p>See <a href="../FAQ/">FAQ</a> for issues you may encounter.</p>
+<p>See <a href="../Migration/From 0.12 to 0.13/">the migration notes</a>, if you are migrating your app from NW.js 0.12 or older versions.</p>
+<h2 id="getting-help">Getting Help</h2>
+<p>There are lots of useful information on <a href="https://github.com/nwjs/nw.js/wiki">NW.js wiki</a>. The wiki is also open for everyone, and you are encouraged to publish your knowledge on wiki.</p>
+<p>You can also ask questions on <a href="https://groups.google.com/forum/#!forum/nwjs-general">mail list on Google group</a> or chat on <a href="https://gitter.im/nwjs/nw.js">Gitter</a>.</p>
+<p>Please report bugs or submit requirements on <a href="https://github.com/nwjs/nw.js/issues">GitHub</a> to make NW.js more powerful.</p>
               
             </div>
           </div>
@@ -545,10 +468,10 @@ document.write('You are running on ', os.platform());
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Package%20and%20Distribute/" class="btn btn-neutral float-right" title="打包与分发"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Debugging with DevTools/" class="btn btn-neutral float-right" title="使用DevTools调试">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../FAQ/" class="btn btn-neutral" title="FAQ"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../.." class="btn btn-neutral" title="首页"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -558,13 +481,13 @@ document.write('You are running on ', os.platform());
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
+      <p>NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script></p>
     
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -572,19 +495,22 @@ document.write('You are running on ', os.platform());
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/lxp135/NW.jsCnDocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../FAQ/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../.." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Package%20and%20Distribute/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Debugging with DevTools/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

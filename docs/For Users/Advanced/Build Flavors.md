@@ -1,12 +1,13 @@
-# Build Flavors
+# Build Flavors {: .doctitle}
 ---
 
 [TOC]
 
-NW.js通过支持不同的编译配置方式来消减应用程序大小。目前NW.js支持以下编译配置方式：
+NW.js supports various build flavors for reducing the application size. Currently NW.js supports following build flavors:
 
-* SDK flavor：内建支持DevTools调试工具与NaCl插件。 SDK flavor与0.13.0之前的编译配置方式类似。
-* NaCL flavor：支持 Native Client (NaCl) 插件，但是不包含DevTools调试工具。
-* Normal flavor：最小编译版本，不支持DevTools调试工具和NaCl插件。
+* SDK flavor: has builtin support for DevTools and NaCl plugins. SDK flavor has the same capabilities as the builds before 0.13.0
+* Normal flavor: is a minimum build without DevTools and NaCl plugin support.
 
-查看 [Build Flavors section in Building NW.js](../../For Developers/Building NW.js.md#build-flavors) 教你如何从源码编译。
+In your code, you can use `process.versions['nw-flavor']` to see in which flavor your application is running.
+
+See [Build Flavors section in Building NW.js](../../For Developers/Building NW.js.md#build-flavors) for how to build them from source code.

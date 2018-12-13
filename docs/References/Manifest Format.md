@@ -11,7 +11,7 @@ Following is a minimal manifest:
 ```json
 {
   "main": "index.html",
-  "name": "nw-demo",
+  "name": "nw-demo"
 }
 ```
 
@@ -26,9 +26,9 @@ Each package must provide all the following fields in its package descriptor fil
 
 ### main
 
-* `{String}` which page should be opened when NW.js starts.
+* `{String}` which HTML page should be opened or which JavaScript file should be executed when NW.js starts.
 
-You can specify a URL here. You can also specify just a filename (such as `index.html`) or a path (relative to the directory where your `package.json` resides).
+You can specify a URL here. You can also specify just a filename (such as `index.html` or `script.js`) or a path (relative to the directory where your `package.json` resides).
 
 ### name
 
@@ -40,6 +40,10 @@ You can specify a URL here. You can also specify just a filename (such as `i
 
 Following fields control which features NW.js should provide and how NW.js should open the main window.
 
+### product_string
+
+* `{String}` Use it to [rename the Helper application under macOS](http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/#mac-os-x).
+
 ### nodejs
 
 * `{Boolean}` set `nodejs` to false will disable Node support in NW.js.
@@ -47,6 +51,10 @@ Following fields control which features NW.js should provide and how NW.js shoul
 ### node-main
 
 * `{String}` Specify the path to a node.js script file. And it will be executed on startup in Node context before the first DOM window load.
+
+### domain
+
+* `{String}` Specify the host in the chrome-extension:// protocol URL used for the application. The web engine will share the same cookies between your application and the website under the same domain.
 
 ### single-instance
 
@@ -59,11 +67,11 @@ By default NW.js only allows one instance of your app. If you want to allow mult
 
 ### bg-script
 
-* `{String}` background script
+* `{String}` background script. The script is executed in the background page at the start of application.
 
 ### window
 
-* `{Object}` controls how the main window looks, see [Window Subfields](#window-subfields) below.
+* `{Object}` controls how the window looks, see [Window Subfields](#window-subfields) below.
 
 ### webkit
 
@@ -78,7 +86,8 @@ The following placeholders are available to composite the user agent dynamically
 * `%name`: replaced by the `name` field in the manifest.
 * `%ver`: replaced by the `version` field in the manifest, if available.
 * `%nwver`: replaced by the version of NW.js.
-* `%webkit_ver`: replaced by the version of WebKit engine.
+* `%webkit_ver`: replaced by the version of Blink engine.
+* `%chromium_ver`: replaced by the Chromium version
 * `%osinfo`: replaced by the OS and CPU information you would see in browser's user agent string.
 
 ### node-remote
@@ -111,6 +120,19 @@ It will be useful if you want to distribute the app with some custom chromium ar
 
 See [Command Line Options](Command Line Options.md) for more information.
 
+### crash_report_url
+
+* `{String}` URL of the crash report server
+
+Once the app crashed, the crash dump file and information about the runtime environment will be sent to the crash server. It's sent in the same way as in Chromium browser: a HTTP POST request with `multipart/form-data` as the content type. In theory, any breakpad/crashpad server could handle the request, since breakpad/crashpad work in the same way in NW as they do in Chromium. See [a very simple server](https://github.com/nwjs/nw.js/blob/nw21/test/sanity/crash-dump-report/crash_server.py) used in our test case, or [simple-breakpad-server](https://github.com/acrisci/simple-breakpad-server).
+
+The request contains the following field at least:
+
+* `prod` - the `name` field in the manifest of your application
+* `ver` - the `version` field in the manifest of your application
+* `upload_file_minidump` - the binary contents of the minidump file
+* `switch-n` - the command line switches of the crashing process. There are multiple fields for each switch where `n` is a number starting from 1.
+
 ### js-flags
 
 * `{String}` Specify the flags passed to JS engine (v8). e.g. turn on Harmony Proxies and Collections feature:
@@ -123,18 +145,20 @@ See [Command Line Options](Command Line Options.md) for more information.
 }
 ```
 
-### inject-js-start
-### inject-js-end
+A list of supported V8 flags can be found here: https://chromium.googlesource.com/v8/v8/+/master/src/flag-definitions.h
+
+### inject_js_start
+### inject_js_end
 
 * `{String}` a local filename, relative to the application path, used to specify a JavaScript file to inject to the window.
 
-`inject-js-start`: The injecting JavaScript code is to be executed after any files from css, but before any other DOM is constructed or any other script is run.
+`inject_js_start`: The injecting JavaScript code is to be executed after any files from css, but before any other DOM is constructed or any other script is run.
 
-`inject-js-end`: The injecting JavaScript code is to be executed after the document object is loaded, before `onload` event is fired. This is mainly to be used as an option of `Window.open()` to inject JS in a new window. 
+`inject_js_end`: The injecting JavaScript code is to be executed after the document object is loaded, before `onload` event is fired. This is mainly to be used as an option of `Window.open()` to inject JS in a new window. 
 
 ### additional_trust_anchors
 
-* `{String}` Containing a list of PEM-encoded certificates (i.e. `"-----BEGIN CERTIFICATE-----\n...certificate data...\n-----END CERTIFICATE-----\n"`).
+* `{Array}` Containing a list of PEM-encoded certificates (i.e. `"-----BEGIN CERTIFICATE-----\n...certificate data...\n-----END CERTIFICATE-----\n"`).
 
 These certificates are used as additional root certificates for validation, to allow connecting to services using a self-signed certificate or certificates issued by custom CAs.
 
@@ -150,6 +174,20 @@ These certificates are used as additional root certificates for validation, to a
 * `{Boolean}` whether the default `Edit` menu should be disabled on Mac OS X. The default value is `false`. Only effective on Mac OS X.
 
 ## Window Subfields
+
+Most of window subfields are inherited by sub windows opened by `window.open()` or links (`<a target="_blank">`) by default. The exception list of non inherited subfields are as following. They will be set to default value for opened window:
+
+* `fullscreen` -> `false`
+* `kiosk` -> `false`
+* `position` -> `null`
+* `resizable` -> `true`
+* `show` -> `true`
+
+All of the window subfields can be overwritten by using [`new-win-policy` event](Window.md#event-new-win-policy-frame-url-policy).
+
+### id
+
+* `{String}` the `id` used to identify the window. This will be used to remember the size and position of the window and restore that geometry when a window with the same id is later opened. [See also the Chrome App documentation](https://developer.chrome.com/apps/app_window#type-CreateWindowOptions)
 
 ### title
 
@@ -243,17 +281,13 @@ There is experimental support for "click-through" on the transparent region: add
 
 ## WebKit Subfields
 
+### double_tap_to_zoom_enabled
+
+* `{Boolean}` enable zooming with double tapping on mac with 2 fingers, default is false.
+
 ### plugin
 
-* `{Boolean}` whether to load external browser plugins like Flash, default to false.
-
-### java
-
-* `{Boolean}` whether to load Java applets, default to false.
-
-### page-cache
-
-* `{Boolean}` whether to enable page cache, default to false.
+* `{Boolean}` whether to load external browser plugins like Flash, default to true.
 
 ## Other Fields
 

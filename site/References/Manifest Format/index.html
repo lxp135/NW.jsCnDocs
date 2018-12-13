@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Manifest Format - NW.js 中文文档</title>
-  
-
+  <meta name="author" content="刘小平">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Manifest Format - NW.js 最新版中文文档</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Manifest Format";
+    var mkdocs_page_input_path = "References\\Manifest Format.md";
+    var mkdocs_page_url = "/References/Manifest Format/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,318 +36,241 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> NW.js 中文文档</a>
+        <a href="../.." class="icon icon-home"> NW.js 最新版中文文档</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">首页</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">首页</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">用户手册</span>
     <ul class="subnav">
-    <li><span>用户手册</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Debugging%20with%20DevTools/">使用DevTools调试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/FAQ/">FAQ</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Getting%20Started/">快速开始</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Package%20and%20Distribute/">打包与分发</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Build%20Flavors/">进阶：Build 特性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Content%20Verification/">进阶：内容验证</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/">进阶：在NW.js中使用JavaScript</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">进阶：保护JavaScript源代码</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Security%20in%20NW.js/">进阶：NW.js的安全性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Test%20with%20ChromeDriver/">进阶：使用ChromeDriver进行测试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Transparent%20Window/">进阶：透明窗口</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Use%20NaCl%20in%20NW.js/">进阶：在NW.js中使用NaCl</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Use%20Native%20Node%20Modules/">进阶：使用 Native Node Modules</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Migration/From%200.12%20to%200.13/">合并版本：从0.12升级到0.13</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/Getting Started/">快速开始</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/Debugging with DevTools/">使用DevTools调试</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/Package and Distribute/">打包与发布</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/FAQ/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">合并版本</span>
     <ul class="subnav">
-    <li><span>开发者手册</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Building%20NW.js/">Building NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Repositories/">Repositories</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
-        
-    </li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Migration/From 0.12 to 0.13/">0.12升级0.13</a>
+                </li>
     </ul>
-<li>
-          
-            <li>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">进阶</span>
     <ul class="subnav">
-    <li><span>参考资料</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../App/">App</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Changes%20to%20DOM/">Changes to DOM</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Changes%20to%20Node/">Changes to Node</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Clipboard/">Clipboard</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Command%20Line%20Options/">Command Line Options</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Manifest Format</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#manifest-format-doctitle">Manifest Format {: .doctitle}</a></li>
-                
-                    <li><a class="toctree-l4" href="#quick-start">Quick Start</a></li>
-                
-                    <li><a class="toctree-l4" href="#required-fields">Required Fields</a></li>
-                
-                    <li><a class="toctree-l4" href="#features-control-fields">Features Control Fields</a></li>
-                
-                    <li><a class="toctree-l4" href="#window-subfields">Window Subfields</a></li>
-                
-                    <li><a class="toctree-l4" href="#webkit-subfields">WebKit Subfields</a></li>
-                
-                    <li><a class="toctree-l4" href="#other-fields">Other Fields</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Menu/">Menu</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../MenuItem/">MenuItem</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Screen/">Screen</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Shell/">Shell</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Shortcut/">Shortcut</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Tray/">Tray</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../webview%20Tag/">webview Tag</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Window/">Window</a>
-        
-    </li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Build Flavors/">编译特性</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Content Verification/">内容验证</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Customize Menubar/">Customize Menubar</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/JavaScript Contexts in NW.js/">JavaScript Contexts in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Protect JavaScript Source Code/">Protect JavaScript Source Code</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Security in NW.js/">Security in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Support for Mac App Store/">Support for Mac App Store</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Test with ChromeDriver/">Test with ChromeDriver</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Transparent Window/">Transparent Window</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Use Flash Plugin/">Use Flash Plugin</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Use NaCl in NW.js/">Use NaCl in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Use Native Node Modules/">Use Native Node Modules</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Autoupdates/">Autoupdates</a>
+                </li>
     </ul>
-<li>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">参考资料</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../App/">App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Changes to DOM/">Changes to DOM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Changes to Node/">Changes to Node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Clipboard/">Clipboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Command Line Options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Chrome Extension APIs/">Chrome Extension APIs</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="./">Manifest Format</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#manifest-format-doctitle">Manifest Format {: .doctitle}</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#quick-start">Quick Start</a></li>
+        
+            <li><a class="toctree-l4" href="#required-fields">Required Fields</a></li>
+        
+            <li><a class="toctree-l4" href="#features-control-fields">Features Control Fields</a></li>
+        
+            <li><a class="toctree-l4" href="#window-subfields">Window Subfields</a></li>
+        
+            <li><a class="toctree-l4" href="#webkit-subfields">WebKit Subfields</a></li>
+        
+            <li><a class="toctree-l4" href="#other-fields">Other Fields</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Menu/">Menu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../MenuItem/">MenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Screen/">Screen</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Shell/">Shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Shortcut/">Shortcut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Tray/">Tray</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../webview Tag/">webview Tag</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Window/">Window</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发者手册</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Building NW.js/">Building NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Contributing to NW.js/">Contributing to NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Enable Proprietary Codecs/">Enable Proprietary Codecs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Repositories/">Repositories</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Understanding Crash Dump/">Understanding Crash Dump</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Writing Documents for NW.js/">Writing Documents for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Writing Test Cases for NW.js/">Writing Test Cases for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Contributors of Documents/">Contributors of Documents</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -361,7 +282,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">NW.js 中文文档</a>
+        <a href="../..">NW.js 最新版中文文档</a>
       </nav>
 
       
@@ -380,9 +301,8 @@
     <li>Manifest Format</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/lxp135/NW.jsCnDocs" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/lxp135/NW.jsCnDocs/edit/master/docs/References/Manifest Format.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -403,8 +323,10 @@
 </ul>
 </li>
 <li><a href="#features-control-fields">Features Control Fields</a><ul>
+<li><a href="#product_string">product_string</a></li>
 <li><a href="#nodejs">nodejs</a></li>
 <li><a href="#node-main">node-main</a></li>
+<li><a href="#domain">domain</a></li>
 <li><a href="#single-instance">single-instance</a></li>
 <li><a href="#bg-script">bg-script</a></li>
 <li><a href="#window">window</a></li>
@@ -412,15 +334,17 @@
 <li><a href="#user-agent">user-agent</a></li>
 <li><a href="#node-remote">node-remote</a></li>
 <li><a href="#chromium-args">chromium-args</a></li>
+<li><a href="#crash_report_url">crash_report_url</a></li>
 <li><a href="#js-flags">js-flags</a></li>
-<li><a href="#inject-js-start">inject-js-start</a></li>
-<li><a href="#inject-js-end">inject-js-end</a></li>
+<li><a href="#inject_js_start">inject_js_start</a></li>
+<li><a href="#inject_js_end">inject_js_end</a></li>
 <li><a href="#additional_trust_anchors">additional_trust_anchors</a></li>
 <li><a href="#dom_storage_quota">dom_storage_quota</a></li>
 <li><a href="#no-edit-menu-mac">no-edit-menu (Mac)</a></li>
 </ul>
 </li>
 <li><a href="#window-subfields">Window Subfields</a><ul>
+<li><a href="#id">id</a></li>
 <li><a href="#title">title</a></li>
 <li><a href="#width">width</a></li>
 <li><a href="#height">height</a></li>
@@ -444,9 +368,8 @@
 </ul>
 </li>
 <li><a href="#webkit-subfields">WebKit Subfields</a><ul>
+<li><a href="#double_tap_to_zoom_enabled">double_tap_to_zoom_enabled</a></li>
 <li><a href="#plugin">plugin</a></li>
-<li><a href="#java">java</a></li>
-<li><a href="#page-cache">page-cache</a></li>
 </ul>
 </li>
 <li><a href="#other-fields">Other Fields</a></li>
@@ -459,7 +382,7 @@
 <p>Following is a minimal manifest:</p>
 <pre class="codehilite"><code class="language-json">{
   &quot;main&quot;: &quot;index.html&quot;,
-  &quot;name&quot;: &quot;nw-demo&quot;,
+  &quot;name&quot;: &quot;nw-demo&quot;
 }</code></pre>
 
 
@@ -472,9 +395,9 @@
 <p>Each package must provide all the following fields in its package descriptor file.</p>
 <h3 id="main">main</h3>
 <ul>
-<li><code>{String}</code> which page should be opened when NW.js starts.</li>
+<li><code>{String}</code> which HTML page should be opened or which JavaScript file should be executed when NW.js starts.</li>
 </ul>
-<p>You can specify a URL here. You can also specify just a filename (such as <code>index.html</code>) or a path (relative to the directory where your <code>package.json</code> resides).</p>
+<p>You can specify a URL here. You can also specify just a filename (such as <code>index.html</code> or <code>script.js</code>) or a path (relative to the directory where your <code>package.json</code> resides).</p>
 <h3 id="name">name</h3>
 <ul>
 <li><code>{String}</code> the name of the package. This must be a unique, lowercase alpha-numeric name without spaces. It may include &ldquo;.&rdquo; or &ldquo;_&rdquo; or &ldquo;-&rdquo; characters. It is otherwise opaque. </li>
@@ -482,6 +405,10 @@
 <p><code>name</code> should be globally unique since NW.js will store app&rsquo;s data under the directory named <code>name</code>.</p>
 <h2 id="features-control-fields">Features Control Fields</h2>
 <p>Following fields control which features NW.js should provide and how NW.js should open the main window.</p>
+<h3 id="product_string">product_string</h3>
+<ul>
+<li><code>{String}</code> Use it to <a href="http://docs.nwjs.io/en/latest/For%20Users/Package%20and%20Distribute/#mac-os-x">rename the Helper application under macOS</a>.</li>
+</ul>
 <h3 id="nodejs">nodejs</h3>
 <ul>
 <li><code>{Boolean}</code> set <code>nodejs</code> to false will disable Node support in NW.js.</li>
@@ -490,10 +417,14 @@
 <ul>
 <li><code>{String}</code> Specify the path to a node.js script file. And it will be executed on startup in Node context before the first DOM window load.</li>
 </ul>
+<h3 id="domain">domain</h3>
+<ul>
+<li><code>{String}</code> Specify the host in the chrome-extension:// protocol URL used for the application. The web engine will share the same cookies between your application and the website under the same domain.</li>
+</ul>
 <h3 id="single-instance">single-instance</h3>
 <div class="admonition warning">
 <p class="admonition-title">Deprecated</p>
-<p>This property is deprecated since 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<p>This property is deprecated since 0.13.0. See <a href="../../For Users/Migration/From 0.12 to 0.13/">Migration Notes from 0.12 to 0.13</a>.</p>
 </div>
 <ul>
 <li><code>{Boolean}</code> Specify whether to start up single instance of your app. It&rsquo;s set to <code>true</code> by default.</li>
@@ -501,11 +432,11 @@
 <p>By default NW.js only allows one instance of your app. If you want to allow multiple instances of your app running at the same time, set this to <code>false</code>.</p>
 <h3 id="bg-script">bg-script</h3>
 <ul>
-<li><code>{String}</code> background script</li>
+<li><code>{String}</code> background script. The script is executed in the background page at the start of application.</li>
 </ul>
 <h3 id="window">window</h3>
 <ul>
-<li><code>{Object}</code> controls how the main window looks, see <a href="#window-subfields">Window Subfields</a> below.</li>
+<li><code>{Object}</code> controls how the window looks, see <a href="#window-subfields">Window Subfields</a> below.</li>
 </ul>
 <h3 id="webkit">webkit</h3>
 <ul>
@@ -520,13 +451,14 @@
 <li><code>%name</code>: replaced by the <code>name</code> field in the manifest.</li>
 <li><code>%ver</code>: replaced by the <code>version</code> field in the manifest, if available.</li>
 <li><code>%nwver</code>: replaced by the version of NW.js.</li>
-<li><code>%webkit_ver</code>: replaced by the version of WebKit engine.</li>
+<li><code>%webkit_ver</code>: replaced by the version of Blink engine.</li>
+<li><code>%chromium_ver</code>: replaced by the Chromium version</li>
 <li><code>%osinfo</code>: replaced by the OS and CPU information you would see in browser&rsquo;s user agent string.</li>
 </ul>
 <h3 id="node-remote">node-remote</h3>
 <div class="admonition warning">
 <p class="admonition-title">Behavior Changed</p>
-<p>This feature is changed in 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<p>This feature is changed in 0.13.0. See <a href="../../For Users/Migration/From 0.12 to 0.13/">Migration Notes from 0.12 to 0.13</a>.</p>
 </div>
 <ul>
 <li><code>{Array}</code> or <code>{String}</code> Enable calling Node in remote pages. The value controls for which sites this feature should be turned on. Each item in the array follows the <a href="https://developer.chrome.com/extensions/match_patterns">match patterns</a> used in Chrome extension.</li>
@@ -549,7 +481,19 @@
 <li><code>{String}</code> Specify chromium (content shell) command line arguments.</li>
 </ul>
 <p>It will be useful if you want to distribute the app with some custom chromium args. For example, if you want to disable the GPU accelerated video display, just add <code>"chromium-args" : "--disable-accelerated-video"</code>. If you want to add multiple arguments, separate each two arguments by space. This field can take a number of flags in one argument as well, via enclosing them in single quotation marks.</p>
-<p>See <a href="../Command%20Line%20Options/">Command Line Options</a> for more information.</p>
+<p>See <a href="../Command Line Options/">Command Line Options</a> for more information.</p>
+<h3 id="crash_report_url">crash_report_url</h3>
+<ul>
+<li><code>{String}</code> URL of the crash report server</li>
+</ul>
+<p>Once the app crashed, the crash dump file and information about the runtime environment will be sent to the crash server. It&rsquo;s sent in the same way as in Chromium browser: a HTTP POST request with <code>multipart/form-data</code> as the content type. In theory, any breakpad/crashpad server could handle the request, since breakpad/crashpad work in the same way in NW as they do in Chromium. See <a href="https://github.com/nwjs/nw.js/blob/nw21/test/sanity/crash-dump-report/crash_server.py">a very simple server</a> used in our test case, or <a href="https://github.com/acrisci/simple-breakpad-server">simple-breakpad-server</a>.</p>
+<p>The request contains the following field at least:</p>
+<ul>
+<li><code>prod</code> - the <code>name</code> field in the manifest of your application</li>
+<li><code>ver</code> - the <code>version</code> field in the manifest of your application</li>
+<li><code>upload_file_minidump</code> - the binary contents of the minidump file</li>
+<li><code>switch-n</code> - the command line switches of the crashing process. There are multiple fields for each switch where <code>n</code> is a number starting from 1.</li>
+</ul>
 <h3 id="js-flags">js-flags</h3>
 <ul>
 <li><code>{String}</code> Specify the flags passed to JS engine (v8). e.g. turn on Harmony Proxies and Collections feature:</li>
@@ -561,16 +505,17 @@
 }</code></pre>
 
 
-<h3 id="inject-js-start">inject-js-start</h3>
-<h3 id="inject-js-end">inject-js-end</h3>
+<p>A list of supported V8 flags can be found here: https://chromium.googlesource.com/v8/v8/+/master/src/flag-definitions.h</p>
+<h3 id="inject_js_start">inject_js_start</h3>
+<h3 id="inject_js_end">inject_js_end</h3>
 <ul>
 <li><code>{String}</code> a local filename, relative to the application path, used to specify a JavaScript file to inject to the window.</li>
 </ul>
-<p><code>inject-js-start</code>: The injecting JavaScript code is to be executed after any files from css, but before any other DOM is constructed or any other script is run.</p>
-<p><code>inject-js-end</code>: The injecting JavaScript code is to be executed after the document object is loaded, before <code>onload</code> event is fired. This is mainly to be used as an option of <code>Window.open()</code> to inject JS in a new window. </p>
+<p><code>inject_js_start</code>: The injecting JavaScript code is to be executed after any files from css, but before any other DOM is constructed or any other script is run.</p>
+<p><code>inject_js_end</code>: The injecting JavaScript code is to be executed after the document object is loaded, before <code>onload</code> event is fired. This is mainly to be used as an option of <code>Window.open()</code> to inject JS in a new window. </p>
 <h3 id="additional_trust_anchors">additional_trust_anchors</h3>
 <ul>
-<li><code>{String}</code> Containing a list of PEM-encoded certificates (i.e. <code>"-----BEGIN CERTIFICATE-----\n...certificate data...\n-----END CERTIFICATE-----\n"</code>).</li>
+<li><code>{Array}</code> Containing a list of PEM-encoded certificates (i.e. <code>"-----BEGIN CERTIFICATE-----\n...certificate data...\n-----END CERTIFICATE-----\n"</code>).</li>
 </ul>
 <p>These certificates are used as additional root certificates for validation, to allow connecting to services using a self-signed certificate or certificates issued by custom CAs.</p>
 <h3 id="dom_storage_quota">dom_storage_quota</h3>
@@ -580,12 +525,25 @@
 <h3 id="no-edit-menu-mac">no-edit-menu (Mac)</h3>
 <div class="admonition warning">
 <p class="admonition-title">Deprecated</p>
-<p>This property is deprecated since 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<p>This property is deprecated since 0.13.0. See <a href="../../For Users/Migration/From 0.12 to 0.13/">Migration Notes from 0.12 to 0.13</a>.</p>
 </div>
 <ul>
 <li><code>{Boolean}</code> whether the default <code>Edit</code> menu should be disabled on Mac OS X. The default value is <code>false</code>. Only effective on Mac OS X.</li>
 </ul>
 <h2 id="window-subfields">Window Subfields</h2>
+<p>Most of window subfields are inherited by sub windows opened by <code>window.open()</code> or links (<code>&lt;a target="_blank"&gt;</code>) by default. The exception list of non inherited subfields are as following. They will be set to default value for opened window:</p>
+<ul>
+<li><code>fullscreen</code> -&gt; <code>false</code></li>
+<li><code>kiosk</code> -&gt; <code>false</code></li>
+<li><code>position</code> -&gt; <code>null</code></li>
+<li><code>resizable</code> -&gt; <code>true</code></li>
+<li><code>show</code> -&gt; <code>true</code></li>
+</ul>
+<p>All of the window subfields can be overwritten by using <a href="../Window/#event-new-win-policy-frame-url-policy"><code>new-win-policy</code> event</a>.</p>
+<h3 id="id">id</h3>
+<ul>
+<li><code>{String}</code> the <code>id</code> used to identify the window. This will be used to remember the size and position of the window and restore that geometry when a window with the same id is later opened. <a href="https://developer.chrome.com/apps/app_window#type-CreateWindowOptions">See also the Chrome App documentation</a></li>
+</ul>
 <h3 id="title">title</h3>
 <ul>
 <li><code>{String}</code> the default title of window created by NW.js, it&rsquo;s very useful if you want to show your own title when the app is starting.</li>
@@ -598,7 +556,7 @@
 <h3 id="toolbar">toolbar</h3>
 <div class="admonition warning">
 <p class="admonition-title">Deprecated</p>
-<p>This property is deprecated since 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<p>This property is deprecated since 0.13.0. See <a href="../../For Users/Migration/From 0.12 to 0.13/">Migration Notes from 0.12 to 0.13</a>.</p>
 </div>
 <ul>
 <li><code>{Boolean}</code> should the navigation toolbar be showed.</li>
@@ -633,7 +591,7 @@
 <h3 id="always_on_top">always_on_top</h3>
 <div class="admonition warning">
 <p class="admonition-title">Behavior Changed</p>
-<p>This feature is changed in 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<p>This feature is changed in 0.13.0. See <a href="../../For Users/Migration/From 0.12 to 0.13/">Migration Notes from 0.12 to 0.13</a>.</p>
 </div>
 <ul>
 <li><code>{Boolean}</code> whether the window should always stay on top of other windows.</li>
@@ -641,7 +599,7 @@
 <h3 id="visible_on_all_workspaces-mac-linux">visible_on_all_workspaces (Mac &amp; Linux)</h3>
 <div class="admonition warning">
 <p class="admonition-title">Behavior Changed</p>
-<p>This feature is changed in 0.13.0. See <a href="../../For%20Users/Migration/From%200.12%20to%200.13/">Migration Notes from 0.12 to 0.13</a>.</p>
+<p>This feature is changed in 0.13.0. See <a href="../../For Users/Migration/From 0.12 to 0.13/">Migration Notes from 0.12 to 0.13</a>.</p>
 </div>
 <ul>
 <li><code>{Boolean}</code> whether the window should be visible on all workspaces simultaneously (on platforms that support multiple workspaces, currently Mac OS X and Linux).</li>
@@ -675,17 +633,13 @@
 <p>Control the transparency with rgba background value in CSS. Use command line option <code>--disable-transparency</code> to disable this feature completely.</p>
 <p>There is experimental support for &ldquo;click-through&rdquo; on the transparent region: add <code>--disable-gpu</code> option to the command line.</p>
 <h2 id="webkit-subfields">WebKit Subfields</h2>
+<h3 id="double_tap_to_zoom_enabled">double_tap_to_zoom_enabled</h3>
+<ul>
+<li><code>{Boolean}</code> enable zooming with double tapping on mac with 2 fingers, default is false.</li>
+</ul>
 <h3 id="plugin">plugin</h3>
 <ul>
-<li><code>{Boolean}</code> whether to load external browser plugins like Flash, default to false.</li>
-</ul>
-<h3 id="java">java</h3>
-<ul>
-<li><code>{Boolean}</code> whether to load Java applets, default to false.</li>
-</ul>
-<h3 id="page-cache">page-cache</h3>
-<ul>
-<li><code>{Boolean}</code> whether to enable page cache, default to false.</li>
+<li><code>{Boolean}</code> whether to load external browser plugins like Flash, default to true.</li>
 </ul>
 <h2 id="other-fields">Other Fields</h2>
 <p>The <a href="http://wiki.commonjs.org/wiki/Packages/1.0">Packages/1.0</a> standard specifies many other fields <code>package.json</code> should provide. Currently we don&rsquo;t make use of them, but you provide them still.</p>
@@ -696,10 +650,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Menu/" class="btn btn-neutral float-right" title="Menu"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Menu/" class="btn btn-neutral float-right" title="Menu">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Command%20Line%20Options/" class="btn btn-neutral" title="Command Line Options"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Chrome Extension APIs/" class="btn btn-neutral" title="Chrome Extension APIs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -709,13 +663,13 @@
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
+      <p>NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script></p>
     
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -723,19 +677,22 @@
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/lxp135/NW.jsCnDocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../Command%20Line%20Options/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Chrome Extension APIs/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../Menu/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

@@ -13,11 +13,17 @@ That's common practice among web browsers and it's a good thing because, for�
 * when a programmer makes a mistake (such as [missing `new` before a poorly written constructor](http://ejohn.org/blog/simple-class-instantiation/)) and the bug affects (pollutes) the global scope, it still cannot affect larger areas (several windows);
 * malicious applications cannot access confidential data structures in other windows.
 
-When a script accessing to an object / function defined in another context, JS engine will temporarily enter the target context and leave it once finished. 
+When a script accessing to an object / function defined in another context, JS engine will temporarily enter the target context and leave it once finished.
+
+## Contexts in NW.js
+
+NW.js is based on the architecture of Chrome Apps. Thus an invisible background page is loaded automatically at start. And when a new window is created, a JavaScript context is created as well.
+
+In NW.js, Node.js modules can be loaded in the context running in background page, which is the default behavior. Also they can be loaded within the context of each window or frame when running as Mixed Context Mode. Continue to read following sections to see the differences between [Separate Context Mode](#separate-context-mode) and [Mixed Context Mode](#mixed-context-mode).
 
 ## Separate Context Mode
 
-Besides the contexts created by browsers, NW.js introduced additional Node context for running Node modules by default. So NW.js has two types of JavaScript contexts: **Browser Context** and **Node Context**.
+Besides the contexts created by browsers, NW.js introduced additional Node context for running Node modules in the background page by default. So NW.js has two types of JavaScript contexts: **Browser Context** and **Node Context**.
 
 !!! note "Web Worker"
     Actually Web Workers are running in a separate JavaScript context which is neither browser context nor node context. But you can't access Web or Node.js or NW.js APIs in Web Worker's context.
@@ -40,13 +46,13 @@ Different windows and frames have different contexts. So when you create a new f
 
 Some objects of Node context are copied to Browser context so that scripts running in Browser context can access Node.js objects:
 
-* `nw` -- the object of all [NW.js APIs](../../References)
+* `nw` -- the object of all NW.js APIs in **`References`** section
 * `global` -- the global object of Node Context; same as `nw.global`
 * `require` -- the `require()` function for loading Node.js modules; similar to `nw.require()`, but it also supports `require('nw.gui')` to load NW.js API module.
 * `process` -- the [process module](https://nodejs.org/api/globals.html#globals_process) of Node.js; same as `nw.process`
 * `Buffer` -- the [Buffer class](https://nodejs.org/api/globals.html#globals_class_buffer) of Node.js
 
-#### Relative Path Resovling of `require()` in Browser Context
+#### Relative Path Resolving of `require()` in Browser Context
 
 Relative paths in Browser context are resolved according to path of main HTML file (like all browsers do).
 
@@ -67,14 +73,14 @@ Scripts running in the Node context can use [JS builtin objects]() like browse
 #### Create New Node Context
 **All node modules shares a same Node context in separate context mode**. But you have several ways to create new Node contexts:
 
-* Set `new-instance` option to `true` when creating window with [`Window.open()`](../../References/Window.md#windowopenurl-options-callback)
-* Start NW.js with `--mixed-context` CLI option to turn NW.js into [Mixed Context mode](#mixed-context)
+* Set `new_instance` option to `true` when creating window with [`Window.open()`](../../References/Window.md#windowopenurl-options-callback)
+* Start NW.js with `--mixed-context` CLI option to turn NW.js into [Mixed Context mode](#mixed-context-mode)
 
 #### Access Browser and NW.js API in Node Context
 
 In Node context, there are no browser side or NW.js APIs, such as `alert()` or `document.*` or `nw.Clipboard` etc. To access browser APIs, you have to pass the corresponding objects, such as `window` object, to functions in Node context.
 
-See following example for how to achive this.
+See following example for how to achieve this.
 
 Following script are running in Node context (myscript.js):
 ```javascript
@@ -90,13 +96,13 @@ In the browser side (index.html):
 <script>
 var myscript = require('./myscript');
 // pass the `el` element to the Node function
-myscript.setText(document.getElementbyId('el'));
+myscript.setText(document.getElementById('el'));
 // you will see "hello" in the element
 </script>
 ```
 
 !!! note "`window` in Node Context"
-    There is a `window` object in Node context pointing to the main window as set in `main` field of Manifest file.
+    There is a `window` object in Node context pointing to the DOM window object of the background page.
 
 #### Relative Paths Resolving of `require()` in Node Context
 
@@ -104,7 +110,7 @@ Relative paths in node modules are resolved according to path of that module (li
 
 ## Mixed Context Mode
 
-Mixed context is introduced in NW.js 0.13. When running NW.js with [`--mixed-context` CLI option](../../References/Command Line Options.md#mixedcontext), a new Node context is created at the time of each browser context creation and running in a same context as browser context, a.k.a. the Mixed context.
+Mixed context is introduced in NW.js 0.13. When running NW.js with [`--mixed-context` CLI option](../../References/Command Line Options.md#-mixed-context), a new Node context is created at the time of each browser context creation and running in a same context as browser context, a.k.a. the Mixed context.
 
 ### Load Script in Mixed Context Mode
 
@@ -149,9 +155,9 @@ myscript.showAlert(); // I'm running in Node module!
 
 ### Comparing with Separate Context
 
-The advantage of MultiContext mode is that you will not encounter many [type checking issue](#working-with-multiple-contexts) as below.
+The advantage of Separate Context Mode is that you will not encounter many [type checking issue](#working-with-multiple-contexts) as below.
 
-The cons is that in Mixed context mode, you can't share variable easily as before. To share variables among contexts, you should put variables in a common context that can be accessed from the contexts you want to share with. Or you can use [`window.postMessage()` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to send and receive messages between contexts.
+The cons is that in Mixed Context Mode, you can't share variable easily as before. To share variables among contexts, you should put variables in a common context that can be accessed from the contexts you want to share with. Or you can use [`window.postMessage()` API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to send and receive messages between contexts.
 
 ## Working with Multiple Contexts
 
@@ -165,7 +171,7 @@ For example, in different browser contexts, the global objects are not identical
 // `window` is the global object of current browser context
 // `myframe.contentWindow` is the global object of the `<iframe>`'s browser context
 var currentContext = window;
-var iframeContext = document.getElementbyId('myframe').contentWindow;
+var iframeContext = document.getElementById('myframe').contentWindow;
 
 // `myfunc` is defined in current context
 function myfunc() {
@@ -177,7 +183,7 @@ console.log(currentContext.Function === iframeContext.Function); // false
 console.log(myfunc instanceof currentContext.Function); // true
 console.log(myfunc instanceof iframeContext.Function); // false
 console.log(myfunc.constructor === currentContext.Function); // true
-console.log(myfunc.constructor === iframeContext.Function); // true
+console.log(myfunc.constructor === iframeContext.Function); // false
 </script>
 ```
 

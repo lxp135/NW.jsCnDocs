@@ -1,50 +1,59 @@
-site_name: NW.js 中文文档
+site_name: NW.js 最新版中文文档
 theme: readthedocs
 use_directory_urls: true
-site_url: http://liuxp.me/nwjs
+site_url: https://nwjs.liuxp.me
 site_author: 刘小平
 repo_url: https://github.com/lxp135/NW.jsCnDocs
-copyright: NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script>
+copyright: NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script>
 
 pages:
-- ['index.md', '首页']
-- ['For Users/Debugging with DevTools.md', '用户手册', '使用DevTools调试']
-- ['For Users/FAQ.md', '用户手册', 'FAQ']
-- ['For Users/Getting Started.md', '用户手册', '快速开始']
-- ['For Users/Package and Distribute.md', '用户手册', '打包与分发']
-- ['For Users/Advanced/Build Flavors.md', '用户手册', '进阶：Build 特性']
-- ['For Users/Advanced/Content Verification.md', '用户手册', '进阶：内容验证']
-- ['For Users/Advanced/JavaScript Contexts in NW.js.md', '用户手册', '进阶：在NW.js中使用JavaScript']
-- ['For Users/Advanced/Protect JavaScript Source Code.md', '用户手册', '进阶：保护JavaScript源代码']
-- ['For Users/Advanced/Security in NW.js.md', '用户手册', '进阶：NW.js的安全性']
-- ['For Users/Advanced/Test with ChromeDriver.md', '用户手册', '进阶：使用ChromeDriver进行测试']
-- ['For Users/Advanced/Transparent Window.md', '用户手册', '进阶：透明窗口']
-- ['For Users/Advanced/Use NaCl in NW.js.md', '用户手册', '进阶：在NW.js中使用NaCl']
-- ['For Users/Advanced/Use Native Node Modules.md', '用户手册', '进阶：使用 Native Node Modules']
-- ['For Users/Migration/From 0.12 to 0.13.md', '用户手册', '合并版本：从0.12升级到0.13']
-- ['For Developers/Building NW.js.md', '开发者手册', 'Building NW.js']
-- ['For Developers/Contributing to NW.js.md', '开发者手册', 'Contributing to NW.js']
-- ['For Developers/Contributors of Documents.md', '开发者手册', 'Contributors of Documents']
-- ['For Developers/Enable Proprietary Codecs.md', '开发者手册', 'Enable Proprietary Codecs']
-- ['For Developers/Repositories.md', '开发者手册', 'Repositories']
-- ['For Developers/Understanding Crash Dump.md', '开发者手册', 'Understanding Crash Dump']
-- ['For Developers/Writing Documents for NW.js.md', '开发者手册', 'Writing Documents for NW.js']
-- ['For Developers/Writing Test Cases for NW.js.md', '开发者手册', 'Writing Test Cases for NW.js']
-- ['References/App.md', '参考资料', 'App']
-- ['References/Changes to DOM.md', '参考资料', 'Changes to DOM']
-- ['References/Changes to Node.md', '参考资料', 'Changes to Node']
-- ['References/Clipboard.md', '参考资料', 'Clipboard']
-- ['References/Command Line Options.md', '参考资料', 'Command Line Options']
-- ['References/Manifest Format.md', '参考资料', 'Manifest Format']
-- ['References/Menu.md', '参考资料', 'Menu']
-- ['References/MenuItem.md', '参考资料', 'MenuItem']
-- ['References/Screen.md', '参考资料', 'Screen']
-- ['References/Shell.md', '参考资料', 'Shell']
-- ['References/Shortcut.md', '参考资料', 'Shortcut']
-- ['References/Tray.md', '参考资料', 'Tray']
-- ['References/webview Tag.md', '参考资料', 'webview Tag']
-- ['References/Window.md', '参考资料', 'Window']
-
+- '首页': 'index.md'
+- '用户手册':
+  - '快速开始': 'For Users/Getting Started.md'
+  - '使用DevTools调试': 'For Users/Debugging with DevTools.md'
+  - '打包与发布': 'For Users/Package and Distribute.md'
+  - 'FAQ': 'For Users/FAQ.md'
+  - '合并版本':
+    - '0.12升级0.13': 'For Users/Migration/From 0.12 to 0.13.md'
+  - '进阶':
+    - '编译': 'For Users/Advanced/Build Flavors.md'
+    - '内容验证': 'For Users/Advanced/Content Verification.md'
+    - '自定义菜单': 'For Users/Advanced/Customize Menubar.md'
+    - '在NW.js中使用JavaScript上下文': 'For Users/Advanced/JavaScript Contexts in NW.js.md'
+    - '保护JavaScript源代码': 'For Users/Advanced/Protect JavaScript Source Code.md'
+    - 'NW.js的安全性': 'For Users/Advanced/Security in NW.js.md'
+    - '提交到Mac应用商店': 'For Users/Advanced/Support for Mac App Store.md'
+    - '使用ChromeDriver测试': 'For Users/Advanced/Test with ChromeDriver.md'
+    - '透明窗口': 'For Users/Advanced/Transparent Window.md'
+    - '在NW.js中使用Flash插件': 'For Users/Advanced/Use Flash Plugin.md'
+    - '在NW.js中使用NaCl': 'For Users/Advanced/Use NaCl in NW.js.md'
+    - '在NW.js中使用原生Node.js模块': 'For Users/Advanced/Use Native Node Modules.md'
+    - '自动更新': 'For Users/Advanced/Autoupdates.md'
+- '开发者手册':
+  - '构建 NW.js': 'For Developers/Building NW.js.md'
+  - '为NW.js贡献代码': 'For Developers/Contributing to NW.js.md'
+  - '打开专有编解码器': 'For Developers/Enable Proprietary Codecs.md'
+  - '资源列表': 'For Developers/Repositories.md'
+  - '了解崩溃机制': 'For Developers/Understanding Crash Dump.md'
+  - '为NW.js编写文档': 'For Developers/Writing Documents for NW.js.md'
+  - '为NW.js编写测试用例': 'For Developers/Writing Test Cases for NW.js.md'
+  - '贡献者列表': 'For Developers/Contributors of Documents.md'
+- '参考资料':
+  - 'App': 'References/App.md'
+  - 'DOM的变化': 'References/Changes to DOM.md'
+  - 'Node的变化': 'References/Changes to Node.md'
+  - '剪切板': 'References/Clipboard.md'
+  - '命令行参数': 'References/Command Line Options.md'
+  - 'Chrome扩展API': 'References/Chrome Extension APIs.md'
+  - '配置文件': 'References/Manifest Format.md'
+  - '菜单': 'References/Menu.md'
+  - '菜单项': 'References/MenuItem.md'
+  - '屏幕': 'References/Screen.md'
+  - 'Shell': 'References/Shell.md'
+  - '快捷键': 'References/Shortcut.md'
+  - '系统托盘': 'References/Tray.md'
+  - 'webview标签': 'References/webview Tag.md'
+  - 'Window': 'References/Window.md'
 
 markdown_extensions:
     - markdown.extensions.toc

@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Building NW.js - NW.js 中文文档</title>
-  
-
+  <meta name="author" content="刘小平">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-
-  
+  <title>Building NW.js - NW.js 最新版中文文档</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
-
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Building NW.js";
+    var mkdocs_page_input_path = "For Developers\\Building NW.js.md";
+    var mkdocs_page_url = "/For Developers/Building NW.js/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
-  <script src="../../js/theme.js"></script> 
-
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,314 +36,247 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> NW.js 中文文档</a>
+        <a href="../.." class="icon icon-home"> NW.js 最新版中文文档</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../..">首页</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">首页</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">用户手册</span>
     <ul class="subnav">
-    <li><span>用户手册</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Debugging%20with%20DevTools/">使用DevTools调试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/FAQ/">FAQ</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Getting%20Started/">快速开始</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Package%20and%20Distribute/">打包与分发</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Build%20Flavors/">进阶：Build 特性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Content%20Verification/">进阶：内容验证</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js/">进阶：在NW.js中使用JavaScript</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Protect%20JavaScript%20Source%20Code/">进阶：保护JavaScript源代码</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Security%20in%20NW.js/">进阶：NW.js的安全性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Test%20with%20ChromeDriver/">进阶：使用ChromeDriver进行测试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Transparent%20Window/">进阶：透明窗口</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Use%20NaCl%20in%20NW.js/">进阶：在NW.js中使用NaCl</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Advanced/Use%20Native%20Node%20Modules/">进阶：使用 Native Node Modules</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../For%20Users/Migration/From%200.12%20to%200.13/">合并版本：从0.12升级到0.13</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/Getting Started/">快速开始</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/Debugging with DevTools/">使用DevTools调试</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/Package and Distribute/">打包与发布</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Users/FAQ/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">合并版本</span>
     <ul class="subnav">
-    <li><span>开发者手册</span></li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Building NW.js</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#building-nwjs-doctitle">Building NW.js {: .doctitle}</a></li>
-                
-                    <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
-                
-                    <li><a class="toctree-l4" href="#get-the-code">Get the Code</a></li>
-                
-                    <li><a class="toctree-l4" href="#build">Build</a></li>
-                
-                    <li><a class="toctree-l4" href="#build-faster">Build Faster</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Contributing%20to%20NW.js/">Contributing to NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Contributors%20of%20Documents/">Contributors of Documents</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Repositories/">Repositories</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
-        
-    </li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Migration/From 0.12 to 0.13/">0.12升级0.13</a>
+                </li>
     </ul>
-<li>
-          
-            <li>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">进阶</span>
     <ul class="subnav">
-    <li><span>参考资料</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/App/">App</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Changes%20to%20DOM/">Changes to DOM</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Changes%20to%20Node/">Changes to Node</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Clipboard/">Clipboard</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Command%20Line%20Options/">Command Line Options</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Manifest%20Format/">Manifest Format</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Menu/">Menu</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/MenuItem/">MenuItem</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Screen/">Screen</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Shell/">Shell</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Shortcut/">Shortcut</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Tray/">Tray</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/webview%20Tag/">webview Tag</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../References/Window/">Window</a>
-        
-    </li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Build Flavors/">编译特性</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Content Verification/">内容验证</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Customize Menubar/">Customize Menubar</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/JavaScript Contexts in NW.js/">JavaScript Contexts in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Protect JavaScript Source Code/">Protect JavaScript Source Code</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Security in NW.js/">Security in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Support for Mac App Store/">Support for Mac App Store</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Test with ChromeDriver/">Test with ChromeDriver</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Transparent Window/">Transparent Window</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Use Flash Plugin/">Use Flash Plugin</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Use NaCl in NW.js/">Use NaCl in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Use Native Node Modules/">Use Native Node Modules</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../For Users/Advanced/Autoupdates/">Autoupdates</a>
+                </li>
     </ul>
-<li>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">参考资料</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../References/App/">App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Changes to DOM/">Changes to DOM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Changes to Node/">Changes to Node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Clipboard/">Clipboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Command Line Options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Chrome Extension APIs/">Chrome Extension APIs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Manifest Format/">Manifest Format</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Menu/">Menu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/MenuItem/">MenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Screen/">Screen</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Shell/">Shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Shortcut/">Shortcut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Tray/">Tray</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/webview Tag/">webview Tag</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../References/Window/">Window</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发者手册</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="./">Building NW.js</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#building-nwjs-doctitle">Building NW.js {: .doctitle}</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#prerequisites">Prerequisites</a></li>
+        
+            <li><a class="toctree-l4" href="#get-the-code">Get the Code</a></li>
+        
+            <li><a class="toctree-l4" href="#generate-ninja-build-files-with-gn-for-chromium">Generate ninja build files with GN for Chromium</a></li>
+        
+            <li><a class="toctree-l4" href="#generate-ninja-build-files-with-gyp-for-node">Generate ninja build files with GYP for Node</a></li>
+        
+            <li><a class="toctree-l4" href="#build-nwjs">Build nwjs</a></li>
+        
+            <li><a class="toctree-l4" href="#build-node">Build Node</a></li>
+        
+            <li><a class="toctree-l4" href="#build-flavors">Build Flavors</a></li>
+        
+            <li><a class="toctree-l4" href="#enable-proprietary-codecs">Enable Proprietary Codecs</a></li>
+        
+            <li><a class="toctree-l4" href="#build-faster">Build Faster</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Contributing to NW.js/">Contributing to NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Enable Proprietary Codecs/">Enable Proprietary Codecs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Repositories/">Repositories</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Understanding Crash Dump/">Understanding Crash Dump</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Writing Documents for NW.js/">Writing Documents for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Writing Test Cases for NW.js/">Writing Test Cases for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Contributors of Documents/">Contributors of Documents</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -357,7 +288,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">NW.js 中文文档</a>
+        <a href="../..">NW.js 最新版中文文档</a>
       </nav>
 
       
@@ -376,9 +307,8 @@
     <li>Building NW.js</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/lxp135/NW.jsCnDocs" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/lxp135/NW.jsCnDocs/edit/master/docs/For Developers/Building NW.js.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -394,12 +324,15 @@
 <li><a href="#building-nwjs-doctitle">Building NW.js {: .doctitle}</a><ul>
 <li><a href="#prerequisites">Prerequisites</a></li>
 <li><a href="#get-the-code">Get the Code</a></li>
-<li><a href="#build">Build</a><ul>
+<li><a href="#generate-ninja-build-files-with-gn-for-chromium">Generate ninja build files with GN for Chromium</a></li>
+<li><a href="#generate-ninja-build-files-with-gyp-for-node">Generate ninja build files with GYP for Node</a><ul>
 <li><a href="#32-bit64-bit-build">32-bit/64-bit Build</a></li>
-<li><a href="#build-flavors">Build Flavors</a></li>
-<li><a href="#enable-proprietary-codecs">Enable Proprietary Codecs</a></li>
 </ul>
 </li>
+<li><a href="#build-nwjs">Build nwjs</a></li>
+<li><a href="#build-node">Build Node</a></li>
+<li><a href="#build-flavors">Build Flavors</a></li>
+<li><a href="#enable-proprietary-codecs">Enable Proprietary Codecs</a></li>
 <li><a href="#build-faster">Build Faster</a></li>
 </ul>
 </li>
@@ -407,19 +340,21 @@
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>This document is written for latest <strong>NW 0.13</strong>. For legacy build instructions, please read the <a href="https://github.com/nwjs/nw.js/wiki/Building-nw.js">wiki page</a> on GitHub.</p>
+<p>Starting from 0.17, we switched to the new build configuration system GN and Ninja in Chromium upstream. The Node.js in NW is still build with GYP/Ninja<br />
+This document is written for latest <strong>NW 0.13</strong> or later. For legacy build instructions, please read the <a href="https://github.com/nwjs/nw.js/wiki/Building-nw.js">wiki page</a> on GitHub.<br />
+See our buildbot for official build configuration and steps: http://buildbot-master.nwjs.io:8010/waterfall<br />
+Debug version should be built with component build configuration. See the <a href="https://groups.google.com/a/chromium.org/d/msg/chromium-dev/LWRR3fMlvQ4/qos4EaBtBgAJ">discussion in upstream</a>.</p>
 </div>
 <h2 id="prerequisites">Prerequisites</h2>
 <p>NW.js use same build tools and similar steps as Chromium. Read the instructions according to your platform to install <code>depot_tools</code> and other prerequistes:</p>
 <ul>
-<li><a href="http://www.chromium.org/developers/how-tos/build-instructions-windows">Windows</a></li>
+<li><a href="https://chromium.googlesource.com/chromium/src/+/master/docs/windows_build_instructions.md">Windows</a></li>
 <li><a href="https://chromium.googlesource.com/chromium/src/+/master/docs/mac_build_instructions.md">Mac OS X</a></li>
 <li><a href="https://chromium.googlesource.com/chromium/src/+/master/docs/linux_build_instructions.md">Linux</a></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Windows</p>
-<p>As suggested by Chromium document, you need to run <code>set DEPOT_TOOLS_WIN_TOOLCHAIN=0</code> or set the variable in your global environment.<br />
-CLang is the build tool used by non-Windows platforms. On Windows, it&rsquo;s not supported yet. You need to run <code>set GYP_DEFINES="clang=0"</code> to disable CLang on Windows before going to next steps.</p>
+<p>As suggested by Chromium document, you need to run <code>set DEPOT_TOOLS_WIN_TOOLCHAIN=0</code> or set the variable in your global environment.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Xcode 7</p>
@@ -429,7 +364,7 @@ CLang is the build tool used by non-Windows platforms. On Windows, it&rsquo;s no
 <p><strong>Step 1.</strong> Create a folder for holding NW.js source code, like <code>$HOME/nwjs</code>, and run following command in the folder to generate <code>.gclient</code> file:</p>
 <pre class="codehilite"><code class="language-bash">mkdir -p $HOME/nwjs
 cd $HOME/nwjs
-gclient config --name=src https://github.com/nwjs/chromium.src.git@origin/nw13</code></pre>
+gclient config --name=src https://github.com/nwjs/chromium.src.git@origin/nw17</code></pre>
 
 
 <p>Generally if you are not interested in running Chromium tests, you don&rsquo;t have to sync the test cases and reference builds, which saves you lot of time. Open the <code>.gclient</code> file you just created and replace <code>custom_deps</code> section with followings:</p>
@@ -444,6 +379,29 @@ gclient config --name=src https://github.com/nwjs/chromium.src.git@origin/nw13</
 }</code></pre>
 
 
+<p>Manually clone and checkout correct branches for following repositories:</p>
+<table>
+<thead>
+<tr>
+<th align="left">path</th>
+<th align="left">repo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">src/content/nw</td>
+<td align="left">https://github.com/nwjs/nw.js</td>
+</tr>
+<tr>
+<td align="left">src/third_party/node-nw</td>
+<td align="left">https://github.com/nwjs/node</td>
+</tr>
+<tr>
+<td align="left">src/v8</td>
+<td align="left">https://github.com/nwjs/v8</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Step 2.</strong> Run following command in your terminal:</p>
 <pre class="codehilite"><code>gclient sync --with_branch_heads</code></pre>
 
@@ -454,27 +412,29 @@ gclient config --name=src https://github.com/nwjs/chromium.src.git@origin/nw13</
 <p class="admonition-title">First Build on Linux</p>
 <p>If you are building on Linux <strong>for the first time</strong>, you need to run <code>gclient sync --with_branch_heads --nohooks</code> and then run <code>./build/install-build-deps.sh</code> to install dependencies on Ubuntu. See <a href="http://dev.chromium.org/developers/how-tos/get-the-code">Chromium document</a> for detailed instructions of getting the source code.</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">First Build on Windows</p>
-<p>On Windows, you have to install <a href="https://www.microsoft.com/en-us/download/details.aspx?id=6812">DirectX SDK</a> and copy the files into the source folder manually using following bash command:</p>
-</div>
-<pre class="codehilite"><code class="language-bash">mkdir -p $HOME/nwjs/src/third_party/directxsdk/files
-cp -r /c/Program\ Files\ \(x86\)/Microsoft\ DirectX\ SDK\ \(June\ 2010\)/* \
-$HOME/nwjs/src/third_party/directxsdk/files/</code></pre>
-
-
-<h2 id="build">Build</h2>
-<p>Build files are generated in <code>out/</code> folder during <code>gclient sync</code>. Run following command in your terminal will generate the Debug build of standard NW.js binaries in <code>out/Debug</code> folder:</p>
+<h2 id="generate-ninja-build-files-with-gn-for-chromium">Generate ninja build files with GN for Chromium</h2>
 <pre class="codehilite"><code class="language-bash">cd src
-ninja -C out/Debug nwjs</code></pre>
+gn gen out/nw  (changing the 'nw' part of the path is not supported. You'd better not changing the 'out' part if you're new to this)</code></pre>
 
 
-<div class="admonition tip">
-<p class="admonition-title">Build Time</p>
-<p>Generally a full build takes hours of time depending on the performance of your machine. Recommended configuration is to build on a PC with multicore CPU (&gt;=8 cores), SSD and large memory (&gt;= 8G). And you can read <a href="#build-faster">Build Faster</a> section below for some tips to speed up the build.</p>
-</div>
-<p>To generate Release build, switch the second command to <code>ninja -C out/Release nwjs</code>.</p>
-<p>To build 32-bit/64-bit binaries or non-standard build flavors, you need to setup <code>GYP_DEFINES</code> variable in your environment and run <code>gclient runhooks --force</code> to generate build files. And then re-run the commands above to generate binaries. Continue to read following sections to find out how to setup <code>GYP_DEFINES</code>.</p>
+<p>Use flags like our official build:</p>
+<pre class="codehilite"><code>is_debug=false
+is_component_ffmpeg=true
+target_cpu=&quot;x64&quot;</code></pre>
+
+
+<p>We support component build: <code>is_component_build = true</code> for faster development cycle. It should be used when you are trying to build debug version.</p>
+<p>See the upstream documentation for the mapping between GN and GYP flags: https://chromium.googlesource.com/chromium/src/+/master/tools/gn/docs/cookbook.md#Variable-mappings</p>
+<h2 id="generate-ninja-build-files-with-gyp-for-node">Generate ninja build files with GYP for Node</h2>
+<pre class="codehilite"><code class="language-bash">cd src
+GYP_CHROMIUM_NO_ACTION=0 ./build/gyp_chromium -I third_party/node-nw/common.gypi -D building_nw=1 third_party/node-nw/node.gyp</code></pre>
+
+
+<p>or use the following if you&rsquo;re doing a component build:</p>
+<pre class="codehilite"><code class="language-bash">./build/gyp_chromium -D component=shared_library -I third_party/node-nw/common.gypi -D building_nw=1 third_party/node-nw/node.gyp</code></pre>
+
+
+<p>To change the build configuration for Node, you need to setup the GYP_DEFINES environment variable:</p>
 <h3 id="32-bit64-bit-build">32-bit/64-bit Build</h3>
 <ul>
 <li>Windows<ul>
@@ -493,15 +453,35 @@ ninja -C out/Debug nwjs</code></pre>
 </ul>
 </li>
 </ul>
-<h3 id="build-flavors">Build Flavors</h3>
+<h2 id="build-nwjs">Build nwjs</h2>
+<p>ninja build files are generated in <code>out/nw</code> folder after you run GN. Run following command in your terminal will generate the Debug build of standard NW.js binaries in <code>out/nw</code> folder:</p>
+<pre class="codehilite"><code class="language-bash">cd src
+ninja -C out/nw nwjs</code></pre>
+
+
+<div class="admonition tip">
+<p class="admonition-title">Build Time</p>
+<p>Generally a full build takes hours of time depending on the performance of your machine. Recommended configuration is to build on a PC with multicore CPU (&gt;=8 cores), SSD and large memory (&gt;= 8G). And you can read <a href="#build-faster">Build Faster</a> section below for some tips to speed up the build.</p>
+</div>
+<p>To build 32-bit/64-bit binaries or non-standard build flavors, you need to edit out/nw/args.gn file And then re-run the commands above to generate binaries.</p>
+<h2 id="build-node">Build Node</h2>
+<pre class="codehilite"><code class="language-bash">cd src
+ninja -C out/Release node</code></pre>
+
+
+<p>After building Node, the final step is to copy the build Node library to the nwjs binary folder:</p>
+<pre class="codehilite"><code class="language-bash">cd src
+ninja -C out/nw copy_node</code></pre>
+
+
+<h2 id="build-flavors">Build Flavors</h2>
 <ul>
-<li>Standard: it&rsquo;s generated by default. Same as <code>GYP_DEFINES="nwjs_sdk=0 disable_nacl=1"</code>.</li>
-<li>SDK: <code>GYP_DEFINES="nwjs_sdk=1 disable_nacl=0"</code></li>
-<li>NaCl: <code>GYP_DEFINES="disable_nacl=0"</code></li>
+<li>Standard: &lsquo;nwjs_sdk=false&rsquo;</li>
+<li>SDK: <code>enable_nacl=true</code></li>
 </ul>
-<p>See <a href="../../For%20Users/Advanced/Build%20Flavors/">Build Flavors</a> for the differences of all supported build flavors.</p>
-<h3 id="enable-proprietary-codecs">Enable Proprietary Codecs</h3>
-<p>Due to the license issue, the prebuilt binaries of NW.js doesn&rsquo;t support proprietary codecs, like H.264. So you can&rsquo;t play MP3/MP4 with <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags with prebuilt NW.js. To enable those medias, you have to build NW.js from source code by following the document of <a href="../Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>.</p>
+<p>See <a href="../../For Users/Advanced/Build Flavors/">Build Flavors</a> for the differences of all supported build flavors.</p>
+<h2 id="enable-proprietary-codecs">Enable Proprietary Codecs</h2>
+<p>Due to the license issue, the prebuilt binaries of NW.js doesn&rsquo;t support proprietary codecs, like H.264. So you can&rsquo;t play MP3/MP4 with <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags with prebuilt NW.js. To enable those medias, you have to build NW.js from source code by following the document of <a href="../Enable Proprietary Codecs/">Enable Proprietary Codecs</a>.</p>
 <h2 id="build-faster">Build Faster</h2>
 <p>From Google&rsquo;s website, there are a few tips to speed up your build. Open the links below to see the tips for your platform:</p>
 <ul>
@@ -515,10 +495,10 @@ ninja -C out/Debug nwjs</code></pre>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Contributing%20to%20NW.js/" class="btn btn-neutral float-right" title="Contributing to NW.js"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Contributing to NW.js/" class="btn btn-neutral float-right" title="Contributing to NW.js">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../For%20Users/Migration/From%200.12%20to%200.13/" class="btn btn-neutral" title="合并版本：从0.12升级到0.13"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../References/Window/" class="btn btn-neutral" title="Window"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -528,13 +508,13 @@ ninja -C out/Debug nwjs</code></pre>
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
+      <p>NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script></p>
     
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -542,19 +522,22 @@ ninja -C out/Debug nwjs</code></pre>
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/lxp135/NW.jsCnDocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../For%20Users/Migration/From%200.12%20to%200.13/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../../References/Window/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Contributing%20to%20NW.js/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Contributing to NW.js/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
 
 </body>
 </html>

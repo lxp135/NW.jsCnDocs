@@ -12,7 +12,7 @@ To extract the stack trace from the `minidump` file, you need three things: the 
 The minidump file will be generated in the following default directories when NW.js crashed:
 
 * Linux: `~/.config/<name-in-manifest>/Crash\ Reports/`
-* Windows: [System temporary directory](http://msdn.microsoft.com/en-us/library/windows/desktop/aa364992%28v=vs.85%29.aspx)
+* Windows: `%LOCALAPPDATA%\<name-in-manifest>\User Data\CrashPad` *(In versions < 0.21.5, it's in `%LOCALAPPDATA%\Chromium\User Data\CrashPad` due to bug [#5248](https://github.com/nwjs/nw.js/issues/5248) )*
 * Mac: `~/Library/Application\ Support/<name-in-manifest>/CrashPad/`
 
 The `<name-in-manifest>` is the `name` field of [Manifest file](../References/Manifest Format.md#name).

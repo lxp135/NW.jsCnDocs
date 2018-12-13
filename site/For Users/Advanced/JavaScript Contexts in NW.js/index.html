@@ -3,31 +3,29 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>进阶：在NW.js中使用JavaScript - NW.js 中文文档</title>
-  
-
+  <meta name="author" content="刘小平">
   <link rel="shortcut icon" href="../../../img/favicon.ico">
-
-  
+  <title>JavaScript Contexts in NW.js - NW.js 最新版中文文档</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../../css/highlight.css">
-
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = "进阶：在NW.js中使用JavaScript";
+    var mkdocs_page_name = "JavaScript Contexts in NW.js";
+    var mkdocs_page_input_path = "For Users\\Advanced\\JavaScript Contexts in NW.js.md";
+    var mkdocs_page_url = "/For Users/Advanced/JavaScript Contexts in NW.js/";
   </script>
   
-  <script src="../../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../../js/highlight.pack.js"></script>
-  <script src="../../../js/theme.js"></script> 
-
+  <script src="../../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,314 +36,239 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../../.." class="icon icon-home"> NW.js 中文文档</a>
+        <a href="../../.." class="icon icon-home"> NW.js 最新版中文文档</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-        <ul class="current">
+	<ul class="current">
+	  
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../../..">首页</a>
-        
-    </li>
-<li>
+            <li class="toctree-l1">
+		
+    <a class="" href="../../..">首页</a>
+	    </li>
           
-            <li>
+            <li class="toctree-l1">
+		
+    <span class="caption-text">用户手册</span>
     <ul class="subnav">
-    <li><span>用户手册</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../Debugging%20with%20DevTools/">使用DevTools调试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../FAQ/">FAQ</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../Getting%20Started/">快速开始</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../Package%20and%20Distribute/">打包与分发</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Build%20Flavors/">进阶：Build 特性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Content%20Verification/">进阶：内容验证</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 current">
-        <a class="current" href="./">进阶：在NW.js中使用JavaScript</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#javascript-contexts-in-nwjs-doctitle">JavaScript Contexts in NW.js {: .doctitle}</a></li>
-                
-                    <li><a class="toctree-l4" href="#concept-of-javascript-context">Concept of JavaScript Context</a></li>
-                
-                    <li><a class="toctree-l4" href="#separate-context-mode">Separate Context Mode</a></li>
-                
-                    <li><a class="toctree-l4" href="#mixed-context-mode">Mixed Context Mode</a></li>
-                
-                    <li><a class="toctree-l4" href="#working-with-multiple-contexts">Working with Multiple Contexts</a></li>
-                
-            
-            </ul>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Protect%20JavaScript%20Source%20Code/">进阶：保护JavaScript源代码</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Security%20in%20NW.js/">进阶：NW.js的安全性</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Test%20with%20ChromeDriver/">进阶：使用ChromeDriver进行测试</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Transparent%20Window/">进阶：透明窗口</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Use%20NaCl%20in%20NW.js/">进阶：在NW.js中使用NaCl</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../Use%20Native%20Node%20Modules/">进阶：使用 Native Node Modules</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../Migration/From%200.12%20to%200.13/">合并版本：从0.12升级到0.13</a>
-        
-    </li>
-
-        
-    </ul>
-<li>
-          
-            <li>
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/">快速开始</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Debugging with DevTools/">使用DevTools调试</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Package and Distribute/">打包与发布</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../FAQ/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">合并版本</span>
     <ul class="subnav">
-    <li><span>开发者手册</span></li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Building%20NW.js/">Building NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Contributing%20to%20NW.js/">Contributing to NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Contributors%20of%20Documents/">Contributors of Documents</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Enable%20Proprietary%20Codecs/">Enable Proprietary Codecs</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Repositories/">Repositories</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Understanding%20Crash%20Dump/">Understanding Crash Dump</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Writing%20Documents%20for%20NW.js/">Writing Documents for NW.js</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../For%20Developers/Writing%20Test%20Cases%20for%20NW.js/">Writing Test Cases for NW.js</a>
-        
-    </li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../../Migration/From 0.12 to 0.13/">0.12升级0.13</a>
+                </li>
     </ul>
-<li>
-          
-            <li>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">进阶</span>
     <ul class="subnav">
-    <li><span>参考资料</span></li>
-
-        
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Build Flavors/">编译特性</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Content Verification/">内容验证</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Customize Menubar/">Customize Menubar</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="./">JavaScript Contexts in NW.js</a>
+    <ul class="subnav">
             
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/App/">App</a>
+    <li class="toctree-l4"><a href="#javascript-contexts-in-nwjs-doctitle">JavaScript Contexts in NW.js {: .doctitle}</a></li>
+    
+        <ul>
         
-    </li>
+            <li><a class="toctree-l5" href="#concept-of-javascript-context">Concept of JavaScript Context</a></li>
+        
+            <li><a class="toctree-l5" href="#contexts-in-nwjs">Contexts in NW.js</a></li>
+        
+            <li><a class="toctree-l5" href="#separate-context-mode">Separate Context Mode</a></li>
+        
+            <li><a class="toctree-l5" href="#mixed-context-mode">Mixed Context Mode</a></li>
+        
+            <li><a class="toctree-l5" href="#working-with-multiple-contexts">Working with Multiple Contexts</a></li>
+        
+        </ul>
+    
 
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Changes%20to%20DOM/">Changes to DOM</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Changes%20to%20Node/">Changes to Node</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Clipboard/">Clipboard</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Command%20Line%20Options/">Command Line Options</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Manifest%20Format/">Manifest Format</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Menu/">Menu</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/MenuItem/">MenuItem</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Screen/">Screen</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Shell/">Shell</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Shortcut/">Shortcut</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Tray/">Tray</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/webview%20Tag/">webview Tag</a>
-        
-    </li>
-
-        
-            
-    <li class="toctree-l1 ">
-        <a class="" href="../../../References/Window/">Window</a>
-        
-    </li>
-
-        
     </ul>
-<li>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Protect JavaScript Source Code/">Protect JavaScript Source Code</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Security in NW.js/">Security in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Support for Mac App Store/">Support for Mac App Store</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Test with ChromeDriver/">Test with ChromeDriver</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Transparent Window/">Transparent Window</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Use Flash Plugin/">Use Flash Plugin</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Use NaCl in NW.js/">Use NaCl in NW.js</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Use Native Node Modules/">Use Native Node Modules</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Autoupdates/">Autoupdates</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">参考资料</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../References/App/">App</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Changes to DOM/">Changes to DOM</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Changes to Node/">Changes to Node</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Clipboard/">Clipboard</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Command Line Options/">Command Line Options</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Chrome Extension APIs/">Chrome Extension APIs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Manifest Format/">Manifest Format</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Menu/">Menu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/MenuItem/">MenuItem</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Screen/">Screen</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Shell/">Shell</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Shortcut/">Shortcut</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Tray/">Tray</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/webview Tag/">webview Tag</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../References/Window/">Window</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发者手册</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Building NW.js/">Building NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Contributing to NW.js/">Contributing to NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Enable Proprietary Codecs/">Enable Proprietary Codecs</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Repositories/">Repositories</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Understanding Crash Dump/">Understanding Crash Dump</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Writing Documents for NW.js/">Writing Documents for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Writing Test Cases for NW.js/">Writing Test Cases for NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../../For Developers/Contributors of Documents/">Contributors of Documents</a>
+                </li>
+    </ul>
+	    </li>
           
         </ul>
       </div>
@@ -357,7 +280,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../..">NW.js 中文文档</a>
+        <a href="../../..">NW.js 最新版中文文档</a>
       </nav>
 
       
@@ -369,16 +292,19 @@
     
       
         
+          <li>进阶 &raquo;</li>
+        
+      
+        
           <li>用户手册 &raquo;</li>
         
       
     
-    <li>进阶：在NW.js中使用JavaScript</li>
+    <li>JavaScript Contexts in NW.js</li>
     <li class="wy-breadcrumbs-aside">
       
-        
-          <a href="https://github.com/lxp135/NW.jsCnDocs" class="icon icon-github"> Edit on GitHub</a>
-        
+        <a href="https://github.com/lxp135/NW.jsCnDocs/edit/master/docs/For Users/Advanced/JavaScript Contexts in NW.js.md"
+          class="icon icon-github"> Edit on GitHub</a>
       
     </li>
   </ul>
@@ -393,13 +319,14 @@
 <ul>
 <li><a href="#javascript-contexts-in-nwjs-doctitle">JavaScript Contexts in NW.js {: .doctitle}</a><ul>
 <li><a href="#concept-of-javascript-context">Concept of JavaScript Context</a></li>
+<li><a href="#contexts-in-nwjs">Contexts in NW.js</a></li>
 <li><a href="#separate-context-mode">Separate Context Mode</a><ul>
 <li><a href="#browser-context">Browser Context</a><ul>
 <li><a href="#load-script-in-browser-context">Load Script in Browser Context</a></li>
 <li><a href="#global-objects-in-browser-context">Global Objects in Browser Context</a></li>
 <li><a href="#create-new-browser-context">Create New Browser Context</a></li>
 <li><a href="#access-nodejs-and-nwjs-api-in-browser-context">Access Node.js and NW.js API in Browser Context</a></li>
-<li><a href="#relative-path-resovling-of-require-in-browser-context">Relative Path Resovling of require() in Browser Context</a></li>
+<li><a href="#relative-path-resolving-of-require-in-browser-context">Relative Path Resolving of require() in Browser Context</a></li>
 </ul>
 </li>
 <li><a href="#node-context">Node Context</a><ul>
@@ -438,9 +365,12 @@
 <li>when a programmer makes a mistake (such as <a href="http://ejohn.org/blog/simple-class-instantiation/">missing <code>new</code> before a poorly written constructor</a>) and the bug affects (pollutes) the global scope, it still cannot affect larger areas (several windows);</li>
 <li>malicious applications cannot access confidential data structures in other windows.</li>
 </ul>
-<p>When a script accessing to an object / function defined in another context, JS engine will temporarily enter the target context and leave it once finished. </p>
+<p>When a script accessing to an object / function defined in another context, JS engine will temporarily enter the target context and leave it once finished.</p>
+<h2 id="contexts-in-nwjs">Contexts in NW.js</h2>
+<p>NW.js is based on the architecture of Chrome Apps. Thus an invisible background page is loaded automatically at start. And when a new window is created, a JavaScript context is created as well.</p>
+<p>In NW.js, Node.js modules can be loaded in the context running in background page, which is the default behavior. Also they can be loaded within the context of each window or frame when running as Mixed Context Mode. Continue to read following sections to see the differences between <a href="#separate-context-mode">Separate Context Mode</a> and <a href="#mixed-context-mode">Mixed Context Mode</a>.</p>
 <h2 id="separate-context-mode">Separate Context Mode</h2>
-<p>Besides the contexts created by browsers, NW.js introduced additional Node context for running Node modules by default. So NW.js has two types of JavaScript contexts: <strong>Browser Context</strong> and <strong>Node Context</strong>.</p>
+<p>Besides the contexts created by browsers, NW.js introduced additional Node context for running Node modules in the background page by default. So NW.js has two types of JavaScript contexts: <strong>Browser Context</strong> and <strong>Node Context</strong>.</p>
 <div class="admonition note">
 <p class="admonition-title">Web Worker</p>
 <p>Actually Web Workers are running in a separate JavaScript context which is neither browser context nor node context. But you can&rsquo;t access Web or Node.js or NW.js APIs in Web Worker&rsquo;s context.</p>
@@ -455,20 +385,20 @@
 <h4 id="access-nodejs-and-nwjs-api-in-browser-context">Access Node.js and NW.js API in Browser Context</h4>
 <p>Some objects of Node context are copied to Browser context so that scripts running in Browser context can access Node.js objects:</p>
 <ul>
-<li><code>nw</code> &ndash; the object of all <a href="../../../References">NW.js APIs</a></li>
+<li><code>nw</code> &ndash; the object of all NW.js APIs in <strong><code>References</code></strong> section</li>
 <li><code>global</code> &ndash; the global object of Node Context; same as <code>nw.global</code></li>
 <li><code>require</code> &ndash; the <code>require()</code> function for loading Node.js modules; similar to <code>nw.require()</code>, but it also supports <code>require('nw.gui')</code> to load NW.js API module.</li>
 <li><code>process</code> &ndash; the <a href="https://nodejs.org/api/globals.html#globals_process">process module</a> of Node.js; same as <code>nw.process</code></li>
 <li><code>Buffer</code> &ndash; the <a href="https://nodejs.org/api/globals.html#globals_class_buffer">Buffer class</a> of Node.js</li>
 </ul>
-<h4 id="relative-path-resovling-of-require-in-browser-context">Relative Path Resovling of <code>require()</code> in Browser Context</h4>
+<h4 id="relative-path-resolving-of-require-in-browser-context">Relative Path Resolving of <code>require()</code> in Browser Context</h4>
 <p>Relative paths in Browser context are resolved according to path of main HTML file (like all browsers do).</p>
 <h3 id="node-context">Node Context</h3>
 <h4 id="load-script-in-node-context">Load Script in Node Context</h4>
 <p>Scripts loaded with following ways are running in Node context:</p>
 <ul>
 <li>Scripts loaded by <code>require()</code> of Node.js API</li>
-<li>Scripts loaded by <a href="../../../References/Manifest%20Format/#node-main"><code>node-main</code> in Manifest file</a></li>
+<li>Scripts loaded by <a href="../../../References/Manifest Format/#node-main"><code>node-main</code> in Manifest file</a></li>
 </ul>
 <h4 id="global-objects-in-node-context">Global Objects in Node Context</h4>
 <p>Scripts running in the Node context can use <a href="">JS builtin objects</a> like browser context. In addition, you can also use <a href="https://nodejs.org/api/globals.html">global objects defined by Node.js</a>, such as <code>__dirname</code>, <code>process</code>, <code>Buffer</code> etc.</p>
@@ -479,12 +409,12 @@
 <h4 id="create-new-node-context">Create New Node Context</h4>
 <p><strong>All node modules shares a same Node context in separate context mode</strong>. But you have several ways to create new Node contexts:</p>
 <ul>
-<li>Set <code>new-instance</code> option to <code>true</code> when creating window with <a href="../../../References/Window/#windowopenurl-options-callback"><code>Window.open()</code></a></li>
-<li>Start NW.js with <code>--mixed-context</code> CLI option to turn NW.js into <a href="#mixed-context">Mixed Context mode</a></li>
+<li>Set <code>new_instance</code> option to <code>true</code> when creating window with <a href="../../../References/Window/#windowopenurl-options-callback"><code>Window.open()</code></a></li>
+<li>Start NW.js with <code>--mixed-context</code> CLI option to turn NW.js into <a href="#mixed-context-mode">Mixed Context mode</a></li>
 </ul>
 <h4 id="access-browser-and-nwjs-api-in-node-context">Access Browser and NW.js API in Node Context</h4>
 <p>In Node context, there are no browser side or NW.js APIs, such as <code>alert()</code> or <code>document.*</code> or <code>nw.Clipboard</code> etc. To access browser APIs, you have to pass the corresponding objects, such as <code>window</code> object, to functions in Node context.</p>
-<p>See following example for how to achive this.</p>
+<p>See following example for how to achieve this.</p>
 <p>Following script are running in Node context (myscript.js):</p>
 <pre class="codehilite"><code class="language-javascript">// `el` should be passed from browser context
 exports.setText = function(el) {
@@ -497,21 +427,21 @@ exports.setText = function(el) {
 &lt;script&gt;
 var myscript = require('./myscript');
 // pass the `el` element to the Node function
-myscript.setText(document.getElementbyId('el'));
+myscript.setText(document.getElementById('el'));
 // you will see &quot;hello&quot; in the element
 &lt;/script&gt;</code></pre>
 
 
 <div class="admonition note">
 <p class="admonition-title"><code>window</code> in Node Context</p>
-<p>There is a <code>window</code> object in Node context pointing to the main window as set in <code>main</code> field of Manifest file.</p>
+<p>There is a <code>window</code> object in Node context pointing to the DOM window object of the background page.</p>
 </div>
 <h4 id="relative-paths-resolving-of-require-in-node-context">Relative Paths Resolving of <code>require()</code> in Node Context</h4>
 <p>Relative paths in node modules are resolved according to path of that module (like Node.js always do).</p>
 <h2 id="mixed-context-mode">Mixed Context Mode</h2>
-<p>Mixed context is introduced in NW.js 0.13. When running NW.js with <a href="../../../References/Command%20Line%20Options/#mixedcontext"><code>--mixed-context</code> CLI option</a>, a new Node context is created at the time of each browser context creation and running in a same context as browser context, a.k.a. the Mixed context.</p>
+<p>Mixed context is introduced in NW.js 0.13. When running NW.js with <a href="../../../References/Command Line Options/#-mixed-context"><code>--mixed-context</code> CLI option</a>, a new Node context is created at the time of each browser context creation and running in a same context as browser context, a.k.a. the Mixed context.</p>
 <h3 id="load-script-in-mixed-context-mode">Load Script in Mixed Context Mode</h3>
-<p>To enable Mixed context, add <code>--mixed-context</code> when starting NW.js or add it to <a href="../../../References/Manifest%20Format/#chromium-args"><code>chromium-args</code> in Manifest file</a>.</p>
+<p>To enable Mixed context, add <code>--mixed-context</code> when starting NW.js or add it to <a href="../../../References/Manifest Format/#chromium-args"><code>chromium-args</code> in Manifest file</a>.</p>
 <p>Any scripts loaded using web ways or <code>require()</code> in Node.js are running in a same context.</p>
 <h3 id="global-objects-in-mixed-context">Global Objects in Mixed Context</h3>
 <p>In Mixed context, you can use all browser and NW.js API in Node modules, and vice versa.</p>
@@ -544,8 +474,8 @@ myscript.showAlert(); // I'm running in Node module!
 
 
 <h3 id="comparing-with-separate-context">Comparing with Separate Context</h3>
-<p>The advantage of MultiContext mode is that you will not encounter many <a href="#working-with-multiple-contexts">type checking issue</a> as below.</p>
-<p>The cons is that in Mixed context mode, you can&rsquo;t share variable easily as before. To share variables among contexts, you should put variables in a common context that can be accessed from the contexts you want to share with. Or you can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"><code>window.postMessage()</code> API</a> to send and receive messages between contexts.</p>
+<p>The advantage of Separate Context Mode is that you will not encounter many <a href="#working-with-multiple-contexts">type checking issue</a> as below.</p>
+<p>The cons is that in Mixed Context Mode, you can&rsquo;t share variable easily as before. To share variables among contexts, you should put variables in a common context that can be accessed from the contexts you want to share with. Or you can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage"><code>window.postMessage()</code> API</a> to send and receive messages between contexts.</p>
 <h2 id="working-with-multiple-contexts">Working with Multiple Contexts</h2>
 <p>While differences of contexts are generally benefitial, sometimes they may constitute a problem in your (or some other person&rsquo;s) code, and a need for a workaround arises.</p>
 <p>For example, in different browser contexts, the global objects are not identical and some type checking tricks will fail with multiple contexts.</p>
@@ -554,7 +484,7 @@ myscript.showAlert(); // I'm running in Node module!
 // `window` is the global object of current browser context
 // `myframe.contentWindow` is the global object of the `&lt;iframe&gt;`'s browser context
 var currentContext = window;
-var iframeContext = document.getElementbyId('myframe').contentWindow;
+var iframeContext = document.getElementById('myframe').contentWindow;
 
 // `myfunc` is defined in current context
 function myfunc() {
@@ -566,7 +496,7 @@ console.log(currentContext.Function === iframeContext.Function); // false
 console.log(myfunc instanceof currentContext.Function); // true
 console.log(myfunc instanceof iframeContext.Function); // false
 console.log(myfunc.constructor === currentContext.Function); // true
-console.log(myfunc.constructor === iframeContext.Function); // true
+console.log(myfunc.constructor === iframeContext.Function); // false
 &lt;/script&gt;</code></pre>
 
 
@@ -598,10 +528,10 @@ Object.prototype.toString.apply(someValue) === &quot;[object Date]&quot;</code><
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Protect%20JavaScript%20Source%20Code/" class="btn btn-neutral float-right" title="进阶：保护JavaScript源代码"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Protect JavaScript Source Code/" class="btn btn-neutral float-right" title="Protect JavaScript Source Code">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../Content%20Verification/" class="btn btn-neutral" title="进阶：内容验证"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Customize Menubar/" class="btn btn-neutral" title="Customize Menubar"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -611,13 +541,13 @@ Object.prototype.toString.apply(someValue) === &quot;[object Date]&quot;</code><
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="http://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="http://js.users.51.la/18564708.js"></script></p>
+      <p>NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script></p>
     
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
@@ -625,19 +555,22 @@ Object.prototype.toString.apply(someValue) === &quot;[object Date]&quot;</code><
 
   </div>
 
-<div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
-          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/lxp135/NW.jsCnDocs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../Content%20Verification/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Customize Menubar/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Protect%20JavaScript%20Source%20Code/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Protect JavaScript Source Code/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
 
 </body>
 </html>

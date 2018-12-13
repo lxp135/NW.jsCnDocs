@@ -30,7 +30,7 @@ for (var i = 0; i < menu.items.length; ++i) {
 }
 ```
 
-To create a menubar, usually you have to create a 2-level menu and assign it to `window.menu`. Here is the example of creating a menubar:
+To create a menubar, usually you have to create a 2-level menu and assign it to `win.menu`. Here is the example of creating a menubar:
 ```javascript
 // Create an empty menubar
 var menu = new nw.Menu({type: 'menubar'});
@@ -49,6 +49,11 @@ menu.append(new nw.MenuItem({
 // Assign it to `window.menu` to get the menu displayed
 nw.Window.get().menu = menu;
 ```
+
+See [Customize Menubar](../For Users/Advanced/Customize Menubar.md) for detailed usages.
+
+!!! warning "Using Menu With Page Navigation"
+    Menus created in the page that can be navigated will not be functional after a reload or navigation. The reason is that the menus and even the web page will be garbage collected by JS engine after navigation to prevent memory leak. So it's recommended to use menus in **background page**, which is existed for the life cycle of your app. See [`bg-script`](Manifest Format.md#bg-script) and [`main`](Manifest Format.md#main) for how to execute scripts in the background page.
 
 ## new Menu([option])
 
@@ -112,7 +117,8 @@ In this way, you can precisely choose which menu to show for different elements,
     - `hideEdit` `{Boolean}` _Optional_ do not populate the Edit menu
     - `hideWindow` `{Boolean}` _Optional_ do not populate the Window menu
 
-Creates the builtin menus (App, Edit and Window) within the menubar on Mac. The items can be manipulated with the `items` property. The argument `appname` is used for the title of App menu.
+Creates the builtin menus (*App*, *Edit* and *Window*) within the menubar on Mac. The items can be manipulated with the `items` property. The argument `appname` is used for the title of *App* menu.
 
 You can still use builtin menus with other menu items. i.e. append or insert items to the menu is still valid.
 
+See also [Customize Menubar](../For Users/Advanced/Customize Menubar.md#mac-os-x) for detailed usage.

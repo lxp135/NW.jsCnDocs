@@ -3,9 +3,12 @@
 
 [TOC]
 
-`Window` is a wrapper of the DOM's `window` object. It has extended operations and can receive various window events.
+`Window` is a wrapper of the DOM's topmost `window` object. It has extended operations and can receive various window events.
 
 Every `Window` is an instance of the EventEmitter class, and you're able to use `Window.on(...)` to respond to native window's events.
+
+!!! warning "Behavior Changed"
+    There are some changes of `Window` since 0.13.0. Please see [Migration Notes from 0.12 to 0.13](../For Users/Migration/From 0.12 to 0.13.md).
 
 ## Synopsis
 
@@ -41,9 +44,18 @@ nw.Window.open('https://github.com', {}, function(new_win) {
 
 If `window_object` is not specifed, then return current window's `Window` object, otherwise return `window_object`'s `Window` object.
 
+!!! note
+    If `window_object` is `iframe`'s, the function will still return topmost window's `Window` object.
+
 ```javascript
 // Get the current window
 var win = nw.Window.get();
+
+// Get iframe's window
+var iframeWin = nw.Window.get(iframe.contentWindow);
+
+//This will return true
+console.log(iframeWin === win);
 
 // Create a new window and get it
 nw.Window.open('https://github.com/nwjs/nw.js', {}, function(new_win) {
@@ -58,10 +70,10 @@ nw.Window.open('https://github.com/nwjs/nw.js', {}, function(new_win) {
 
 * `url` `{String}` URL to be loaded in the opened window
 * `options` `{Object}` _Optional_ see [Window subfields](Manifest Format.md#window-subfields) in manifest format. And following extra fields can also be used in options.
-    - `new-instance` `{Boolean}` _Optional_ whether to open a new window in a separate render process.
-    - `inject-js-start` `{String}` _Optional_ the script to be injected before document loaded. See [Manifest format](Manifest Format.md#inject-js-start)
-    - `inject-js-end` `{String}` _Optional_ the script to be injected before document unloaded. See [Manifest format](Manifest Format.md#inject-js-end)
-    - `id` `{String}` _Optional_ the ID used to identify the window. This will be used to remember the size and position of the window and restore that geometry when a window with the same id is later opened. [See also the Chrome App documentation](https://developer.chrome.com/apps/app_window#type-CreateWindowOptions)
+    - `new_instance` `{Boolean}` _Optional_ whether to open a new window in a separate render process.
+    - `inject_js_start` `{String}` _Optional_ the script to be injected before document loaded. See [Manifest format](Manifest Format.md#inject_js_start)
+    - `inject_js_end` `{String}` _Optional_ the script to be injected before document unloaded. See [Manifest format](Manifest Format.md#inject_js_end)
+    - `id` `{String}` _Optional_ the `id` used to identify the window. This will be used to remember the size and position of the window and restore that geometry when a window with the same id is later opened. [See also the Chrome App documentation](https://developer.chrome.com/apps/app_window#type-CreateWindowOptions)
 * `callback(win)` `{Function}` _Optional_ callback when with the opened native `Window` object
 
 Open a new window and load `url` in it.
@@ -92,7 +104,13 @@ Get or set window's title.
 
 ## win.menu
 
-Get or set window's menubar. Set with a Menu with type `menubar`. See [Menu](Menu.md).
+Get or set window's menubar. Set with a Menu with type `menubar`. When `win.menu` is set to `null`, the menubar is completely removed for Windows and Linux, and the menubar is cleared out on Mac.
+
+See [Customize Menubar](../For Users/Advanced/Customize Menubar.md) for the usage of menubars. And see [Menu](Menu.md) and [MenuItem](MenuItem.md) for detailed APIs.
+
+## win.isAlwaysOnTop
+
+Get whether the window is always on top of other windows.
 
 ## win.isFullscreen
 
@@ -112,7 +130,7 @@ Get or set the page zoom. `0` for normal size; positive value for zooming in; ne
 
 ## win.cookies.*
 
-This includes multiple functions to manipulate the cookies. The API is defined in the same way as [Chrome Extensions'](http://developer.chrome.com/extensions/cookies.html). NW.js supports the `get`, `getAll`, `remove` and `set` methods; `onChanged` event (supporting both `addListener` and `removeListener` function on this event).
+This includes multiple functions to manipulate the cookies. The API is defined in the same way as [Chrome Extensions](http://developer.chrome.com/extensions/cookies.html). NW.js supports the `get`, `getAll`, `remove` and `set` methods; `onChanged` event (supporting both `addListener` and `removeListener` function on this event).
 
 And anything related to `CookieStore` in the Chrome extension API is not supported, because there is only one global cookie store in NW.js apps.
 
@@ -252,7 +270,13 @@ Toggle the kiosk mode.
 
 Turn on/off the transparency support. See more info on [Transparent Window](../For Users/Advanced/Transparent Window.md).
 
-## win.showDevTools([iframe], [headless], [callback])
+## win.setShadow(shadow) (Mac)
+
+* `shadow` `{Boolean}` whether the window has a shadow
+
+Turn the window's native shadow on/off. Useful for frameless, transparent windows.
+
+## win.showDevTools([iframe], [callback])
 
 !!! note
     This API is only available on SDK build flavor.
@@ -261,8 +285,7 @@ Turn on/off the transparency support. See more info on [Transparent Window](../F
     The behavior of the function is changed since 0.13.0. Please see [Migration Notes from 0.12 to 0.13](../For Users/Migration/From 0.12 to 0.13.md).
 
 * `iframe` `{String} or {HTMLIFrameElement}` _Optional_ the id or the element of the `<iframe>` to be jailed on. By default, the DevTools is shown for entire window.
-* `headless` `{Boolean}` _Optional_ whether show DevTools in headless mode. If ignored, it's set to `false` by default.
-* `callback(dev_win)` `{Function}` callback with the native window of the DevTools window when `headless` is false.
+* `callback(dev_win)` `{Function}` callback with the native window of the DevTools window.
 
 Open the devtools to inspect the window.
 
@@ -270,9 +293,9 @@ The optional `iframe` as `String` should be the value of `id` attribute of any `
 
 The optional `iframe` as `HTMLIFrameElement` should be the iframe object. And it serves the same purpose with the `id` argument.
 
-When `headless` is `true`, the Devtools window will not be opened. Instead, a `devtools-opened` event will be emitted to the `Window` object after Devtools is ready.
+This function returns a `Window` object via the callback. You can use any properties and methods of `Window` except the events.
 
-This function returns a `Window` object when `headless` is `false`. You can use any properties and methods of `Window` except the events.
+See also in [webview reference](webview Tag.md) on how to open DevTools for webview or open DevTools in a webview.
 
 ## win.closeDevTools()
 
@@ -281,6 +304,10 @@ This function returns a `Window` object when `headless` is `false`. You can use 
 
 Close the devtools window.
 
+## win.getPrinters(callback)
+
+Enumerate the printers in the system. The callback function will receive an array of JSON objects for the printer information. The device name of the JSON object can be used as parameter in `nw.Window.print()`.
+
 ## win.isDevToolsOpen()
 
 !!! note
@@ -288,7 +315,30 @@ Close the devtools window.
 
 Query the status of devtools window.
 
-This will always return `false` if the `headless` option was `true` when calling [`win.showDevTools()`](#winshowdevtoolsiframe-headless-callback).
+See also [`win.showDevTools()`](#winshowdevtoolsiframe-callback).
+
+## win.print(options)
+
+Print the web contents in the window with or without the need for user's interaction. `options` is a JSON object with the following fields:
+
+* `autoprint` `{Boolean}` whether to print without the need for user's interaction; optional, true by default
+* `printer` `{String}` the device name of the printer returned by `nw.Window.getPrinters()`; No need to set this when printing to PDF
+* `pdf_path` `{String}` the path of the output PDF when printing to PDF
+* `headerFooterEnabled` `{Boolean}` whether to enable header and footer
+* `landscape` `{Boolean}` whether to use landscape or portrait
+* `mediaSize` `{JSON Object}` the paper size spec
+* `shouldPrintBackgrounds` `{Boolean}` whether to print CSS backgrounds
+* `marginsType` `{Integer}` 0 - Default; 1 - No margins; 2 - minimum; 3 - Custom, see `marginsCustom`.
+* `marginsCustom` `{JSON Object}` the custom margin setting; units are points.
+* `copies` `{Integer}` the number of copies to print.
+* `scaleFactor` `{Integer}` the scale factor; `100` is the default.
+* `headerString` `{String}` string to replace the URL in the header.
+* `footerString` `{String}` string to replace the URL in the footer.
+
+`marginsCustom` example: `"marginsCustom":{"marginBottom":54,"marginLeft":70,"marginRight":28,"marginTop":32}`  
+`mediaSize` example: `'mediaSize':{'name': 'CUSTOM', 'width_microns': 279400, 'height_microns': 215900, 'custom_display_name':'Letter', 'is_default': true}`
+
+*NOTE: If no options are being passed, `win.print({})` is what should be called.*
 
 ## win.setMaximumSize(width, height)
 
@@ -318,7 +368,7 @@ Sets the widget to be on top of all other windows in the window system.
 
 ## win.setVisibleOnAllWorkspaces(visible) (Mac and Linux)
 
-* `top` `{Boolean}` whether the window should be visible on all workspaces
+* `visible` `{Boolean}` whether the window should be visible on all workspaces
 
 For platforms that support multiple workspaces (currently Mac OS X and Linux), this allows NW.js windows to be visible on all workspaces simultaneously.
 
@@ -396,9 +446,27 @@ Execute a piece of JavaScript in the frame.
 ## win.evalNWBin(frame, path)
 
 * `frame` `{HTMLIFrameElement}` the frame to execute in. If `iframe` is `null`, it assumes in current window / frame.
-* `path` `{String}` the path of the snapshot file generated by `nwjc`
+* `path` `{String|ArrayBuffer|Buffer}` the path or `Buffer` or `ArrayBuffer` of the binary file generated by `nwjc`
 
-Load and execute the compiled snapshot in the frame. See [Protect JavaScript Source Code with V8 Snapshot](../For Users/Advanced/Protect JavaScript Source Code.md).
+Load and execute the compiled binary in the frame. See [Protect JavaScript Source Code](../For Users/Advanced/Protect JavaScript Source Code.md).
+
+## win.evalNWBinModule(frame, path, module_path)
+
+!!! warning "experimental"
+    This API is subject to change in future versions as we're exploring ways to support this feature better. [Discuss here](https://github.com/nwjs/nw.js/issues/6303).
+
+* `frame` `{HTMLIFrameElement}` the frame to execute in. If `iframe` is `null`, it assumes in current window / frame.
+* `path` `{String|ArrayBuffer|Buffer}` the path or `Buffer` or `ArrayBuffer` of the binary file generated by `nwjc`
+* `module_path` `{String}` the module URL related to the current document. It will be used to [resolve the module specifier](https://html.spec.whatwg.org/multipage/webappapis.html#resolve-a-module-specifier).
+
+Load and execute the compiled binary for Modules in the frame. The binary should be compiled with `nwjc --nw-module`. The following code will load lib.bin as module and other modules can refer to it with something like `import * from './lib.js'`:
+```javascript
+nw.Window.get().evalNWBinModule(null, 'lib.bin', 'lib.js');
+```
+
+## win.removeAllListeners([eventName])
+
+Removes all listeners, or those of the specified `eventName`.
 
 ## Event: close
 
@@ -411,33 +479,33 @@ And if the shutdown work takes some time, users may feel that the app is exiting
 See example code of [`win.close(true)` above](#wincloseforce) for the usage of `close` event.
 
 !!! note "Mac"
-    On Mac, there is an argument passed to the callback indicating whether it's being closed by <kbd>&#8984;</kbd>+<kbd>Q</kbd>.
+    On Mac, there is an argument passed to the callback indicating whether it's being closed by <kbd>&#8984;</kbd>+<kbd>Q</kbd>. It will be set to string `quit` if that's true, otherwise `undefined`.
 
 ## Event: closed
 
-The `closed` event is emitted after corresponding window is closed. Normally you'll not be able to get this event since after the window is closed all js objects will be released. But it's useful if you're listening this window's events in another window, whose objects will not be released.
+The `closed` event is emitted after the corresponding window is closed. Normally you will not be able to get this event since after the window is closed all js objects will be released. But it is useful when listening to the window's events in another window, whose objects will not be released.
 
 ```javascript
 // Open a new window.
-nw.Window.open('popup.html', {}, function(win) {
-// Release the 'win' object here after the new window is closed.
-win.on('closed', function() {
-  win = null;
-});
+nw.Window.open('popup.html', {}, function (win) {
+  // Release the 'win' object here after the new window is closed.
+  win.on('closed', function () {
+    win = null;
+  });
 
-// Listen to main window's close event
-nw.Window.get().on('close', function() {
-  // Hide the window to give user the feeling of closing immediately
-  this.hide();
+  // Listen to main window's close event
+  nw.Window.get().on('close', function () {
+    // Hide the window to give user the feeling of closing immediately
+    this.hide();
 
-  // If the new window is still open then close it.
-  if (win != null)
-    win.close(true);
-
-  // After closing the new window, close the main window.
-  this.close(true);
-});
-
+    // If the new window is still open then close it.
+    if (win !== null) {
+      win.close(true);
+    }
+ 
+    // After closing the new window, close the main window.
+    this.close(true);
+  });
 });
 
 ```
@@ -457,8 +525,9 @@ Emitted when the window is fully loaded, this event behaves the same with `windo
 * `frame` `{HTMLIFrameElement}` is the iframe object, or `null` if the event is for the window. 
 
 Emitted when the document object in this window or a child iframe is available, after all files are loaded, but before DOM is constructed or any script is run.
+It will not be fired on the new window being created with nw.Window.open(): the callback of that function will be fired at the same point of this event.
 
-See `inject-js-start` in [Manifest-format](Manifest Format.md#inject-js-start).
+See `inject_js_start` in [Manifest-format](Manifest Format.md#inject_js_start).
 
 ## Event: document-end(frame)
 
@@ -466,7 +535,7 @@ See `inject-js-start` in [Manifest-format](Manifest Format.md#inject-js-start).
  
 Emitted when the document object in this window or a child iframe is unloaded, but before the `onunload` event is emitted.
 
-See `inject-js-end` in [[Manifest-format]]
+See `inject_js_end` in [Manifest-format](Manifest Format.md#inject_js_end)
 
 ## Event: focus
 
@@ -491,13 +560,6 @@ Emitted when window is restored from minimize, maximize and fullscreen state.
 
 Emitted when window is maximized.
 
-## Event: unmaximize
-
-Emitted when window is restored from maximize state.
-
-!!! note
-    On some platforms window can be resized even when maximized. The `unmaximize` may not be emitted when a maximized window is resized instead of being unmaximized
-
 ## Event: move(x, y)
 
 Emitted after window is moved. The callback is called with 2 arguments: `(x, y)` for the new location of the left / top corner of the window.
@@ -519,7 +581,7 @@ Emitted when window leaves fullscreen state.
 
 ## Event: zoom
 
-Emitted when window zooming changed. It has a parameter indicating the new zoom level. See [`win.zoom()` method](#winzoom) for the parameter's value definition.
+Emitted when window zooming changed. It has a parameter indicating the new zoom level. See [`win.zoom()` method](#winzoomlevel) for the parameter's value definition.
 
 ## Event: capturepagedone
 
@@ -531,11 +593,9 @@ Emitted after the capturePage method is called and image data is ready. See `win
 ## Event: devtools-opened(url)
 
 !!! warning "Deprecated"
-    This feature is deprecated since 0.13.0. Use the `callback` passed to [`win.showDevtools`](#winshowdevtoolsiframe-headless-callback) instead. See [Migration Notes from 0.12 to 0.13](../For Users/Migration/From 0.12 to 0.13.md).
+    This feature is deprecated since 0.13.0. Use the `callback` passed to [`win.showDevtools`](#winshowdevtoolsiframe-callback) instead. See [Migration Notes from 0.12 to 0.13](../For Users/Migration/From 0.12 to 0.13.md).
 
-Emitted after Devtools is opened by any means, or ready after calling `win.showDevTools(id, headless)` with `headless` is `true`. The event callback has an `url` argument, which is the URL to load Devtools UI.
-
-See [`win.showDevTools()` method](#winshowdevtoolsiframe-headless-callback) for more details.
+See [`win.showDevTools()` method](#winshowdevtoolsiframe-callback) for more details.
 
 ## Event: devtools-closed
 
