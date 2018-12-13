@@ -124,7 +124,7 @@ cd /path/to/your/app
 
 ### 例 3 - 使用 Node.js API
 
-You can call node.js and modules directly from the DOM. So it enables endless possibilities for writing apps with nw.js.
+你可以在DOM文档中直接调用node.js代码以及模块，这样就可以通过NW.js轻松开发桌面应用。
 
 这个例子展示了如何使用Node.js中的`os`模块来调用系统接口，您可以在`index.html`文件中加入如下代码：
 
