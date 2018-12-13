@@ -30,11 +30,11 @@ fork本项目并编辑docs文件夹中的md文件，然后申请提交。
 | 标题 | 文件 | 进度 |
 | ------ | ------ | ------ |
 | - '首页' | 'index.md' | 100% |
-|- '用户手册' | | 0% |
+|- '用户手册' | | 11% |
 |  - '快速开始' | 'For Users/Getting Started.md' | 100% |
 |  - '使用DevTools调试' | 'For Users/Debugging with DevTools.md' | 0% |
 |  - '打包与发布' | 'For Users/Package and Distribute.md' | 0% |
-|  - 'FAQ' | 'For Users/FAQ.md' | 0% |
+|  - 'FAQ' | 'For Users/FAQ.md' | 100% |
 |  - '合并版本' | | 0% |
 |    - '0.12升级0.13' | 'For Users/Migration/From 0.12 to 0.13.md' | 0% |
 |  - '进阶' | | 0% |
