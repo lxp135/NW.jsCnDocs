@@ -8,7 +8,7 @@
   
   <meta name="author" content="刘小平">
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>使用DevTools调试 - NW.js 最新版中文文档</title>
+  <title>使用开发者工具调试 - NW.js 0.35.2 中文参考文档</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "\u4f7f\u7528DevTools\u8c03\u8bd5";
+    var mkdocs_page_name = "\u4f7f\u7528\u5f00\u53d1\u8005\u5de5\u5177\u8c03\u8bd5";
     var mkdocs_page_input_path = "For Users\\Debugging with DevTools.md";
     var mkdocs_page_url = "/For Users/Debugging with DevTools/";
   </script>
@@ -36,7 +36,7 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> NW.js 最新版中文文档</a>
+        <a href="../.." class="icon icon-home"> NW.js 0.35.2 中文参考文档</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -63,20 +63,20 @@
                 </li>
                 <li class=" current">
                     
-    <a class="current" href="./">使用DevTools调试</a>
+    <a class="current" href="./">使用开发者工具调试</a>
     <ul class="subnav">
             
-    <li class="toctree-l3"><a href="#debugging-with-devtools-doctitle">Debugging with DevTools {: .doctitle}</a></li>
+    <li class="toctree-l3"><a href="#_1">使用开发者工具调试</a></li>
     
         <ul>
         
-            <li><a class="toctree-l4" href="#open-developer-tools">Open Developer Tools</a></li>
+            <li><a class="toctree-l4" href="#_2">启用开发者工具</a></li>
         
-            <li><a class="toctree-l4" href="#nodejs-modules-debugging">Node.js Modules Debugging</a></li>
+            <li><a class="toctree-l4" href="#nodejs">Node.js 模块调试</a></li>
         
-            <li><a class="toctree-l4" href="#remote-debugging">Remote Debugging</a></li>
+            <li><a class="toctree-l4" href="#_3">远程调试</a></li>
         
-            <li><a class="toctree-l4" href="#using-devtools-extensions">Using devtools extensions</a></li>
+            <li><a class="toctree-l4" href="#_4">使用开发者工具扩展</a></li>
         
         </ul>
     
@@ -93,7 +93,7 @@
                 </li>
                 <li class="">
                     
-    <span class="caption-text">合并版本</span>
+    <span class="caption-text">迁移</span>
     <ul class="subnav">
                 <li class="toctree-l3">
                     
@@ -107,7 +107,7 @@
     <ul class="subnav">
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Build Flavors/">编译特性</a>
+    <a class="" href="../Advanced/Build Flavors/">编译版本</a>
                 </li>
                 <li class="toctree-l3">
                     
@@ -115,49 +115,88 @@
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Customize Menubar/">Customize Menubar</a>
+    <a class="" href="../Advanced/Customize Menubar/">自定义菜单</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/JavaScript Contexts in NW.js/">JavaScript Contexts in NW.js</a>
+    <a class="" href="../Advanced/JavaScript Contexts in NW.js/">在NW.js中使用JavaScript上下文</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Protect JavaScript Source Code/">Protect JavaScript Source Code</a>
+    <a class="" href="../Advanced/Protect JavaScript Source Code/">保护JavaScript源代码</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Security in NW.js/">Security in NW.js</a>
+    <a class="" href="../Advanced/Security in NW.js/">NW.js的安全性</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Support for Mac App Store/">Support for Mac App Store</a>
+    <a class="" href="../Advanced/Support for Mac App Store/">提交到Mac应用商店</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Test with ChromeDriver/">Test with ChromeDriver</a>
+    <a class="" href="../Advanced/Test with ChromeDriver/">使用ChromeDriver测试</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Transparent Window/">Transparent Window</a>
+    <a class="" href="../Advanced/Transparent Window/">透明窗口</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Use Flash Plugin/">Use Flash Plugin</a>
+    <a class="" href="../Advanced/Use Flash Plugin/">在NW.js中使用Flash插件</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Use NaCl in NW.js/">Use NaCl in NW.js</a>
+    <a class="" href="../Advanced/Use NaCl in NW.js/">在NW.js中使用NaCl</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Use Native Node Modules/">Use Native Node Modules</a>
+    <a class="" href="../Advanced/Use Native Node Modules/">在NW.js中使用原生Node.js模块</a>
                 </li>
                 <li class="toctree-l3">
                     
-    <a class="" href="../Advanced/Autoupdates/">Autoupdates</a>
+    <a class="" href="../Advanced/Autoupdates/">自动更新</a>
                 </li>
     </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">开发者手册</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Building NW.js/">构建 NW.js</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Contributing to NW.js/">为NW.js贡献代码</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Enable Proprietary Codecs/">打开专有编解码器</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Repositories/">资源列表</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Understanding Crash Dump/">了解崩溃机制</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Writing Documents for NW.js/">为NW.js编写文档</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Writing Test Cases for NW.js/">为NW.js编写测试用例</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../For Developers/Contributors of Documents/">贡献者列表</a>
                 </li>
     </ul>
 	    </li>
@@ -172,39 +211,39 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Changes to DOM/">Changes to DOM</a>
+    <a class="" href="../../References/Changes to DOM/">DOM的变化</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Changes to Node/">Changes to Node</a>
+    <a class="" href="../../References/Changes to Node/">Node的变化</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Clipboard/">Clipboard</a>
+    <a class="" href="../../References/Clipboard/">剪切板</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Command Line Options/">Command Line Options</a>
+    <a class="" href="../../References/Command Line Options/">命令行参数</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Chrome Extension APIs/">Chrome Extension APIs</a>
+    <a class="" href="../../References/Chrome Extension APIs/">Chrome扩展API</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Manifest Format/">Manifest Format</a>
+    <a class="" href="../../References/Manifest Format/">配置文件</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Menu/">Menu</a>
+    <a class="" href="../../References/Menu/">菜单</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/MenuItem/">MenuItem</a>
+    <a class="" href="../../References/MenuItem/">菜单项</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Screen/">Screen</a>
+    <a class="" href="../../References/Screen/">屏幕</a>
                 </li>
                 <li class="">
                     
@@ -212,58 +251,19 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Shortcut/">Shortcut</a>
+    <a class="" href="../../References/Shortcut/">快捷键</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/Tray/">Tray</a>
+    <a class="" href="../../References/Tray/">系统托盘</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../References/webview Tag/">webview Tag</a>
+    <a class="" href="../../References/webview Tag/">webview标签</a>
                 </li>
                 <li class="">
                     
     <a class="" href="../../References/Window/">Window</a>
-                </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">开发者手册</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Building NW.js/">Building NW.js</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Contributing to NW.js/">Contributing to NW.js</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Enable Proprietary Codecs/">Enable Proprietary Codecs</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Repositories/">Repositories</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Understanding Crash Dump/">Understanding Crash Dump</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Writing Documents for NW.js/">Writing Documents for NW.js</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Writing Test Cases for NW.js/">Writing Test Cases for NW.js</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../../For Developers/Contributors of Documents/">Contributors of Documents</a>
                 </li>
     </ul>
 	    </li>
@@ -278,7 +278,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">NW.js 最新版中文文档</a>
+        <a href="../..">NW.js 0.35.2 中文参考文档</a>
       </nav>
 
       
@@ -294,7 +294,7 @@
         
       
     
-    <li>使用DevTools调试</li>
+    <li>使用开发者工具调试</li>
     <li class="wy-breadcrumbs-aside">
       
         <a href="https://github.com/lxp135/NW.jsCnDocs/edit/master/docs/For Users/Debugging with DevTools.md"
@@ -307,39 +307,42 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="debugging-with-devtools-doctitle">Debugging with DevTools {: .doctitle}</h1>
+                <h1 id="_1">使用开发者工具调试</h1>
 <hr />
 <div class="admonition note">
-<p class="admonition-title">SDK Flavor Only</p>
-<p>DevTools is only available in <a href="../Advanced/Build Flavors/">SDK flavor</a>. It&rsquo;s recommended to use SDK flavor to develop and test your app. And use other flavors for production.</p>
+<p class="admonition-title">仅SDK版本支持调试</p>
+<p>开发者工具仅在<a href="../Advanced/Build Flavors/">SDK版本</a>中工作，建议您使用SDK版本进行开发与调试NW.js应用。使用其他版本发布应用。</p>
 </div>
-<h2 id="open-developer-tools">Open Developer Tools</h2>
-<p>DevTools can be opened with keyboard shortcut <kbd>F12</kbd> on Windows and Linux or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> on Mac.</p>
-<p>Alternatively, you may open DevTools programmatically using NW.js API <a href="../../References/Window/#winshowdevtoolsiframe-callback">win.showDevTools()</a> for a window.</p>
-<h2 id="nodejs-modules-debugging">Node.js Modules Debugging</h2>
-<p>NW.js is running in <a href="../Advanced/JavaScript Contexts in NW.js/#separate-context-mode">Separate Context Mode</a> by default. To debug Node.js modules, you can right click the app and choose &ldquo;Inspect Background Page&rdquo;. When stepping into Node.js modules in the debugger, the DevTools for background page is automatically focused and stopped at certain statement.</p>
-<p>If your app is running under <a href="../Advanced/JavaScript Contexts in NW.js/#mixed-context-mode">Mixed Context Mode</a>, Node.js modules can be directly debugged within the same DevTools window of the window. See <a href="../Advanced/JavaScript Contexts in NW.js/">JavaScript Contexts in NW.js</a> for the differences.</p>
-<h2 id="remote-debugging">Remote Debugging</h2>
-<p>You can use the <code>--remote-debugging-port=port</code> command line option to specify which port the DevTools should listen to. For example, by running <code>nw --remote-debugging-port=9222</code>, you can open http://localhost:9222/ in your browser to visit the debugger remotely.</p>
-<h2 id="using-devtools-extensions">Using devtools extensions</h2>
-<p>Devtools extensions are fully supported, including the one for ReactJS, Vue.js, etc. To use it, add the permission &ldquo;chrome-extension://*&rdquo; to manifest.json of the devtools extension, and load it with <code>--load-extension=path/to/extension</code> when nw is started. The files for devtools extensions can be copied from extension folder of Chrome browser after you install them from Chrome Web Store.</p>
-<h3 id="react-example">React Example</h3>
+<h2 id="_2">启用开发者工具</h2>
+<p>您可以在Windows、Linux上使用快捷键<kbd>F12</kbd>呼出开发者工具，或者在Mac上使用<kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd>呼出。</p>
+<p>此外, 您可以编写JS代码调用NW.js的API打开开发者工具窗口 <a href="../../References/Window/#winshowdevtoolsiframe-callback">win.showDevTools()</a>。</p>
+<h2 id="nodejs">Node.js 模块调试</h2>
+<p>NW.js默认运行在<a href="../Advanced/JavaScript Contexts in NW.js/#separate-context-mode">Separate Context Mode</a>模式下。调试Node.js模块，您需要在应用中右键单击并选择&rdquo;Inspect Background Page&rdquo;菜单。当程序运行到Node.js模块断点时，在后台运行的开发者工具会自动聚焦并暂定在断点上。</p>
+<p>如果您的应用运行在<a href="../Advanced/JavaScript Contexts in NW.js/#mixed-context-mode">Mixed Context Mode</a>模式下，Node.js模块可以在开发者工具中直接进行调试。想知道更详细的两种不同模式的差异，请查看<a href="../Advanced/JavaScript Contexts in NW.js/">在NW.js中使用JavaScript上下文</a>文档。</p>
+<h2 id="_3">远程调试</h2>
+<p>您可以在命令行输入 <code>--remote-debugging-port=port</code> 指令并指定端口来启动开发者工具监听。举个例子，输入并运行 <code>nw --remote-debugging-port=9222</code>，可以在您自己的浏览器中输入网址http://localhost:9222/来进行远程调试。</p>
+<h2 id="_4">使用开发者工具扩展</h2>
+<p>支持开发者工具全部扩展，包括但不限于ReactJS、Vue.js等等。<br />
+使用扩展，需要在manifest.json配置文件中添加 &ldquo;chrome-extension://*&rdquo; 权限配置项，并在启动nw.exe时添加 <code>--load-extension=path/to/extension</code> 执行参数。<br />
+这些开发者工具的扩展程序文件可以从Chrome Web商店下载安装后，在Chrome浏览器的扩展文件夹中拷贝出来。</p>
+<h3 id="react">React 例子</h3>
 <ul>
 <li>https://s3-us-west-2.amazonaws.com/nwjs/sample/react-app.zip</li>
 <li>https://s3-us-west-2.amazonaws.com/nwjs/sample/react-devtools.zip</li>
 </ul>
-<p>Unpack them, download the SDK build and run it with: <code>nw.exe --load-extension=path/to/devtools path/to/app/folder</code></p>
-<p>The app is a simple react app with &lsquo;package.json&rsquo; added. The devtools files are from the Chrome browser&rsquo;s extension folder of official react devtools extension installed from Chrome Web store. Only the manifest file is modified to add the permission: &ldquo;chrome-extension://*&rdquo;.</p>
-<h3 id="vue-example">Vue Example</h3>
+<p>解压缩, 下载SDK版本并带以下参数运行：<code>nw.exe --load-extension=path/to/devtools path/to/app/folder</code></p>
+<p>这个是一个包含&rsquo;package.json&rsquo;配置文件的简单react应用。开发者工具文件来自Chrome浏览器的扩展文件夹，该文件夹是安装在Chrome Web应用商店中的官方react开发者工具扩展。<br />
+仅在配置文件manifest中添加&rdquo;chrome-extension://*&rdquo;权限配置项时有效。</p>
+<h3 id="vue">Vue 例子</h3>
 <ol>
 <li><code>npm install --save-dev nw-vue-devtools</code></li>
-<li>Add this to your <code>package.json</code>:<br />
+<li>在配置文件 <code>package.json</code> 中添加以下代码:<br />
 <code>js
     "chromium-args": "--load-extension='./node_modules/nw-vue-devtools/extension'",</code></li>
-<li>Vue.js must be in use in your app, and cannot be minified (use <code>vue.js</code> not <code>vue.min.js</code>).</li>
+<li>您必须在您的应用中引用Vue.js，不能使用被压缩过版本 (使用 <code>vue.js</code> 而不是 <code>vue.min.js</code>)。</li>
 </ol>
-<p>This will automatically download, build, and install the latest Vue-DevTools into NW.js.</p>
-<p>If you are using <code>nwjs-builder-phoenix</code> then add in <code>"chromium-args"</code> to your <code>package.json</code> <code>build.strippedProperties</code> array.</p>
+<p>自动下载、编译并安装最新版的Vue开发者工具到NW.js。</p>
+<p>如果您使用<code>nwjs-builder-phoenix</code>打包工具，添加<code>"chromium-args"</code>配置项到<code>package.json</code> <code>build.strippedProperties</code>配置文件列表中。</p>
               
             </div>
           </div>
@@ -360,7 +363,7 @@
   <div role="contentinfo">
     <!-- Copyright etc -->
     
-      <p>NW.js中文文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script language="javascript" type="text/javascript" src="https://js.users.51.la/18564708.js"></script></p>
+      <p>NW.js中文参考文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script type="text/javascript" src="https://js.users.51.la/18564708.js"></script></p>
     
   </div>
 

@@ -2,212 +2,212 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://nwjs.liuxp.me/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Getting Started/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Debugging with DevTools/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Package and Distribute/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/FAQ/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Migration/From 0.12 to 0.13/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Build Flavors/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Content Verification/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Customize Menubar/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/JavaScript Contexts in NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Protect JavaScript Source Code/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Security in NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Support for Mac App Store/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Test with ChromeDriver/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Transparent Window/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Use Flash Plugin/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Use NaCl in NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Use Native Node Modules/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Users/Advanced/Autoupdates/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/App/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Changes to DOM/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Changes to Node/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Clipboard/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Command Line Options/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Chrome Extension APIs/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Manifest Format/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Menu/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/MenuItem/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Screen/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Shell/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Shortcut/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Tray/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/webview Tag/</loc>
-     <lastmod>2018-12-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://nwjs.liuxp.me/References/Window/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Building NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Contributing to NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Enable Proprietary Codecs/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Repositories/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Understanding Crash Dump/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Writing Documents for NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Writing Test Cases for NW.js/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://nwjs.liuxp.me/For Developers/Contributors of Documents/</loc>
-     <lastmod>2018-12-13</lastmod>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/App/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Changes to DOM/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Changes to Node/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Clipboard/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Command Line Options/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Chrome Extension APIs/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Manifest Format/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Menu/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/MenuItem/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Screen/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Shell/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Shortcut/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Tray/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/webview Tag/</loc>
+     <lastmod>2018-12-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://nwjs.liuxp.me/References/Window/</loc>
+     <lastmod>2018-12-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
