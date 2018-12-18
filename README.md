@@ -30,7 +30,7 @@ fork本项目并编辑docs文件夹中的md文件，然后申请提交。
 | 标题 | 文件 | 进度 |
 | ------ | ------ | ------ |
 | - '首页' | 'index.md' | 100% |
-|- '用户手册' | | 22% |
+|- '用户手册' | | 27.5% |
 |  - '快速开始' | 'For Users/Getting Started.md' | 100% |
 |  - '使用开发者工具调试' | 'For Users/Debugging with DevTools.md' | 100% |
 |  - '打包与发布' | 'For Users/Package and Distribute.md' | 100% |
@@ -38,7 +38,7 @@ fork本项目并编辑docs文件夹中的md文件，然后申请提交。
 |  - '迁移' | | 0% |
 |    - '0.12升级0.13' | 'For Users/Migration/From 0.12 to 0.13.md' | 0% |
 |  - '进阶' | | 0% |
-|    - '编译' | 'For Users/Advanced/Build Flavors.md' | 0% |
+|    - '编译版本' | 'For Users/Advanced/Build Flavors.md' | 100% |
 |    - '内容验证' | 'For Users/Advanced/Content Verification.md' | 0% |
 |    - '自定义菜单' | 'For Users/Advanced/Customize Menubar.md' | 0% |
 |    - '在NW.js中使用JavaScript上下文' | 'For Users/Advanced/JavaScript Contexts in NW.js.md' | 0% |
