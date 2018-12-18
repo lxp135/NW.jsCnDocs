@@ -3,7 +3,7 @@
 
 ## 如何使用
 * 直接访问 https://nwjs.liuxp.me
-* 点击Download ZIP按钮下载本项目，解压缩后用浏览器打开site文件夹中的index.html。
+* 使用mkdocs本地编译md文件，生成HTML静态页面。
 
 ## 如何编译
 中文文档同英文文档相同，使用markdown书写并用mkdocs编译而成。
