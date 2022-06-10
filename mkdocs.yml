@@ -4,9 +4,9 @@ use_directory_urls: true
 site_url: https://nwjs.liuxp.me
 site_author: 刘小平
 repo_url: https://github.com/lxp135/NW.jsCnDocs
-copyright: NW.js中文参考文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script type="text/javascript" src="https://js.users.51.la/18564708.js"></script>
+copyright: NW.js中文参考文档由<a href="https://liuxp.me">刘小平</a>提供，项目托管在<a href="https://github.com/lxp135/NW.jsCnDocs">GitHub</a>，欢迎您参与翻译。<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js?id=CDqGooQbS8dts6eI&ck=CDqGooQbS8dts6eI"></script>
 
-pages:
+nav:
 - '首页': 'index.md'
 - '用户手册':
   - '快速开始': 'For Users/Getting Started.md'

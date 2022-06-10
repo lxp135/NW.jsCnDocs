@@ -1,4 +1,4 @@
-# Window {: .doctitle}
+# Window
 ---
 
 [TOC]

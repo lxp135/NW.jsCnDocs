@@ -1,40 +1,40 @@
-# Migrate from 0.12 to 0.13 {: doctitle}
+# 从0.12升级到0.13
 ---
 
 [TOC]
 
-## Architecture Changes
+## 架构变化
 
-+ NW.js application is running as a Chrome App internally. All chrome.* platform APIs and features can be used in NW application now. The default protocol is changed from `file://` to `chrome-extension://`, where the host part of the URL is the generated id. The `app://` protocol in 0.12 is replaced by `chrome-extension://` protocol.
-+ All NW specific APIs, including `require()` is moved into a `nw` object from the `nw.gui` library. However, we provided a builtin wrapper library to provide compatibility for 0.12 apps. You can use `nw.gui` library for some time before we deprecate it in 0.14 or later.
++ NW.js应用运行于Chrome内核之上，所有Chrome支持的API与特性NW.js同样支持。默认协议地址从 `file://` 改为 `chrome-extension://`，where the host part of the URL is the generated id. 在0.12中使用 `app://` 的地方改为使用 `chrome-extension://` 。
++ 全部 NW 独有的 API, 原使用 `require()` 的情况现在需要从 `nw.gui` 库中new一个 `nw` 对象来使用。 无论如何, 我们提供了一个内建的库来兼容使用0.12开发的应用。在0.14或更迟的版本我们不建议使用之后，您需要使用`nw.gui`库。
 + The Node.js context is put in the DOM context of the background page, which is shared between opening windows as in 0.12 and before. The difference is you have access to all DOM features and chrome.* platform APIs in the Node context in 0.13.
 + To debug Node.js modules, you have to open DevTools for background page in Separate Context Mode by default. See [Debugging with DevTools](../Debugging with DevTools.md) for details.
 + The entry of the application is either JS or HTML as in 0.12, but as the application is internally a Chrome App, the first window is supposed to be launched by JS from the background page. If you specify a HTML file as the entry with "main" field in package.json, NW will use a default JS to open the first window and load it.
 + If NW.js is running under [Mixed Context Mode](../Advanced/JavaScript Contexts in NW.js.md#mixed-context-mode) (boot NW.js with `--mixed-context` argument), `nw.*` is kind of mirror of `window.*`. In this mode, you **CANNOT** share variables among frames or windows by assigning it to Node context. So do **NOT** turn on Mixed Context mode if your application is heavily depending on this variable sharing feature.
 
-## Node.js Changes
+## Node.js 变化
 
 + Node.js is bumped to 6.x in latest build. Check your NPM modules to make sure they support Node.js 6.x **especially for native modules**. There is [a list of native modules](https://github.com/nodejs/node/issues/2798) which should be migrated to latest [NaN 2](https://github.com/nodejs/nan).
 + Add NW version information to process.versions[`nw`]. process.versions[`node-webkit`] will be deprecated later.
 
-## API Changes
+## API 变化
 
-### Build Flavors
+### 编译版本
 
-+ Different build flavors support different set of APIs and capabilities. See [Build Flavors](../Advanced/Build Flavors.md) to choose the right NW.js flavor or [build your own](../../For Developers/Building NW.js.md).
++ 不同的编译版本支持不同的API与功能，可以通过查看 [编译版本](../Advanced/Build Flavors.md) 文档选择合适的NW.js版本，或者查看 [构建 NW.js](../../For Developers/Building NW.js.md) 文档自己编译NW.js。
 
-### Shorcut
+### 快捷键
 
 + `Shortcut` API does **NOT** map <kbd>Ctrl</kbd> modifier to <kbd>&#8984;</kbd> on Mac OS X. However 0.13.0 supports `Command` modifier in cross platform way. So it's your responsible to detect the OS and choose the right modifier when registering hotkeys. See [Shortcut.key](../../References/Shortcut.md#shortcutkey) for details.
 
-### Menu
+### 菜单
 + Menus on Mac is created with default menubar, including `app-name`, `Edit` and `Window`, instead of minimal menubar in 0.12.
 + To fix the name of application menu, you will need to modify  `nwjs.app/Contents/Resources/en.lproj/InfoPlist.strings` instead of `nwjs.app/Contents/Info.plist`. See [Customize Menubar](../Advanced/Customize Menubar.md#mac-os-x).
 
 ### Manifest Format
 
-+ [`single-instance`](../../References/Manifest Format.md#single-instance) is **deprecated** and it's always `true`. You **CANNOT** have multiple instances for your app unless you're using different user data directory (by `--user-data-dir`). You may also want to use the [open event](../../References/App.md#event-openargs): the first instance will be notified with this event when user tries to launch the second instance.
-+ [`toolbar`](../../References/Manifest Format.md#toolbar) is **deprecated** and it's always `false`. The traditional toolbar will **NOT** be supported including the reload buttons, location bar and DevTools buttons. As a workaround, you can open / close DevTools with <kbd>F12</kbd> (Windows & Linux) or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> (Mac). And use [`win.reload()`](../../References/Window.md#winreload) and [`win.reloadDev()`](../../References/Window.md#winreloaddev) to simulate the reload buttons.
++ [`single-instance`](../../References/Manifest Format.md#single-instance) 选项已 **弃用** ，现在这个选项永远是 `true`。 您 **不能** 再使用多个 instances for your app unless you're using different user data directory (by `--user-data-dir`). You may also want to use the [open event](../../References/App.md#event-openargs): the first instance will be notified with this event when user tries to launch the second instance.
++ [`toolbar`](../../References/Manifest Format.md#toolbar) 选项已 **弃用** 现在这个选项永远是 `false`。The traditional toolbar will **NOT** be supported including the reload buttons, location bar and DevTools buttons. As a workaround, you can open / close DevTools with <kbd>F12</kbd> (Windows & Linux) or <kbd>&#8984;</kbd>+<kbd>&#8997;</kbd>+<kbd>i</kbd> (Mac). And use [`win.reload()`](../../References/Window.md#winreload) and [`win.reloadDev()`](../../References/Window.md#winreloaddev) to simulate the reload buttons.
 + [`no-edit-menu`](../../References/Manifest Format.md#no-edit-menu-mac) is **deprecated**.
 + `snapshot` is **deprecated**. Use [`win.evalNWBin()`](../../References/Window.md#winevalnwbinframe-path) instead.
 + The format of [`node-remote`](../../References/Manifest Format.md#node-remote) is changed to array of [match patterns](https://developer.chrome.com/extensions/match_patterns) used by Chrome extension.
@@ -56,7 +56,7 @@
 
 + The `id` obtained by `added`, `orderchanged`, `namechanged`, `thumbnailchanged` should be registered and use the stream id returned by [`registerStream(id)`](../../References/Screen.md#screendesktopcapturemonitorregisterstreamid) before passing to `getUserMedia`. See [Synopsis](../../References/Screen.md#synopsis_1) for the usage.
 
-### Known issues
+### 已知问题
 
 + The following window options passed to `nw.Window.open()` is not effective on **Linux**: `resizable` for now; try to set them in the callback.
 + `reloadDev()` and `isDevToolsOpen()` of `nw.Window` are not supported for now
